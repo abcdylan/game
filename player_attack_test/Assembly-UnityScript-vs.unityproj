@@ -47,9 +47,11 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\AttackClass.js" />
+     <Compile Include="Assets\Scripts\AutoDestroyParticles.js" />
      <Compile Include="Assets\Scripts\PlayerClass.js" />
      <Compile Include="Assets\Scripts\ProjectileClass.js" />
      <Compile Include="Assets\Scripts\RightWallTest.js" />
+     <Compile Include="Assets\Scripts\SortParticleSystem.js" />
      <Compile Include="Assets\Scripts\UtilScript.js" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
