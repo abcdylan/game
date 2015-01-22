@@ -52,6 +52,11 @@
      <Compile Include="Assets\SampleAssets\2D\Scripts\ProjectileClass.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\RightWallTest.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\UtilScript.js" />
+     <Compile Include="Assets\Scripts\AttackClass2.js" />
+     <Compile Include="Assets\Scripts\Enemy1Control.js" />
+     <Compile Include="Assets\Scripts\PlayerClass.js" />
+     <Compile Include="Assets\Scripts\ProjectileClass2.js" />
+     <Compile Include="Assets\Scripts\UtilScript2.js" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>
