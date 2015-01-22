@@ -1,12 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ProjectileClass.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\AutoDestroyParticles.js">
     <Files>
-      <File FileName="Assets\Scripts\AttackClass.js" Line="6" Column="30" />
-      <File FileName="Assets\Scripts\ProjectileClass.js" Line="24" Column="2" />
-      <File FileName="Assets\Scripts\PlayerClass.js" Line="6" Column="29" />
-      <File FileName="Assets\Scripts\UtilScript.js" Line="9" Column="2" />
+      <File FileName="Assets\Scripts\ProjectileClass.js" Line="46" Column="24" />
+      <File FileName="Assets\Scripts\AttackClass.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PlayerClass.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\UtilScript.js" Line="1" Column="1" />
       <File FileName="Assets\Scripts\RightWallTest.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\SortParticleSystem.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\AutoDestroyParticles.js" Line="6" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
