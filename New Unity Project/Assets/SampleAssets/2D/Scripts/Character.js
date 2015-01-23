@@ -40,7 +40,7 @@ function Move (move : float, crouch : boolean, jump : boolean) {
 		
 		anim.SetFloat("Speed", Mathf.Abs(move));
 		rigidbody2D.velocity = new Vector2(move*maxSpeed, rigidbody2D.velocity.y);
-		
+
 		if (move > 0 && !facingRight) {
 			Flip();
 		} else if (move < 0 && facingRight) {
@@ -52,6 +52,20 @@ function Move (move : float, crouch : boolean, jump : boolean) {
 		grounded = false;
 		anim.SetBool("Ground", false);
 		rigidbody2D.AddForce(new Vector2(0, jumpForce));
+
+	}
+}
+
+function OnTriggerEnter2D(other: Collider2D) {
+	//this.gameObject.AddComponent("HingeJoint2D");
+	var connectingHinge : HingeJoint2D = this.GetComponent(HingeJoint2D);
+	connectingHinge.enabled = true;
+}
+
+function Update() {
+	if(Input.GetKeyDown(KeyCode.LeftShift)) {
+		var connectingHinge : HingeJoint2D = this.GetComponent(HingeJoint2D);
+		connectingHinge.enabled = false;
 	}
 }
 
