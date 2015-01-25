@@ -1,8 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\EditUnityProject\Assets\SampleAssets\2D\Scripts\ProjectileClass 1.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\SampleAssets\2D\Scripts\ProjectileClass 1.js">
     <Files>
-      <File FileName="..\EditUnityProject\Assets\SampleAssets\2D\Scripts\ProjectileClass 1.js" Line="1" Column="1" />
+      <File FileName="Assets\SampleAssets\2D\Scripts\ProjectileClass 1.js" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
