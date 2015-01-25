@@ -59,6 +59,12 @@
      <Compile Include="Assets\SampleAssets\2D\Scripts\disableScripts\StoryManager.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\disableScripts\TellTaleManager.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\disableScripts\TellTaleScript.js" />
+     <Compile Include="Assets\Scripts\AttackClass2.js" />
+     <Compile Include="Assets\Scripts\Enemy1Control.js" />
+     <Compile Include="Assets\Scripts\PlayerClass.js" />
+     <Compile Include="Assets\Scripts\PlayerControl.js" />
+     <Compile Include="Assets\Scripts\ProjectileClass2.js" />
+     <Compile Include="Assets\Scripts\UtilScript2.js" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>

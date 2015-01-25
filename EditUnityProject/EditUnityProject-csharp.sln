@@ -1,7 +1,7 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
-Project("{2EF809AF-25D6-D2AD-7CE0-BD9B086A9246}") = "player_attack_test", "Assembly-UnityScript.unityproj", "{0A710EFB-EB52-F491-6978-74AAA648949B}"
+Project("{7DA17CED-A3C2-EB9D-22BA-EB0C5C628528}") = "EditUnityProject", "Assembly-CSharp-vs.csproj", "{2B9AF513-F49C-84F2-9580-42D4FA6E3035}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,15 +9,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0A710EFB-EB52-F491-6978-74AAA648949B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0A710EFB-EB52-F491-6978-74AAA648949B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0A710EFB-EB52-F491-6978-74AAA648949B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0A710EFB-EB52-F491-6978-74AAA648949B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B9AF513-F49C-84F2-9580-42D4FA6E3035}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B9AF513-F49C-84F2-9580-42D4FA6E3035}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B9AF513-F49C-84F2-9580-42D4FA6E3035}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B9AF513-F49C-84F2-9580-42D4FA6E3035}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																			GlobalSection(MonoDevelopProperties) = preSolution
+		GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
