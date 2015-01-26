@@ -2,6 +2,9 @@
 
 private var character : Character;
 private var jump : boolean;
+//fire ability boolean, whether or not the character has gotten it
+private var fAbility : boolean = false;
+private var iAbility : boolean = false;
 
 //indicating that the player has arrived at a story element
 private var atStory : boolean;
@@ -13,7 +16,7 @@ private function Awake() {
 }
 
 //on collision with a trigger
-//function OnTriggerEnter2D(other : Collider2D) {
+function OnTriggerEnter2D(other : Collider2D) {
    //check the tag of the object the 
    //player has collided with
 //   if (other.tag == "Story") {
@@ -21,18 +24,28 @@ private function Awake() {
    //set story flag to true
 //   atStory = true;
 //   }
-//}
+
+//if colliding with the fire ability
+   if(other.tag == "FireAbility") {
+      fAbility = true;
+      Destroy(other.gameObject);
+   }//if colliding with the fire ability
+      else if(other.tag == "IceAbility") {
+      iAbility = true;
+      Destroy(other.gameObject);
+   }
+}
 
 private function Update() {
 	if (!jump) {
 		jump = Input.GetButtonDown("Jump");
 	}
 	//if in front of a story element stop moving
-	if (atStory) {
-	   character.maxSpeed = 0;
-	}
+	//if (atStory) {
+	//   character.maxSpeed = 0;
+	//}
 	
-	if(Input.GetKeyDown(KeyCode.Alpha1)) {
+	if(iAbility && Input.GetKeyDown(KeyCode.Alpha1)) {
        // Get players attack component
        // and execute its shoot() method
        var iceAttack : AttackClass;
@@ -40,7 +53,7 @@ private function Update() {
        iceAttack.Shoot();
        
     }
-    if(Input.GetKeyDown(KeyCode.Alpha2)) {
+    if(fAbility && Input.GetKeyDown(KeyCode.Alpha2)) {
        // Get players attack component
        // and execute its shoot() method
        var fireAttack : AttackClass;

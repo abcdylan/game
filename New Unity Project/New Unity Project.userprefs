@@ -1,8 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\EditUnityProject\Assets\SampleAssets\2D\Scripts\ProjectileClass 1.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\SampleAssets\2D\Scripts\Controls.js">
     <Files>
+      <File FileName="Assets\SampleAssets\2D\Scripts\FloatingText.js" Line="25" Column="40" />
       <File FileName="..\EditUnityProject\Assets\SampleAssets\2D\Scripts\ProjectileClass 1.js" Line="1" Column="1" />
+      <File FileName="Assets\SampleAssets\2D\Scripts\StoryController.js" Line="26" Column="17" />
+      <File FileName="Assets\SampleAssets\2D\Scripts\Controls.js" Line="39" Column="28" />
+      <File FileName="Assets\SampleAssets\2D\Scripts\AbilityClass.js" Line="13" Column="3" />
+      <File FileName="Assets\SampleAssets\2D\Scripts\Character.js" Line="1" Column="1" />
+      <File FileName="Assets\SampleAssets\2D\Scripts\AttackClass.js" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

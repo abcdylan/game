@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\SampleAssets\2D\Scripts\AbilityClass.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\AttackClass.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\AutoDestroyParticles.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\Character.js" />
@@ -55,6 +56,7 @@
      <Compile Include="Assets\SampleAssets\2D\Scripts\ParallaxScroll.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\ProjectileClass.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\RightWallTest.js" />
+     <Compile Include="Assets\SampleAssets\2D\Scripts\StoryController.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\UtilScript.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\disableScripts\StoryManager.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\disableScripts\TellTaleManager.js" />
