@@ -44,7 +44,7 @@ private function Update() {
 	//if (atStory) {
 	//   character.maxSpeed = 0;
 	//}
-	
+		
 	if(iAbility && Input.GetKeyDown(KeyCode.Alpha1)) {
        // Get players attack component
        // and execute its shoot() method
