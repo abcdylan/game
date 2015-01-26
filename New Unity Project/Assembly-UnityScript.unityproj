@@ -49,8 +49,10 @@
      <Compile Include="Assets\FlickeringLightScript.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\AttackClass.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\AutoDestroyParticles.js" />
+     <Compile Include="Assets\SampleAssets\2D\Scripts\Boss.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\Character.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\Controls.js" />
+     <Compile Include="Assets\SampleAssets\2D\Scripts\EnemyAI.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\FloatingText.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\GrapplingHook.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\OffsetScroller.js" />
