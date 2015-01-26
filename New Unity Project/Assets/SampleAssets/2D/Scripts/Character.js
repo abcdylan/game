@@ -6,7 +6,7 @@ var crouchSpeed : float = .5;
 var airControl : boolean = true;
 var whatIsGround : LayerMask;
 
-private var facingRight : boolean = true;
+var facingRight : boolean = true;
 private var groundCheck : Transform;
 private var groundedRadius : float = .2;
 private var grounded : boolean = false;
@@ -26,6 +26,23 @@ private function FixedUpdate () {
 	anim.SetBool("Ground", grounded);
 	anim.SetFloat("vSpeed", rigidbody2D.velocity.y);
 }
+
+function FireShoot() {
+	// Get players attack component
+	// and execute its shoot() method
+	var fireAttack : AttackClass;
+	fireAttack = GetComponent(AttackClass);
+	fireAttack.Shoot();
+}
+
+function IceShoot() {
+	// Get players attack component
+	// and execute its shoot() method
+	var iceAttack : AttackClass;
+	iceAttack = GetComponent(AttackClass);
+	iceAttack.IceShoot();      	
+}
+
 
 function Move (move : float, crouch : boolean, jump : boolean) {
 	if (!crouch && anim.GetBool("Crouch")) {
@@ -57,15 +74,16 @@ function Move (move : float, crouch : boolean, jump : boolean) {
 }
 
 function OnTriggerEnter2D(other: Collider2D) {
-	//this.gameObject.AddComponent("HingeJoint2D");
 	var connectingHinge : HingeJoint2D = this.GetComponent(HingeJoint2D);
 	connectingHinge.enabled = true;
 }
 
 function Update() {
-	if(Input.GetKeyDown(KeyCode.LeftShift)) {
-		var connectingHinge : HingeJoint2D = this.GetComponent(HingeJoint2D);
-		connectingHinge.enabled = false;
+	var connectingHinge : HingeJoint2D = this.GetComponent(HingeJoint2D);
+	if(connectingHinge.enabled) {
+		if(Input.GetKeyDown(KeyCode.Space)) {
+			connectingHinge.enabled = false;
+		}
 	}
 }
 

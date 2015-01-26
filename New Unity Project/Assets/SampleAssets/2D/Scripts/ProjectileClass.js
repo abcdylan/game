@@ -8,12 +8,32 @@ var speed: float;
 //destroy effect
 var DestroyEffect : Transform;
 
+private var playerObject : GameObject;
+private var character : Character;
+var direction : boolean = true;
+
+private function Awake() {
+	playerObject = GameObject.FindGameObjectWithTag("Player");
+	character = playerObject.GetComponent(Character);
+
+}
+
 function Update () {
-	//for now the default direction of the projectile will be right
 	transform.Translate(Vector3.right * speed * Time.deltaTime);
-	
+	/*if (character.facingRight && direction) {
+		ShootRight();
+		direction = false;
+	} else if (!character.facingRight && direction){
+		ShootLeft();
+		direction = false;
+	}*/
 	
 
+	/*if(character.facingRight) {
+		transform.Translate(Vector3.right * speed * Time.deltaTime);
+	} else {
+		transform.Translate(Vector3.left * speed * Time.deltaTime);
+	}*/
    // Check if the game object is visible, if not, destroy self   
    if(!UtilScript.isVisible(renderer, Camera.main)) {
       if(DestroyEffect != null) {

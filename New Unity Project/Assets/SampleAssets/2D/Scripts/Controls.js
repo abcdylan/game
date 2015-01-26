@@ -12,20 +12,10 @@ private function Update() {
 		jump = Input.GetButtonDown("Jump");
 	}
 	if(Input.GetKeyDown(KeyCode.Alpha1)) {
-       // Get players attack component
-       // and execute its shoot() method
-       var iceAttack : AttackClass;
-       iceAttack = GetComponent(AttackClass);
-       iceAttack.Shoot();
-       
+	character.FireShoot(); 
     }
     if(Input.GetKeyDown(KeyCode.Alpha2)) {
-       // Get players attack component
-       // and execute its shoot() method
-       var fireAttack : AttackClass;
-       fireAttack = GetComponent(AttackClass);
-       fireAttack.IceShoot();
-       
+    character.IceShoot();
     }
 	
 }
