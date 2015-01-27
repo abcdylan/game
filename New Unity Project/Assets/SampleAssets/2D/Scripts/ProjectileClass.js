@@ -8,32 +8,8 @@ var speed: float;
 //destroy effect
 var DestroyEffect : Transform;
 
-private var playerObject : GameObject;
-private var character : Character;
-var direction : boolean = true;
-
-private function Awake() {
-	playerObject = GameObject.FindGameObjectWithTag("Player");
-	character = playerObject.GetComponent(Character);
-
-}
-
 function Update () {
 	transform.Translate(Vector3.right * speed * Time.deltaTime);
-	/*if (character.facingRight && direction) {
-		ShootRight();
-		direction = false;
-	} else if (!character.facingRight && direction){
-		ShootLeft();
-		direction = false;
-	}*/
-	
-
-	/*if(character.facingRight) {
-		transform.Translate(Vector3.right * speed * Time.deltaTime);
-	} else {
-		transform.Translate(Vector3.left * speed * Time.deltaTime);
-	}*/
    // Check if the game object is visible, if not, destroy self   
    if(!UtilScript.isVisible(renderer, Camera.main)) {
       if(DestroyEffect != null) {
@@ -49,5 +25,17 @@ function Update () {
 		} else {
 			Destroy(gameObject);
 		}
+	}
+}
+
+function OnTriggerEnter2D(other: Collider2D) {
+	if(other.tag == "Enemy") {
+		Destroy(gameObject);
+	}
+	if(gameObject.tag == "Fireball" && other.tag == "IceCube") {
+		Destroy(gameObject);
+	}
+	if(gameObject.tag == "IceCube" && other.tag == "Fireball") {
+		Destroy(gameObject);
 	}
 }

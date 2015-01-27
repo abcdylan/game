@@ -2,6 +2,7 @@
 
 // variable storing projectile
 var fireballPrefab: Transform;
+var fireballPrefabLeft : Transform;
 var iceBlockPrefab: Transform;
 
 var shootCooldownTime: float;
@@ -41,17 +42,19 @@ function IceShoot() {
 function Shoot() {
 	//shoot only if no cooldown time left
 	if (shootCooldownTimeLeft <= 0) {
-	var fireball = Instantiate(fireballPrefab);
-	// sets position of fireball 1 position in front of player
-	fireball.position = transform.position;
-	if(character.facingRight) {
-		fireball.position.x += 1;
-	} else {
-		fireball.position.x -= 1;
-	}
-       
-	// set time left until next shot to 
-	// the cooldown time
-      shootCooldownTimeLeft = shootCooldownTime;
+		if(character.facingRight) {
+			var fireball = Instantiate(fireballPrefab);
+			// sets position of fireball 1 position in front of player
+			fireball.position = transform.position;
+			fireball.position.x += 1;
+		} else {
+			var fireballLeft = Instantiate(fireballPrefabLeft);
+			// sets position of fireball 1 position in front of player
+			fireballLeft.position = transform.position;
+			fireballLeft.position.x -= 1;
+		}     
+		// set time left until next shot to 
+		// the cooldown time
+     	shootCooldownTimeLeft = shootCooldownTime;
 	}
 }
