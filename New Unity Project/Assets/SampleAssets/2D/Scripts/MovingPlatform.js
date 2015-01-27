@@ -1,5 +1,6 @@
 ﻿#pragma strict
 
+
 public var DestinationSpot : Transform;
 public var OriginSpot : Transform;
 public var speed : float;
@@ -22,5 +23,15 @@ function FixedUpdate () {
    // otherwise move platform to destination
       transform.position = new Vector3.MoveTowards(transform.position, DestinationSpot.position, speed);
    }
-      
+        
 }
+
+/*function OnDrawGizmos() {
+   Gizmos.color = Color.green;
+   Gizmos.DrawWireCube(OriginSpot.position, platform.localScale);
+   
+   
+   Gizmos.color = Color.red;
+   Gizmos.DrawWireCube(DestinationSpot.position, platform.localScale);
+   
+}*/
