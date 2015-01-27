@@ -43,7 +43,6 @@ function IceShoot() {
 	iceAttack.IceShoot();      	
 }
 
-
 function Move (move : float, crouch : boolean, jump : boolean) {
 	if (!crouch && anim.GetBool("Crouch")) {
 		if (Physics2D.OverlapCircle(ceilingCheck.position, ceilingRadius, whatIsGround)) {
@@ -74,8 +73,10 @@ function Move (move : float, crouch : boolean, jump : boolean) {
 }
 
 function OnTriggerEnter2D(other: Collider2D) {
-	var connectingHinge : HingeJoint2D = this.GetComponent(HingeJoint2D);
-	connectingHinge.enabled = true;
+	if(other.tag == "Rope") {
+		var connectingHinge : HingeJoint2D = this.GetComponent(HingeJoint2D);
+		connectingHinge.enabled = true;
+	}
 }
 
 function Update() {
