@@ -9,11 +9,7 @@ var speed: float;
 var DestroyEffect : Transform;
 
 function Update () {
-	//for now the default direction of the projectile will be right
 	transform.Translate(Vector3.right * speed * Time.deltaTime);
-	
-	
-
    // Check if the game object is visible, if not, destroy self   
    if(!UtilScript.isVisible(renderer, Camera.main)) {
       if(DestroyEffect != null) {
@@ -29,5 +25,17 @@ function Update () {
 		} else {
 			Destroy(gameObject);
 		}
+	}
+}
+
+function OnTriggerEnter2D(other: Collider2D) {
+	if(other.tag == "Enemy") {
+		Destroy(gameObject);
+	}
+	if(gameObject.tag == "Fireball" && other.tag == "IceCube") {
+		Destroy(gameObject);
+	}
+	if(gameObject.tag == "IceCube" && other.tag == "Fireball") {
+		Destroy(gameObject);
 	}
 }
