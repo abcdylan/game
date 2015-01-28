@@ -1,0 +1,15 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\SampleAssets\2D\Scripts\MainMenuScript.js">
+    <Files>
+      <File FileName="Assets\SampleAssets\2D\Scripts\MainMenuScript.js" Line="71" Column="19" />
+      <File FileName="Assets\SampleAssets\2D\Scripts\MainMenuManager.js" Line="20" Column="1" />
+      <File FileName="Assets\SampleAssets\2D\Scripts\Controls.js" Line="14" Column="40" />
+      <File FileName="Assets\SampleAssets\2D\Scripts\ProjectileClassBoss.js" Line="12" Column="11" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
