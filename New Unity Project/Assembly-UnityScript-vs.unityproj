@@ -55,6 +55,8 @@
      <Compile Include="Assets\SampleAssets\2D\Scripts\Controls.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\FloatingText.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\FollowPath.js" />
+     <Compile Include="Assets\SampleAssets\2D\Scripts\MainMenuManager.js" />
+     <Compile Include="Assets\SampleAssets\2D\Scripts\MainMenuScript.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\MovingPlatform.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\OffsetScroller.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\ParallaxScroll.js" />
