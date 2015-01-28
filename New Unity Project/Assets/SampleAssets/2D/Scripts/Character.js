@@ -6,7 +6,7 @@ var crouchSpeed : float = .5;
 var airControl : boolean = true;
 var whatIsGround : LayerMask;
 
-private var facingRight : boolean = true;
+var facingRight : boolean = true;
 private var groundCheck : Transform;
 private var groundedRadius : float = .2;
 private var grounded : boolean = false;
@@ -27,6 +27,22 @@ private function FixedUpdate () {
 	anim.SetFloat("vSpeed", rigidbody2D.velocity.y);
 }
 
+function FireShoot() {
+	// Get players attack component
+	// and execute its shoot() method
+	var fireAttack : AttackClass;
+	fireAttack = GetComponent(AttackClass);
+	fireAttack.Shoot();
+}
+
+function IceShoot() {
+	// Get players attack component
+	// and execute its shoot() method
+	var iceAttack : AttackClass;
+	iceAttack = GetComponent(AttackClass);
+	iceAttack.IceShoot();      	
+}
+
 function Move (move : float, crouch : boolean, jump : boolean) {
 	if (!crouch && anim.GetBool("Crouch")) {
 		if (Physics2D.OverlapCircle(ceilingCheck.position, ceilingRadius, whatIsGround)) {
@@ -40,7 +56,7 @@ function Move (move : float, crouch : boolean, jump : boolean) {
 		
 		anim.SetFloat("Speed", Mathf.Abs(move));
 		rigidbody2D.velocity = new Vector2(move*maxSpeed, rigidbody2D.velocity.y);
-		
+
 		if (move > 0 && !facingRight) {
 			Flip();
 		} else if (move < 0 && facingRight) {
@@ -52,6 +68,23 @@ function Move (move : float, crouch : boolean, jump : boolean) {
 		grounded = false;
 		anim.SetBool("Ground", false);
 		rigidbody2D.AddForce(new Vector2(0, jumpForce));
+
+	}
+}
+
+function OnTriggerEnter2D(other: Collider2D) {
+	if(other.tag == "Rope") {
+		var connectingHinge : HingeJoint2D = this.GetComponent(HingeJoint2D);
+		connectingHinge.enabled = true;
+	}
+}
+
+function Update() {
+	var connectingHinge : HingeJoint2D = this.GetComponent(HingeJoint2D);
+	if(connectingHinge.enabled) {
+		if(Input.GetKeyDown(KeyCode.Space)) {
+			connectingHinge.enabled = false;
+		}
 	}
 }
 
