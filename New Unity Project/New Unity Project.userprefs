@@ -1,9 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\SampleAssets\2D\Scripts\FloatingText.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\SampleAssets\2D\Scripts\Camera2DFollow.cs">
     <Files>
-      <File FileName="Assets\SampleAssets\2D\Scripts\StoryController.js" Line="39" Column="9" />
-      <File FileName="Assets\SampleAssets\2D\Scripts\FloatingText.js" Line="20" Column="31" />
+      <File FileName="Assets\SampleAssets\2D\Scripts\Camera2DFollow.cs" Line="1" Column="1" />
+      <File FileName="Assets\SampleAssets\2D\Scripts\PathDefinition.js" Line="1" Column="1" />
+      <File FileName="Assets\SampleAssets\2D\Scripts\StoryController.js" Line="1" Column="1" />
+      <File FileName="Assets\SampleAssets\2D\Scripts\FloatingText.js" Line="1" Column="1" />
       <File FileName="Assets\SampleAssets\2D\Scripts\Character.js" Line="1" Column="1" />
       <File FileName="..\EditUnityProject\Assets\SampleAssets\2D\Scripts\ProjectileClass 1.js" Line="1" Column="1" />
       <File FileName="Assets\SampleAssets\2D\Scripts\Controls.js" Line="1" Column="1" />
@@ -14,8 +16,10 @@
       <File FileName="Assets\Scripts\PlayerControl.js" Line="1" Column="1" />
       <File FileName="Assets\Scripts\ProjectileClass2.js" Line="1" Column="1" />
       <File FileName="Assets\Scripts\UtilScript2.js" Line="1" Column="1" />
-      <File FileName="Assets\SampleAssets\2D\Scripts\MovingPlatform.js" Line="26" Column="4" />
-      <File FileName="Assets\SampleAssets\2D\Scripts\MovePlatformPlayer.js" Line="34" Column="4" />
+      <File FileName="Assets\SampleAssets\2D\Scripts\MovingPlatform.js" Line="1" Column="1" />
+      <File FileName="Assets\SampleAssets\2D\Scripts\FollowPath.js" Line="1" Column="1" />
+      <File FileName="Assets\SampleAssets\2D\Scripts\ChildController.js" Line="9" Column="32" />
+      <File FileName="Assets\SampleAssets\2D\Scripts\CameraFollow.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

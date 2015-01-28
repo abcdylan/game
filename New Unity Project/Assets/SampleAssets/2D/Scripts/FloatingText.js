@@ -21,13 +21,13 @@ function Hide() {
    gameObject.SetActive(false); 
 }
 
-//function Start () {
-   //var transform : RectTransform = storyPanel.gameObject.transform as RectTransform;
+function Start () {
+   var transform : RectTransform = storyPanel.gameObject.transform as RectTransform;
    //var position : Vector2 = transform.anchoredPosition;
    //position.y -= transform.rect.height;
    //transform.anchoredPosition = position; 
-   //storyPanel = GetComponent(Animator);
-//}
+   storyPanel = GetComponent(Animator);
+}
 
 
 //function Update () {

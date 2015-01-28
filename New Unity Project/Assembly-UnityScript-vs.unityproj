@@ -50,12 +50,14 @@
      <Compile Include="Assets\SampleAssets\2D\Scripts\AttackClass.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\AutoDestroyParticles.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\Character.js" />
+     <Compile Include="Assets\SampleAssets\2D\Scripts\ChildController.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\Controls.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\FloatingText.js" />
-     <Compile Include="Assets\SampleAssets\2D\Scripts\MovePlatformPlayer.js" />
+     <Compile Include="Assets\SampleAssets\2D\Scripts\FollowPath.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\MovingPlatform.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\OffsetScroller.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\ParallaxScroll.js" />
+     <Compile Include="Assets\SampleAssets\2D\Scripts\PathDefinition.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\ProjectileClass.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\RightWallTest.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\StoryController.js" />
