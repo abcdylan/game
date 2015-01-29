@@ -9,20 +9,24 @@ private var iAbility : boolean = false;
 private function Awake() {
 	character = GetComponent(Character);
 }
-/*
-function OnTriggerEnter2D(other : Collider2D) {
 
-//if colliding with the fire ability
-   if(other.tag == "FireAbility") {
-      fAbility = true;
-      Destroy(other.gameObject);
-   }//if colliding with the fire ability
-      else if(other.tag == "IceAbility") {
-      iAbility = true;
-      Destroy(other.gameObject);
-   }
+function OnTriggerEnter2D(other : Collider2D) {
+	if(other.tag == "disableAirControl") {
+		character.airControl = false;
+	} else if (other.tag == "enableAirControl") {
+		character.airControl = true;
+	}
+	//if colliding with the fire ability
+	if(other.tag == "FireAbility") {
+		fAbility = true;
+		Destroy(other.gameObject);
+	}//if colliding with the fire ability
+	else if(other.tag == "IceAbility") {
+		iAbility = true;
+		Destroy(other.gameObject);
+	}
 }
-*/
+
 private function Update() {
 	if (!jump) {
 		jump = Input.GetButtonDown("Jump");
