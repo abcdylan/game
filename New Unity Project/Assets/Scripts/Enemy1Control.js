@@ -55,6 +55,9 @@ function FixedUpdate () {
 
 function OnTriggerEnter2D(other : Collider2D) {
    //var enemyWave : EnemyWaveClass;
+   if(other.tag=="IceCube"){
+      Destroy(gameObject);
+      }
 
    // Check if colliding with the left or right wall
    // (by checking the tags of the collider that the enemy

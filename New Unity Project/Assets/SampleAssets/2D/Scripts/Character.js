@@ -77,6 +77,16 @@ function OnTriggerEnter2D(other: Collider2D) {
 		var connectingHinge : HingeJoint2D = this.GetComponent(HingeJoint2D);
 		connectingHinge.enabled = true;
 	}
+	
+	
+      if(other.tag == "Enemy") {
+   Application.LoadLevel("Ice Level Demo");
+   }
+      
+   
+   if (other.tag=="IceSpikes"){
+   Application.LoadLevel("Ice Level Demo");                
+}
 }
 
 function Update() {
