@@ -63,12 +63,10 @@ function Move (move : float, crouch : boolean, jump : boolean) {
 			Flip();
 		}
 	}
-	
 	if (grounded && jump && anim.GetBool("Ground")) {
 		grounded = false;
 		anim.SetBool("Ground", false);
 		rigidbody2D.AddForce(new Vector2(0, jumpForce));
-
 	}
 }
 
@@ -76,17 +74,13 @@ function OnTriggerEnter2D(other: Collider2D) {
 	if(other.tag == "Rope") {
 		var connectingHinge : HingeJoint2D = this.GetComponent(HingeJoint2D);
 		connectingHinge.enabled = true;
+	}	
+	if(other.tag == "Enemy") {
+		Application.LoadLevel("Ice Level Demo");
+	}   
+	if (other.tag=="IceSpikes"){
+		Application.LoadLevel("Ice Level Demo");                
 	}
-	
-	
-      if(other.tag == "Enemy") {
-   Application.LoadLevel("Ice Level Demo");
-   }
-      
-   
-   if (other.tag=="IceSpikes"){
-   Application.LoadLevel("Ice Level Demo");                
-}
 }
 
 function Update() {
