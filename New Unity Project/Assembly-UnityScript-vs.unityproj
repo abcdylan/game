@@ -49,9 +49,11 @@
      <Compile Include="Assets\SampleAssets\2D\Scripts\AttackClass.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\Character.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\Controls.js" />
+     <Compile Include="Assets\SampleAssets\2D\Scripts\MovingPlatform.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\ProjectileClass.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\RightWallTest.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\UtilScript.js" />
+     <Compile Include="Assets\backupCharacter.js.js" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>
