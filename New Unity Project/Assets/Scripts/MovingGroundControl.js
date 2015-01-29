@@ -25,9 +25,9 @@ function OnTriggerEnter2D(other : Collider2D) {
    //if(other.tag=="Player"){
    //thatObject.GetComponent.< PlayerMovingGround >().movementDir= movementDir;
    //}
-   if(other.tag=="Player"){
+   //if(other.tag=="Player"){
      contact=true;
-     }
+     //}
    
    if(other.tag == "LeftWall") {
       // If collided with the left wall, get a reference
