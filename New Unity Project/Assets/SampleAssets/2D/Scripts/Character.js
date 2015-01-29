@@ -6,7 +6,10 @@ var crouchSpeed : float = .5;
 var airControl : boolean = true;
 var whatIsGround : LayerMask;
 
-var facingRight : boolean = true;
+
+private var doubleJumpCount : int = 1;
+private var maxAirJumpCount = 1;
+var airJumpCount : int = 0; //how many more times can the player jump
 private var groundCheck : Transform;
 private var groundedRadius : float = .2;
 private var grounded : boolean = false;
@@ -21,10 +24,13 @@ function Awake () {
 	ceilingCheck = transform.Find("CeilingCheck");		
 }
 
-private function FixedUpdate () {
+function FixedUpdate () {
+
 	grounded = Physics2D.OverlapCircle (groundCheck.position, groundedRadius, whatIsGround);
 	anim.SetBool("Ground", grounded);
 	anim.SetFloat("vSpeed", rigidbody2D.velocity.y);
+	
+
 }
 
 function FireShoot() {
@@ -96,11 +102,19 @@ function Update() {
 			connectingHinge.enabled = false;
 		}
 	}
-}
+	 else if (grounded == false && jump && doubleJumpCount == 1) {
+             rigidbody2D.AddForce (new Vector2 (0f, jumpForce));
+             doubleJumpCount = 0;
+                 }
+         if (grounded) {
+                         doubleJumpCount = 1;
+                 }
+     }
+
 
 private function Flip() {
 	facingRight = !facingRight;
 	var theScale : Vector3 = transform.localScale;
 	theScale.x *= -1;
 	transform.localScale = theScale;	            
-}            
+}  
