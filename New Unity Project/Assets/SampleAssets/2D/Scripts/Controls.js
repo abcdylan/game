@@ -9,7 +9,7 @@ private var iAbility : boolean = false;
 private function Awake() {
 	character = GetComponent(Character);
 }
-
+/*
 function OnTriggerEnter2D(other : Collider2D) {
 
 //if colliding with the fire ability
@@ -22,6 +22,7 @@ function OnTriggerEnter2D(other : Collider2D) {
       Destroy(other.gameObject);
    }
 }
+*/
 private function Update() {
 	if (!jump) {
 		jump = Input.GetButtonDown("Jump");
@@ -30,10 +31,10 @@ private function Update() {
 	//   character.maxSpeed = 0;
 	//}
 		
-	if(iAbility && Input.GetKeyDown(KeyCode.Alpha1)) {
+	if(/*iAbility && */Input.GetKeyDown(KeyCode.Alpha1)) {
 	character.FireShoot(); 
     }
-    if(fAbility && Input.GetKeyDown(KeyCode.Alpha2)) {
+    if(/*fAbility && */Input.GetKeyDown(KeyCode.Alpha2)) {
     character.IceShoot();
     }
 	

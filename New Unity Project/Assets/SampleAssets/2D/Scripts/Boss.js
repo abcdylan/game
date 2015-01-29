@@ -5,7 +5,7 @@ var jumpForce : float;
 var crouchSpeed : float = .5;
 var airControl : boolean = true;
 var whatIsGround : LayerMask;
-static var health : float = 5;
+var health : float = 5;
 var dodgeCollider1 : EdgeCollider2D;
 var dodgeCollider2 : EdgeCollider2D;
 var dodgeRandom : float;
@@ -97,14 +97,14 @@ function Move (move : float, crouch : boolean, jump : boolean) {
 function OnTriggerEnter2D(other: Collider2D) {
 	if (other.tag == "Fireball") {
 		var number = Random.Range(0,10);
-		if (dodgeCollider1.enabled && dodgeCollider2.enabled && grounded == true && anim.GetBool("Ground")) {
+		//if (dodgeCollider1.enabled && dodgeCollider2.enabled && grounded == true && anim.GetBool("Ground")) {
 		//if(number > 4 && grounded == true && anim.GetBool("Ground")){
-			grounded = false;
-			anim.SetBool("Ground", false);
-			rigidbody2D.AddForce(new Vector2(0, jumpForce));
-		} else {
+		//	grounded = false;
+		//	anim.SetBool("Ground", false);
+		//	rigidbody2D.AddForce(new Vector2(0, jumpForce));
+		//} else {
 			health--;
-		}
+		//}
 	}
 }
 /*
