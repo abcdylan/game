@@ -24,7 +24,7 @@ function Update () {
    
 	if(gameObject.tag == "IceCube") {
 		if(gameObject.GetComponent(SpriteRenderer).color.a > 0) {
-			gameObject.GetComponent(SpriteRenderer).color.a -= 0.2 * Time.deltaTime * 2 ;
+			gameObject.GetComponent(SpriteRenderer).color.a -= 0.01 * Time.deltaTime * 2 ;
 		} else {
 			Destroy(gameObject);
 		}

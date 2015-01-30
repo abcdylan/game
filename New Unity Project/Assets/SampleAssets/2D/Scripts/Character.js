@@ -1,4 +1,3 @@
-#pragma strict
 
 var maxSpeed : float = 10;
 var jumpForce : float = 400;
@@ -25,12 +24,9 @@ function Awake () {
 }
 
 function FixedUpdate () {
-
 	grounded = Physics2D.OverlapCircle (groundCheck.position, groundedRadius, whatIsGround);
 	anim.SetBool("Ground", grounded);
 	anim.SetFloat("vSpeed", rigidbody2D.velocity.y);
-	
-
 }
 
 function FireShoot() {
@@ -82,17 +78,18 @@ function OnTriggerEnter2D(other: Collider2D) {
 	if(other.tag == "Rope") {
 		var connectingHinge : HingeJoint2D = this.GetComponent(HingeJoint2D);
 		connectingHinge.enabled = true;
+	}	
+	if(other.tag == "Enemy") {
+		Application.LoadLevel("BossBattle");
+		Boss.health = 5;
+	}   
+	if (other.tag == "EnemyAttack") {
+		Application.LoadLevel("BossBattle");
+		Boss.health = 5;
 	}
-	
-	
-      if(other.tag == "Enemy") {
-   Application.LoadLevel("Ice Level Demo");
-   }
-      
-   
-   if (other.tag=="IceSpikes"){
-   Application.LoadLevel("Ice Level Demo");                
-}
+	if (other.tag=="IceSpikes"){
+		Application.LoadLevel("Ice Level Demo");                
+	}
 }
 
 function Update() {
@@ -101,15 +98,15 @@ function Update() {
 		if(Input.GetKeyDown(KeyCode.Space)) {
 			connectingHinge.enabled = false;
 		}
+	} 
+	if (!grounded && doubleJumpCount == 1 && Input.GetKeyDown(KeyCode.Space)) {
+		rigidbody2D.AddForce (new Vector2 (0f, jumpForce));
+		doubleJumpCount = 0;
 	}
-	 else if (grounded == false && doubleJumpCount == 1) {
-             rigidbody2D.AddForce (new Vector2 (0f, jumpForce));
-             doubleJumpCount = 0;
-                 }
-         if (grounded) {
-                         doubleJumpCount = 1;
-                 }
-     }
+	if (grounded) {
+		doubleJumpCount = 1;
+	}
+}
 
 
 private function Flip() {

@@ -6,8 +6,8 @@ var crouchSpeed : float = .5;
 var airControl : boolean = true;
 var whatIsGround : LayerMask;
 static var health : float = 5;
-var dodgeCollider1 : EdgeCollider2D;
-var dodgeCollider2 : EdgeCollider2D;
+var dodgeColliderRight : EdgeCollider2D;
+var dodgeColliderLeft : EdgeCollider2D;
 var dodgeRandom : float;
 public var body : BoxCollider2D;
 public var legs : CircleCollider2D;
@@ -33,11 +33,11 @@ private function FixedUpdate () {
 	if(dodgeTimerLeft <= 0) {
 		dodgeRandom = Random.Range(0, 30);
 		if (dodgeRandom > 15) {
-			dodgeCollider1.enabled = true;
-			dodgeCollider2.enabled = true;
+			dodgeColliderRight.enabled = true;
+			dodgeColliderLeft.enabled = true;
 		} else {
-			dodgeCollider1.enabled = false;
-			dodgeCollider2.enabled = false;
+			dodgeColliderRight.enabled = false;
+			dodgeColliderLeft.enabled = false;
 		}
 		dodgeTimerLeft = dodgeTimer;		
 	}
@@ -47,6 +47,14 @@ private function FixedUpdate () {
 	grounded = Physics2D.OverlapCircle (groundCheck.position, groundedRadius, whatIsGround);
 	anim.SetBool("Ground", grounded);
 	anim.SetFloat("vSpeed", rigidbody2D.velocity.y);
+	
+	if (facingRight) {
+		dodgeColliderLeft.enabled = false;
+		dodgeColliderRight.enabled = true;
+	} else if (!facingRight) {
+		dodgeColliderRight.enabled = false;	
+		dodgeColliderLeft.enabled = true;
+	}
 }
 
 function FireShoot() {
@@ -96,8 +104,7 @@ function Move (move : float, crouch : boolean, jump : boolean) {
 
 function OnTriggerEnter2D(other: Collider2D) {
 	if (other.tag == "Fireball") {
-		var number = Random.Range(0,10);
-		if (dodgeCollider1.enabled && dodgeCollider2.enabled && grounded == true && anim.GetBool("Ground")) {
+		if (grounded && anim.GetBool("Ground")) {
 		//if(number > 4 && grounded == true && anim.GetBool("Ground")){
 			grounded = false;
 			anim.SetBool("Ground", false);
@@ -111,7 +118,7 @@ function OnTriggerEnter2D(other: Collider2D) {
 function OnCollisionEnter2D(coll : Collision2D) {
 	if (coll == body || coll == legs) {
 		health--;
-	} else if ((coll == dodgeCollider1 || coll == dodgeCollider2) && grounded == true && anim.GetBool("Ground")) {
+	} else if ((coll == dodgeColliderRight || coll == dodgeColliderLeft) && grounded == true && anim.GetBool("Ground")) {
 		grounded = false;
 		anim.SetBool("Ground", false);
 		rigidbody2D.AddForce(new Vector2(0, jumpForce));
