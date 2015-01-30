@@ -16,7 +16,7 @@ public var cloud : Transform;
    destroy = true;
 }*/
 
-function Update() {
+/*function Update() {
   //if there is still cooldown time left
    // reduce time by time passed since last frame
    if(waitForLeft > 0) {
@@ -37,7 +37,7 @@ function respawn() {
    }
 }
 
-
+*/
 /*
 function Start () {
 
