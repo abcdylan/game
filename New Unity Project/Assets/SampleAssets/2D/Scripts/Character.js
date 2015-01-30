@@ -6,7 +6,7 @@ var crouchSpeed : float = .5;
 var airControl : boolean = true;
 var whatIsGround : LayerMask;
 
-
+var facingRight : boolean = true;
 private var doubleJumpCount : int = 1;
 private var maxAirJumpCount = 1;
 var airJumpCount : int = 0; //how many more times can the player jump
@@ -102,7 +102,7 @@ function Update() {
 			connectingHinge.enabled = false;
 		}
 	}
-	 else if (grounded == false && jump && doubleJumpCount == 1) {
+	 else if (grounded == false && doubleJumpCount == 1) {
              rigidbody2D.AddForce (new Vector2 (0f, jumpForce));
              doubleJumpCount = 0;
                  }
