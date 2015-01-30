@@ -57,6 +57,8 @@
      <Compile Include="Assets\SampleAssets\2D\Scripts\ChildController.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\Controls.js" />
 <<<<<<< local
+     <Compile Include="Assets\SampleAssets\2D\Scripts\MovingPlatform.js" />
+=======
      <Compile Include="Assets\SampleAssets\2D\Scripts\EnemyAI.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\FloatingText.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\FollowPath.js" />
@@ -67,8 +69,6 @@
      <Compile Include="Assets\SampleAssets\2D\Scripts\OffsetScroller.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\ParallaxScroll.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\PathDefinition.js" />
-=======
-     <Compile Include="Assets\SampleAssets\2D\Scripts\MovingPlatform.js" />
 >>>>>>> other
      <Compile Include="Assets\SampleAssets\2D\Scripts\ProjectileClass.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\ProjectileClassBoss.js" />
@@ -77,6 +77,8 @@
      <Compile Include="Assets\SampleAssets\2D\Scripts\StoryController.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\UtilScript.js" />
 <<<<<<< local
+     <Compile Include="Assets\backupCharacter.js.js" />
+=======
      <Compile Include="Assets\SampleAssets\2D\Scripts\disableScripts\StoryManager.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\disableScripts\TellTaleManager.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\disableScripts\TellTaleScript.js" />
@@ -93,8 +95,6 @@
      <Compile Include="Assets\Scripts\ProjectileClass2.js" />
      <Compile Include="Assets\Scripts\UtilScript2.js" />
      <Compile Include="Assets\Scripts\VerticalMovingPlatforms.js" />
-=======
-     <Compile Include="Assets\backupCharacter.js.js" />
 >>>>>>> other
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
