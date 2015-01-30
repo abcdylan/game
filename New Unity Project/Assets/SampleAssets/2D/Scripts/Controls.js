@@ -2,30 +2,40 @@
 
 private var character : Character;
 private var jump : boolean;
+//fire ability boolean, whether or not the character has gotten it
+private var fAbility : boolean = false;
+private var iAbility : boolean = false;
 
 private function Awake() {
 	character = GetComponent(Character);
 }
 
+function OnTriggerEnter2D(other : Collider2D) {
+/*
+//if colliding with the fire ability
+   if(other.tag == "FireAbility") {
+      fAbility = true;
+      Destroy(other.gameObject);
+   }//if colliding with the fire ability
+      else if(other.tag == "IceAbility") {
+      iAbility = true;
+      Destroy(other.gameObject);
+   }
+}*/
+}
 private function Update() {
 	if (!jump) {
 		jump = Input.GetButtonDown("Jump");
 	}
-	if(Input.GetKeyDown(KeyCode.Alpha1)) {
-       // Get players attack component
-       // and execute its shoot() method
-       var iceAttack : AttackClass;
-       iceAttack = GetComponent(AttackClass);
-       iceAttack.Shoot();
-       
+	//if (atStory) {
+	//   character.maxSpeed = 0;
+	//}
+		
+	if(/*iAbility && */Input.GetKeyDown(KeyCode.Alpha1)) {
+	character.FireShoot(); 
     }
-    if(Input.GetKeyDown(KeyCode.Alpha2)) {
-       // Get players attack component
-       // and execute its shoot() method
-       var fireAttack : AttackClass;
-       fireAttack = GetComponent(AttackClass);
-       fireAttack.IceShoot();
-       
+    if(/*fAbility && */Input.GetKeyDown(KeyCode.Alpha2)) {
+    character.IceShoot();
     }
 	
 }
