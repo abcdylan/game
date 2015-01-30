@@ -10,7 +10,7 @@ private var anim : Animator;
 var jumpForce : float = 400;
 
 //if ready to attack
-private var attack : boolean = false;
+var attack : boolean = false;
 var attackClass : AttackClassBoss;
 
 //Shot Timer
@@ -30,6 +30,10 @@ function FixedUpdate () {
 	
 	if (Boss.health < 3){
 		attack = true;
+	}
+	if (Boss.health == 0) {
+		Application.LoadLevel("BossBattle");
+		Boss.health = 5;
 	}
 	if(attack) {
 		gameObject.GetComponent(Transform).position.x = -8.73;
