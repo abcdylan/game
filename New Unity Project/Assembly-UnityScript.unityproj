@@ -63,6 +63,7 @@
      <Compile Include="Assets\SampleAssets\2D\Scripts\MainMenuScript.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\MovingPlatform.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\OffsetScroller.js" />
+     <Compile Include="Assets\SampleAssets\2D\Scripts\OneTouchPlatform.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\ParallaxScroll.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\PathDefinition.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\ProjectileClass.js" />
@@ -74,6 +75,7 @@
      <Compile Include="Assets\SampleAssets\2D\Scripts\disableScripts\StoryManager.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\disableScripts\TellTaleManager.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\disableScripts\TellTaleScript.js" />
+     <Compile Include="Assets\SampleAssets\2D\Scripts\oneTouchPlatformClass.js" />
      <Compile Include="Assets\Scripts\AttackClass2.js" />
      <Compile Include="Assets\Scripts\Enemy1Control.js" />
      <Compile Include="Assets\Scripts\PlayerClass.js" />
