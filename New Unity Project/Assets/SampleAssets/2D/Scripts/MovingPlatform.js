@@ -26,12 +26,12 @@ function FixedUpdate () {
         
 }
 
-/*function OnDrawGizmos() {
+function OnDrawGizmos() {
    Gizmos.color = Color.green;
-   Gizmos.DrawWireCube(OriginSpot.position, platform.localScale);
+   Gizmos.DrawWireCube(OriginSpot.position, transform.localScale);
    
    
    Gizmos.color = Color.red;
-   Gizmos.DrawWireCube(DestinationSpot.position, platform.localScale);
+   Gizmos.DrawWireCube(DestinationSpot.position, transform.localScale);
    
-}*/
+}
