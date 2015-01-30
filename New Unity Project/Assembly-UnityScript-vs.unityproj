@@ -88,6 +88,7 @@
      <Compile Include="Assets\Scripts\ProjectileClass2.js" />
      <Compile Include="Assets\Scripts\UtilScript2.js" />
      <Compile Include="Assets\Scripts\VerticalMovingPlatforms.js" />
+     <Compile Include="Assets\backupCharacter.js.js" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>
