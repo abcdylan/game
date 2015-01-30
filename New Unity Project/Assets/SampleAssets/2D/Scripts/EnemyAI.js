@@ -28,9 +28,13 @@ function Start () {
 function FixedUpdate () {
 	//If ready to attack
 	
-	//if (Boss.health < 3){
-	//	attack = true;
-	//}
+	if (Boss.health < 3){
+		attack = true;
+	}
+	if (Boss.health == 0) {
+		Application.LoadLevel("BossBattle");
+		Boss.health = 5;
+	}
 	if(attack) {
 		gameObject.GetComponent(Transform).position.x = -8.73;
 		gameObject.GetComponent(Transform).position.y = 5.83;
