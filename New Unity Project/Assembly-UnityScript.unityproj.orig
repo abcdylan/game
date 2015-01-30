@@ -46,8 +46,12 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< local
      <Compile Include="Assets\FlickeringLightScript.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\AbilityClass.js" />
+=======
+     <Compile Include="Assets\FlickeringLightScript.js" />
+>>>>>>> other
      <Compile Include="Assets\SampleAssets\2D\Scripts\AttackClass.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\AttackClassBoss.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\AutoDestroyParticles.js" />
@@ -56,9 +60,6 @@
      <Compile Include="Assets\SampleAssets\2D\Scripts\Character.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\ChildController.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\Controls.js" />
-<<<<<<< local
-     <Compile Include="Assets\SampleAssets\2D\Scripts\MovingPlatform.js" />
-=======
      <Compile Include="Assets\SampleAssets\2D\Scripts\EnemyAI.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\FloatingText.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\FollowPath.js" />
@@ -67,21 +68,19 @@
      <Compile Include="Assets\SampleAssets\2D\Scripts\MainMenuScript.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\MovingPlatform.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\OffsetScroller.js" />
+     <Compile Include="Assets\SampleAssets\2D\Scripts\OneTouchPlatform.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\ParallaxScroll.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\PathDefinition.js" />
->>>>>>> other
      <Compile Include="Assets\SampleAssets\2D\Scripts\ProjectileClass.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\ProjectileClassBoss.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\ProjectileClassLeft.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\RightWallTest.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\StoryController.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\UtilScript.js" />
-<<<<<<< local
-     <Compile Include="Assets\backupCharacter.js.js" />
-=======
      <Compile Include="Assets\SampleAssets\2D\Scripts\disableScripts\StoryManager.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\disableScripts\TellTaleManager.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\disableScripts\TellTaleScript.js" />
+     <Compile Include="Assets\SampleAssets\2D\Scripts\oneTouchPlatformClass.js" />
      <Compile Include="Assets\Scripts\AttackClass2.js" />
      <Compile Include="Assets\Scripts\DestroySpikeClass.js" />
      <Compile Include="Assets\Scripts\Enemy1Control.js" />
@@ -95,7 +94,7 @@
      <Compile Include="Assets\Scripts\ProjectileClass2.js" />
      <Compile Include="Assets\Scripts\UtilScript2.js" />
      <Compile Include="Assets\Scripts\VerticalMovingPlatforms.js" />
->>>>>>> other
+     <Compile Include="Assets\backupCharacter.js.js" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>
