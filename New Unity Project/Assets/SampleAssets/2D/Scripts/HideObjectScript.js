@@ -11,6 +11,7 @@ function Update () {
 
 }*/
 
+/*
 function Hide() {
    gameObject.SetActive(false);
 }
@@ -18,4 +19,4 @@ function Hide() {
 function Show() {
    gameObject.SetActive(true);
 }
-
+*/

@@ -1,8 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\SampleAssets\2D\Scripts\HideObjectController.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\SampleAssets\2D\Scripts\HideObjectScript.js">
     <Files>
-      <File FileName="Assets\SampleAssets\2D\Scripts\HideObjectScript.js" Line="3" Column="3" />
+      <File FileName="Assets\SampleAssets\2D\Scripts\HideObjectController.js" Line="38" Column="3" />
+      <File FileName="Assets\SampleAssets\2D\Scripts\HideObjectScript.js" Line="22" Column="3" />
       <File FileName="Assets\SampleAssets\2D\Scripts\DisControl.js" Line="1" Column="1" />
       <File FileName="Assets\SampleAssets\2D\Scripts\DisappearPlatform.js" Line="1" Column="1" />
       <File FileName="Assets\SampleAssets\2D\Scripts\OneTouchPlatform.js" Line="1" Column="1" />
@@ -22,11 +23,10 @@
       <File FileName="Assets\Scripts\AttackClass2.js" Line="1" Column="1" />
       <File FileName="Assets\Scripts\PlayerControl.js" Line="1" Column="1" />
       <File FileName="Assets\Scripts\PlayerClass.js" Line="1" Column="1" />
-      <File FileName="Assets\SampleAssets\2D\Scripts\FloatingText.js" Line="31" Column="1" />
+      <File FileName="Assets\SampleAssets\2D\Scripts\FloatingText.js" Line="1" Column="1" />
       <File FileName="Assets\SampleAssets\2D\Scripts\StoryController.js" Line="1" Column="1" />
       <File FileName="Assets\SampleAssets\2D\Scripts\CameraController.js" Line="1" Column="1" />
       <File FileName="Assets\SampleAssets\2D\Scripts\Controls.js" Line="1" Column="1" />
-      <File FileName="Assets\SampleAssets\2D\Scripts\HideObjectController.js" Line="11" Column="30" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

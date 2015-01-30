@@ -1,5 +1,5 @@
 ﻿#pragma strict
-
+/*
 var obj : GameObject;
 
 var timer : float;
@@ -35,4 +35,4 @@ function changeState() {
       isShow = true;
    }
 }
-   
+*/
