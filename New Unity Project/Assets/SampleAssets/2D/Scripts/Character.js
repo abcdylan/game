@@ -1,4 +1,3 @@
-#pragma strict
 
 var maxSpeed : float = 10;
 var jumpForce : float = 400;

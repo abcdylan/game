@@ -1,13 +1,6 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\SampleAssets\2D\Scripts\Character.js">
-    <Files>
-      <File FileName="Assets\SampleAssets\2D\Scripts\Boss.js" Line="116" Column="1" />
-      <File FileName="Assets\SampleAssets\2D\Scripts\Controls.js" Line="38" Column="52" />
-      <File FileName="Assets\SampleAssets\2D\Scripts\Character.js" Line="98" Column="28" />
-      <File FileName="Assets\SampleAssets\2D\Scripts\EnemyAI.js" Line="37" Column="3" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
