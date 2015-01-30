@@ -1,0 +1,102 @@
+fileFormatVersion: 2
+guid: c2df9cf5a3b2a7c46b9322fe2165bfbe
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: test_sprite_left_0
+    21300002: test_sprite_left_1
+    21300004: test_sprite_left_2
+    21300006: test_sprite_left_3
+    21300008: test_sprite_left_4
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: test_sprite_left_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 91
+        width: 140
+        height: 190
+      alignment: 2
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: test_sprite_left_1
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 91
+        width: 140
+        height: 190
+      alignment: 2
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: test_sprite_left_2
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 91
+        width: 140
+        height: 190
+      alignment: 2
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: test_sprite_left_3
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 91
+        width: 140
+        height: 190
+      alignment: 2
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: test_sprite_left_4
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 91
+        width: 140
+        height: 190
+      alignment: 2
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
