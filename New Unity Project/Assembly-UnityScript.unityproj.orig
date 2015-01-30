@@ -46,12 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< local
      <Compile Include="Assets\FlickeringLightScript.js" />
-     <Compile Include="Assets\SampleAssets\2D\Scripts\AbilityClass.js" />
-=======
-     <Compile Include="Assets\FlickeringLightScript.js" />
->>>>>>> other
      <Compile Include="Assets\SampleAssets\2D\Scripts\AttackClass.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\AttackClassBoss.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\AutoDestroyParticles.js" />
@@ -82,19 +77,16 @@
      <Compile Include="Assets\SampleAssets\2D\Scripts\disableScripts\TellTaleScript.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\oneTouchPlatformClass.js" />
      <Compile Include="Assets\Scripts\AttackClass2.js" />
-     <Compile Include="Assets\Scripts\DestroySpikeClass.js" />
      <Compile Include="Assets\Scripts\Enemy1Control.js" />
-     <Compile Include="Assets\Scripts\FallingSpike.js" />
-     <Compile Include="Assets\Scripts\FalllingSpikeAttackClass.js" />
-     <Compile Include="Assets\Scripts\MovingGroundControl.js" />
      <Compile Include="Assets\Scripts\PlayerClass.js" />
      <Compile Include="Assets\Scripts\PlayerControl.js" />
-     <Compile Include="Assets\Scripts\PlayerMovingGround.js" />
-     <Compile Include="Assets\Scripts\PlayerMovingVertical.js" />
      <Compile Include="Assets\Scripts\ProjectileClass2.js" />
      <Compile Include="Assets\Scripts\UtilScript2.js" />
+<<<<<<< local
      <Compile Include="Assets\Scripts\VerticalMovingPlatforms.js" />
      <Compile Include="Assets\backupCharacter.js.js" />
+=======
+>>>>>>> other
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>

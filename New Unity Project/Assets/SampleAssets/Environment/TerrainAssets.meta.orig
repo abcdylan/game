@@ -1,9 +1,13 @@
-fileFormatVersion: 2
 <<<<<<< local
-guid: 11cbf953e5114ae489d45caa7017d4ae
-=======
-guid: da83a5378f3ef1c4b930b38dbeb240d5
->>>>>>> other
+fileFormatVersion: 2
+guid: 394970c3f3907f645990a3455dfb3340
 folderAsset: yes
 DefaultImporter:
   userData: 
+=======
+fileFormatVersion: 2
+guid: da83a5378f3ef1c4b930b38dbeb240d5
+folderAsset: yes
+DefaultImporter:
+  userData: 
+>>>>>>> other
