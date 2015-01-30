@@ -11,7 +11,7 @@ private function Awake() {
 }
 
 function OnTriggerEnter2D(other : Collider2D) {
-
+/*
 //if colliding with the fire ability
    if(other.tag == "FireAbility") {
       fAbility = true;
@@ -21,6 +21,7 @@ function OnTriggerEnter2D(other : Collider2D) {
       iAbility = true;
       Destroy(other.gameObject);
    }
+}*/
 }
 private function Update() {
 	if (!jump) {
@@ -30,10 +31,10 @@ private function Update() {
 	//   character.maxSpeed = 0;
 	//}
 		
-	if(iAbility && Input.GetKeyDown(KeyCode.Alpha1)) {
+	if(/*iAbility && */Input.GetKeyDown(KeyCode.Alpha1)) {
 	character.FireShoot(); 
     }
-    if(fAbility && Input.GetKeyDown(KeyCode.Alpha2)) {
+    if(/*fAbility && */Input.GetKeyDown(KeyCode.Alpha2)) {
     character.IceShoot();
     }
 	
