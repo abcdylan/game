@@ -1,26 +1,6 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\SampleAssets\2D\Scripts\Character.js">
-    <Files>
-      <File FileName="Assets\SampleAssets\2D\Scripts\OneTouchPlatform.js" Line="23" Column="34" />
-      <File FileName="Assets\SampleAssets\2D\Scripts\MovingPlatform.js" Line="1" Column="1" />
-      <File FileName="Assets\SampleAssets\2D\Scripts\AttackClass.js" Line="1" Column="1" />
-      <File FileName="Assets\SampleAssets\2D\Scripts\EnemyAI.js" Line="1" Column="1" />
-      <File FileName="Assets\SampleAssets\2D\Scripts\Boss.js" Line="1" Column="1" />
-      <File FileName="Assets\SampleAssets\2D\Scripts\Character.js" Line="67" Column="22" />
-      <File FileName="Assets\SampleAssets\2D\Scripts\AttackClassBoss.js" Line="1" Column="1" />
-      <File FileName="Assets\SampleAssets\2D\Scripts\ProjectileClassLeft.js" Line="1" Column="1" />
-      <File FileName="Assets\SampleAssets\2D\Scripts\ProjectileClass.js" Line="1" Column="1" />
-      <File FileName="Assets\SampleAssets\2D\Scripts\ProjectileClassBoss.js" Line="1" Column="1" />
-      <File FileName="Assets\SampleAssets\2D\Scripts\ChildController.js" Line="1" Column="1" />
-      <File FileName="Assets\SampleAssets\2D\Scripts\oneTouchPlatformClass.js" Line="18" Column="1" />
-      <File FileName="Assets\SampleAssets\2D\Scripts\RightWallTest.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ProjectileClass2.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\AttackClass2.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PlayerControl.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PlayerClass.js" Line="1" Column="1" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
