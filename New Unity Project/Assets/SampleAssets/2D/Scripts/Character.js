@@ -75,6 +75,11 @@ function Move (move : float, crouch : boolean, jump : boolean) {
 }
 
 function OnTriggerEnter2D(other: Collider2D) {
+	if (other.tag =="DisableAirControl") {
+		airControl = false;
+	} else if (other.tag == "EnableAirControl") {
+		airControl = true;
+	}
 	if(other.tag == "Rope") {
 		var connectingHinge : HingeJoint2D = this.GetComponent(HingeJoint2D);
 		connectingHinge.enabled = true;
@@ -84,7 +89,7 @@ function OnTriggerEnter2D(other: Collider2D) {
 		Boss.health = 5;
 	}   
 	if (other.tag == "EnemyAttack") {
-		Application.LoadLevel("BossBattle");
+		Application.LoadLevel("Ice Level Demo");
 		Boss.health = 5;
 	}
 	if (other.tag=="IceSpikes"){

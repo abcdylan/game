@@ -49,6 +49,7 @@
      <Compile Include="Assets\FlickeringLightScript.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\AttackClass.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\AttackClassBoss.js" />
+     <Compile Include="Assets\SampleAssets\2D\Scripts\AttackClassEnemy.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\AutoDestroyParticles.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\Boss.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\CameraController.js" />

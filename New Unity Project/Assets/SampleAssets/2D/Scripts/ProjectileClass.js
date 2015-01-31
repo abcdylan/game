@@ -18,9 +18,6 @@ function Update () {
 		}
 		Destroy(gameObject);
 	}
-	/*if(gameObject.tag == "Fireball") {
-	   
-	}*/
    
 	if(gameObject.tag == "IceCube") {
 		if(gameObject.GetComponent(SpriteRenderer).color.a > 0) {
