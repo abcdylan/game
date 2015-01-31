@@ -5,6 +5,8 @@ var crouchSpeed : float = .5;
 var airControl : boolean = true;
 var whatIsGround : LayerMask;
 
+var spawnPoint : Transform;
+
 var facingRight : boolean = true;
 private var doubleJumpCount : int = 1;
 private var maxAirJumpCount = 1;
@@ -87,9 +89,10 @@ function OnTriggerEnter2D(other: Collider2D) {
 		Application.LoadLevel("BossBattle");
 		Boss.health = 5;
 	}
-	if (other.tag=="IceSpikes"){
-		Application.LoadLevel("Ice Level Demo");                
-	}
+	//if (other.tag=="IceSpikes"){
+		//gameObject.position = spawnPoint.position;  
+		//Application.LoadLevel("Ice Level Demo");              
+	//}
 }
 
 function Update() {
