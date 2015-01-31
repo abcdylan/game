@@ -53,13 +53,13 @@ function FixedUpdate () {
 	//If not attacking and walking around
 	} else {
 		// if the player is to the left of the enemy, walk left
-		if (player.transform.position.x < enemy.transform.position.x) {
+		if (player.transform.position.x < gameObject.transform.position.x) {
 			if (facingRight) {
 				Flip();
 			}
 			rigidbody2D.velocity = new Vector2(-.3*maxSpeed, rigidbody2D.velocity.y);
 		// if the player is to the right of the enemy, walk right
-		} else if (player.transform.position.x > enemy.transform.position.x) {
+		} else if (player.transform.position.x > gameObject.transform.position.x) {
 			if (!facingRight) {
 				Flip();
 			}
