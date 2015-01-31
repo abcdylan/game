@@ -71,20 +71,11 @@ function OnTriggerEnter2D(other : Collider2D) {
    // (by checking the tags of the collider that the enemy
    //  collided with)
    if(other.tag == "LeftWall") {
-      // If collided with the left wall, get a reference
-      // to the EnemyWave object, which should be a component
-      // of enemies parent
-      //enemyWave = transform.parent.GetComponent(EnemyWaveClass);
       // Set direction of the wave
-      //enemyWave.SetDirectionRight();
       movementDir=1;      
    } else if(other.tag == "RightWall") {
-      // If collided with the right wall, get a reference
-      // to the EnemyWave object, which should be a component
-      // of enemies parent
       //enemyWave = transform.parent.GetComponent(EnemyWaveClass);
       // Set direction of the wave
-      //enemyWave.SetDirectionLeft();
       movementDir= -1;
    }             
 }
