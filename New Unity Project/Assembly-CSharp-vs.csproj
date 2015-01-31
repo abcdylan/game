@@ -46,11 +46,11 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\SampleAssets\2D\Scripts\Camera2DFollow.cs" />
-     <Compile Include="Assets\SampleAssets\2D\Scripts\CameraFollow.cs" />
-     <Compile Include="Assets\SampleAssets\2D\Scripts\Platformer2DUserControl.cs" />
-     <Compile Include="Assets\SampleAssets\2D\Scripts\PlatformerCharacter2D.cs" />
-     <Compile Include="Assets\SampleAssets\2D\Scripts\Restarter.cs" />
+     <Compile Include="Assets\Scripts\Camera2DFollow.cs" />
+     <Compile Include="Assets\Scripts\CameraFollow.cs" />
+     <Compile Include="Assets\Scripts\Platformer2DUserControl.cs" />
+     <Compile Include="Assets\Scripts\PlatformerCharacter2D.cs" />
+     <Compile Include="Assets\Scripts\Restarter.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>
