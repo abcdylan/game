@@ -1,7 +1,16 @@
 ﻿#pragma strict
 
 //prefab of what we want to create
-public var cloud : Transform;
+//public var cloud : Transform;
+
+
+/*
+function OnTriggerEnter2D (other : Collider2D) {
+   if (other.tag == "Player") {
+      
+   }
+}
+*/
 
 //var actualObject : Transform;
 //public var waitFor : float;

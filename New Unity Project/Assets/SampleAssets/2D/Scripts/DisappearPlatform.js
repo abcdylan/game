@@ -2,14 +2,16 @@
 
 //var platform : GameObject;
 
-//public var isActive : boolean = false;
+//public var isActive : boolean = true;
 
+/*
 function Update() {
 	if(gameObject.tag == "DisPlatform") {
 		if(gameObject.GetComponent(SpriteRenderer).color.a > 0) {
 			gameObject.GetComponent(SpriteRenderer).color.a -= 0.2 * Time.deltaTime * 2 ;
 		} else {
 		   gameObject.SetActive(false);
+		   isActive = false;
 	    }
      }
 }
