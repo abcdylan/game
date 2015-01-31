@@ -8,6 +8,8 @@ function OnTriggerEnter2D(other : Collider2D) {
    //Destroy(other.gameObject);
    //var P : GameObject;
    //var P = Instantiate(Player);
+   //WaitForSeconds(3);
+   
    other.transform.position = spawnPoint.position;
    //var cam = camera.main.getComponent(CameraController);
    //camera.player = P.transform;

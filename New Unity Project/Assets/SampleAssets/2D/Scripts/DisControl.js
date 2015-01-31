@@ -25,22 +25,23 @@ function Update() {
 */
 
 function Update () {
-   if(!child.activeSelf) {
-      //child.GetComponent(SpriteRenderer).color.a += 0.2 * Time.deltaTime * 2 ;
-      wait();
-   } /*else {
-     if(child.GetComponent(SpriteRenderer).color.a < 255) {
+
+   //if(!child.isActive) {
+   //   child.GetComponent(SpriteRenderer).color.a += 0.2 * Time.deltaTime * 2 ;
+      //wait();
+   //} else {
+    /* if(child.GetComponent(SpriteRenderer).color.a < 255) {
 	       child.GetComponent(SpriteRenderer).color.a += 0.2 * Time.deltaTime * 2 ;
      }*/
 }
 
 
 
-function wait() {
+/*function wait() {
    //WaitForSeconds(5);
    if (!child.activeSelf) {
       child.GetComponent(SpriteRenderer).color.a += 0.2 * Time.deltaTime * 2 ;
       //child.SetActive(true);
     }
     child.SetActive(true);
-}
+}*/
