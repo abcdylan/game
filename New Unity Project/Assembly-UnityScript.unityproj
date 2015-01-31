@@ -73,6 +73,7 @@
      <Compile Include="Assets\SampleAssets\2D\Scripts\ProjectileClass.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\ProjectileClassBoss.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\ProjectileClassLeft.js" />
+     <Compile Include="Assets\SampleAssets\2D\Scripts\RespawnPlayer.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\RightWallTest.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\StoryController.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\UtilScript.js" />
