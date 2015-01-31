@@ -2,13 +2,19 @@
 
 import UnityEngine.UI;
 
+
+//public var openBox : Animator;
+
 //reference to UI panel object
 var storyPanel : GameObject;
+
+
+var TellStory : boolean = false;
 
 // reference to panels script object
 private var story : FloatingText;
 
-var TellStory : boolean = false;
+private var isEnter : boolean = false;
 
 function OnTriggerEnter2D (other : Collider2D) {
     if( other.tag == "Player") {
@@ -23,6 +29,7 @@ function OnTriggerExit2D (other : Collider2D) {
 }
 
 function Start () {
+   //openBox = GetComponent(Animator);
    //initialise reference to script object, which is a component of
    // the panel game object
    story = storyPanel.GetComponent(FloatingText);
@@ -35,6 +42,8 @@ function Update () {
    if (TellStory) {
       //story.SetActive(true);
       story.showStory();
+      //isEnter = true;
+      
    } else {
       //yield WaitForSeconds(5);
       story.Hide();
