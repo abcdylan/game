@@ -1,18 +1,30 @@
 ﻿<Properties>
 <<<<<<< local
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\SampleAssets\2D\Scripts\oneTouchPlatformClass.js">
+=======
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\SampleAssets\2D\Scripts\Character.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Enemy1Control.js">
+>>>>>>> other
     <Files>
-      <File FileName="Assets\SampleAssets\2D\Scripts\Boss.js" Line="116" Column="1" />
-      <File FileName="Assets\SampleAssets\2D\Scripts\Controls.js" Line="38" Column="52" />
-      <File FileName="Assets\SampleAssets\2D\Scripts\Character.js" Line="98" Column="28" />
-      <File FileName="Assets\SampleAssets\2D\Scripts\EnemyAI.js" Line="37" Column="3" />
+<<<<<<< local
+      <File FileName="Assets\SampleAssets\2D\Scripts\oneTouchPlatformClass.js" Line="13" Column="3" />
+      <File FileName="Assets\SampleAssets\2D\Scripts\DisappearPlatform.js" Line="1" Column="1" />
+      <File FileName="Assets\SampleAssets\2D\Scripts\RespawnPlayer.js" Line="1" Column="1" />
+      <File FileName="Assets\SampleAssets\2D\Scripts\Character.js" Line="1" Column="1" />
+      <File FileName="Assets\SampleAssets\2D\Scripts\ProjectileClass.js" Line="1" Column="1" />
+      <File FileName="Assets\SampleAssets\2D\Scripts\CameraController.js" Line="1" Column="1" />
+      <File FileName="Assets\SampleAssets\2D\Scripts\DisControl.js" Line="1" Column="1" />
+      <File FileName="Assets\SampleAssets\2D\Scripts\OneTouchPlatform.js" Line="1" Column="1" />
+=======
+      <File FileName="Assets\SampleAssets\2D\Scripts\AttackClassEnemy.js" Line="1" Column="1" />
+      <File FileName="Assets\SampleAssets\2D\Scripts\EnemyAI.js" Line="1" Column="1" />
+      <File FileName="Assets\SampleAssets\2D\Scripts\Boss.js" Line="1" Column="1" />
+      <File FileName="Assets\SampleAssets\2D\Scripts\Character.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Enemy1Control.js" Line="1" Column="1" />
+>>>>>>> other
     </Files>
   </MonoDevelop.Ide.Workbench>
-=======
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench />
->>>>>>> other
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
