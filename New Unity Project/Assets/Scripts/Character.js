@@ -95,10 +95,9 @@ function OnTriggerEnter2D(other: Collider2D) {
 		Application.LoadLevel("Ice Level Demo");
 		Boss.health = 5;
 	}
-	//if (other.tag=="IceSpikes"){
-		//gameObject.position = spawnPoint.position;  
-		//Application.LoadLevel("Ice Level Demo");              
-	//}
+	if (other.tag=="fallingSpikes"){
+		transform.position = spawnPoint.position;		            
+	}
 }
 
 function Update() {
