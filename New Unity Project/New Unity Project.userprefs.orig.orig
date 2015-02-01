@@ -1,13 +1,10 @@
 ﻿<Properties>
 <<<<<<< local
+<<<<<<< local
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-<<<<<<< local
-<<<<<<< local
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\backupCharacter.js.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\FloatingText.js">
 =======
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\OnButtonPress.js">
->>>>>>> other
-=======
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench />
 =======
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
@@ -15,30 +12,7 @@
 >>>>>>> other
     <Files>
 <<<<<<< local
-<<<<<<< local
-      <File FileName="Assets\SampleAssets\2D\Scripts\Character.js" Line="1" Column="1" />
-      <File FileName="Assets\SampleAssets\2D\Scripts\MovingPlatform.js" Line="1" Column="1" />
-      <File FileName="Assets\SampleAssets\2D\Scripts\AttackClass.js" Line="1" Column="1" />
-      <File FileName="Assets\SampleAssets\2D\Scripts\EnemyAI.js" Line="1" Column="1" />
-      <File FileName="Assets\SampleAssets\2D\Scripts\Boss.js" Line="1" Column="1" />
-      <File FileName="Assets\SampleAssets\2D\Scripts\AttackClassBoss.js" Line="1" Column="1" />
-      <File FileName="Assets\SampleAssets\2D\Scripts\ProjectileClassLeft.js" Line="1" Column="1" />
-      <File FileName="Assets\SampleAssets\2D\Scripts\ProjectileClass.js" Line="1" Column="1" />
-      <File FileName="Assets\SampleAssets\2D\Scripts\ProjectileClassBoss.js" Line="1" Column="1" />
-      <File FileName="Assets\SampleAssets\2D\Scripts\ChildController.js" Line="1" Column="1" />
-      <File FileName="Assets\SampleAssets\2D\Scripts\RightWallTest.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ProjectileClass2.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\AttackClass2.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PlayerControl.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PlayerClass.js" Line="1" Column="1" />
-      <File FileName="Assets\backupCharacter.js.js" Line="63" Column="3" />
-=======
-      <File FileName="Assets\Scripts\StoryController.js" Line="17" Column="3" />
-      <File FileName="Assets\Scripts\FloatingText.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\MainMenuManager.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\MainMenuScript.js" Line="1" Column="1" />
-      <File FileName="Assets\OnButtonPress.js" Line="4" Column="4" />
->>>>>>> other
+      <File FileName="Assets\Scripts\FloatingText.js" Line="19" Column="1" />
 =======
       <File FileName="Assets\Scripts\StoryController.js" Line="17" Column="3" />
       <File FileName="Assets\Scripts\FloatingText.js" Line="1" Column="1" />
@@ -48,6 +22,21 @@
 >>>>>>> other
     </Files>
   </MonoDevelop.Ide.Workbench>
+<<<<<<< local
+=======
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\OnButtonPress.js">
+    <Files>
+      <File FileName="Assets\Scripts\StoryController.js" Line="17" Column="3" />
+      <File FileName="Assets\Scripts\FloatingText.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MainMenuManager.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MainMenuScript.js" Line="1" Column="1" />
+      <File FileName="Assets\OnButtonPress.js" Line="4" Column="4" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+>>>>>>> other
+=======
+>>>>>>> other
 >>>>>>> other
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
