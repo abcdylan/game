@@ -11,7 +11,10 @@ function OnTriggerEnter2D(other : Collider2D) {
    //WaitForSeconds(3);
    if(other.tag=="Player"){
      other.transform.position = spawnPoint.position;
-     }
+   }
+   if(other.tag=="Enemy"){
+     Destroy(other.gameObject);
+   }
    //var cam = camera.main.getComponent(CameraController);
    //camera.player = P.transform;
    

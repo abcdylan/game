@@ -4,6 +4,9 @@ var startText : Text = null;
 var instructText : Text = null;
 var loadText : Text = null;
 var quitText : Text = null;
+var pressed : boolean;
+public var wait : int;
+private var time : int;
 
 
 // Array storing text objct with index
@@ -22,7 +25,8 @@ function Start () {
    //optionArray[1] = instructText;
    optionArray[1] = instructText;
    optionArray[2] = loadText;
-   optionArray[3] = quitText;
+   optionArray[3] = quitText; 
+   time= wait;  
 }
 
 
@@ -34,9 +38,9 @@ function ExecuteCommand(command: String) {
    
       // For resume option, just hide the panel
       // (the pausegame flag will be set to false)
-      case "Start":
+      case "New Game":
       // Load the first level
-      Application.LoadLevel("Level1");  //intro
+      Application.LoadLevel("Ice Level Demo");  //intro
          break;
          
        case "Controls":
@@ -62,21 +66,27 @@ function ExecuteCommand(command: String) {
    }
 }
 
+
 function Update () {
    // Get a reference to the currently selected text box   
    var currentSelection: Text = optionArray[optionIdx];
-
-   if(Input.GetKey("down")) {
+  
+   if(!pressed){
+      if(Input.GetKey("down")) {
+      pressed= Input.GetKey("down");
       // When user presses down arrow, go to next option
       optionIdx++;
    } else if(Input.GetKey("up")) {
+      pressed= Input.GetKey("up");
       // When user presses up arrow, go to previous option
       optionIdx--;
    } else if(Input.GetKey(KeyCode.Return) /*|| Input.GetAxis("Jump")*/ ) {
       // If uses presses Enter or "Jump" key (Space), execute
       // the command corresponding to the current option
+      pressed= Input.GetKey(KeyCode.Return);
       ExecuteCommand(currentSelection.text);
    }
+  }
    
    // Make sure that the option index indicator is within the range
    // of the number of options
@@ -90,9 +100,24 @@ function Update () {
    for(var i : int = 0; i < optionArray.Length; i++)
     {
       optionArray[i].color = Color.white;
-    }
+    }  
+    
     // Set the font colour of the currently selected text box
     // to yellow
    currentSelection.color = Color.red;
+   
+   if(pressed){            
+       if(time>0){
+          time-= 0.2 * Time.deltaTime * 2 ;
+       }else{
+          press();
+          time=wait;
+       }
+     } 
+         
 
+}
+
+private function press() {
+pressed = false;
 }
