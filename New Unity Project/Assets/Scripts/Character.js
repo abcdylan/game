@@ -6,6 +6,9 @@ var crouchSpeed : float = .5;
 var airControl : boolean = true;
 var whatIsGround : LayerMask;
 
+//enemy object
+//var minion : GameObject;
+
 var spawnPoint : Transform;
 
 var facingRight : boolean = true;
@@ -86,11 +89,14 @@ function OnTriggerEnter2D(other: Collider2D) {
 	if(other.tag == "Rope") {
 		var connectingHinge : HingeJoint2D = this.GetComponent(HingeJoint2D);
 		connectingHinge.enabled = true;
-	}	
-	if(other.tag == "Enemy") {
-		Application.LoadLevel("BossBattle");
+	}
+	//if freeze in EnemyControl1 returns false, then execute this
+	//if (!(minion.GetComponent.< Enemy1Control >(). freeze)) {	
+    if(other.tag == "Enemy") {
+	    Application.LoadLevel("BossBattle");
 		Boss.health = 5;
-	}   
+	}
+	//}   
 	if (other.tag == "EnemyAttack") {
 		Application.LoadLevel("Ice Level Demo");
 		Boss.health = 5;
