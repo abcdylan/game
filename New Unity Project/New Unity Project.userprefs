@@ -1,0 +1,17 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\SampleAssets\2D\Scripts\BoudlerDoor.js">
+    <Files>
+      <File FileName="Assets\SampleAssets\2D\Scripts\Character.js" Line="7" Column="1" />
+      <File FileName="Assets\SampleAssets\2D\Scripts\AttackClassEnemy.js" Line="1" Column="1" />
+      <File FileName="Assets\SampleAssets\2D\Scripts\EnemyAI.js" Line="1" Column="1" />
+      <File FileName="Assets\SampleAssets\2D\Scripts\Boss.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Enemy1Control.js" Line="1" Column="1" />
+      <File FileName="Assets\SampleAssets\2D\Scripts\BoudlerDoor.js" Line="14" Column="19" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
