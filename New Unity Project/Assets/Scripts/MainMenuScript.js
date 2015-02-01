@@ -43,7 +43,7 @@ function ExecuteCommand(command: String) {
       Application.LoadLevel("Ice Level Demo");  //intro
          break;
          
-       case "Instruct":
+       case "Controls":
       // Load the first level
       //Application.LoadLevel("Level1");  instructions
          break;
