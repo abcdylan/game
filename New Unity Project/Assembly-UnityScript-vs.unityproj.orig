@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< local
      <Compile Include="Assets\FlickeringLightScript.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\AttackClass.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\AttackClassBoss.js" />
@@ -79,28 +80,58 @@
      <Compile Include="Assets\SampleAssets\2D\Scripts\RightWallTest.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\StoryController.js" />
      <Compile Include="Assets\SampleAssets\2D\Scripts\UtilScript.js" />
-<<<<<<< local
-     <Compile Include="Assets\SampleAssets\2D\Scripts\disableScripts\StoryManager.js" />
-     <Compile Include="Assets\SampleAssets\2D\Scripts\disableScripts\TellTaleManager.js" />
-     <Compile Include="Assets\SampleAssets\2D\Scripts\disableScripts\TellTaleScript.js" />
-     <Compile Include="Assets\Scripts\Appear.js" />
-=======
      <Compile Include="Assets\SampleAssets\2D\Scripts\oneTouchPlatformClass.js" />
+=======
+     <Compile Include="Assets\Scripts\Appear.js" />
+     <Compile Include="Assets\Scripts\AttackClass.js" />
 >>>>>>> other
      <Compile Include="Assets\Scripts\AttackClass2.js" />
+     <Compile Include="Assets\Scripts\AttackClassBoss.js" />
+     <Compile Include="Assets\Scripts\AttackClassEnemy.js" />
+     <Compile Include="Assets\Scripts\AutoDestroyParticles.js" />
+     <Compile Include="Assets\Scripts\Boss.js" />
+     <Compile Include="Assets\Scripts\BoudlerDoor.js" />
+     <Compile Include="Assets\Scripts\CameraController.js" />
+     <Compile Include="Assets\Scripts\Character.js" />
+     <Compile Include="Assets\Scripts\ChildController.js" />
+     <Compile Include="Assets\Scripts\Controls.js" />
      <Compile Include="Assets\Scripts\DestroySpikeClass.js" />
+     <Compile Include="Assets\Scripts\DisControl.js" />
+     <Compile Include="Assets\Scripts\DisappearPlatform.js" />
      <Compile Include="Assets\Scripts\Enemy1Control.js" />
+     <Compile Include="Assets\Scripts\EnemyAI.js" />
      <Compile Include="Assets\Scripts\FallingSpike.js" />
      <Compile Include="Assets\Scripts\FalllingSpikeAttackClass.js" />
+     <Compile Include="Assets\Scripts\FlickeringLightScript.js" />
+     <Compile Include="Assets\Scripts\FloatingText.js" />
+     <Compile Include="Assets\Scripts\FollowPath.js" />
+     <Compile Include="Assets\Scripts\GrapplingHook.js" />
+     <Compile Include="Assets\Scripts\HideObjectController.js" />
+     <Compile Include="Assets\Scripts\HideObjectScript.js" />
+     <Compile Include="Assets\Scripts\MainMenuManager.js" />
+     <Compile Include="Assets\Scripts\MainMenuScript.js" />
      <Compile Include="Assets\Scripts\MovingGroundControl.js" />
+     <Compile Include="Assets\Scripts\MovingPlatform.js" />
+     <Compile Include="Assets\Scripts\OffsetScroller.js" />
+     <Compile Include="Assets\Scripts\OneTouchPlatform.js" />
+     <Compile Include="Assets\Scripts\ParallaxScroll.js" />
+     <Compile Include="Assets\Scripts\PathDefinition.js" />
      <Compile Include="Assets\Scripts\PlayerClass.js" />
      <Compile Include="Assets\Scripts\PlayerControl.js" />
      <Compile Include="Assets\Scripts\PlayerMovingGround.js" />
      <Compile Include="Assets\Scripts\PlayerMovingVertical.js" />
+     <Compile Include="Assets\Scripts\ProjectileClass.js" />
      <Compile Include="Assets\Scripts\ProjectileClass2.js" />
+     <Compile Include="Assets\Scripts\ProjectileClassBoss.js" />
+     <Compile Include="Assets\Scripts\ProjectileClassLeft.js" />
+     <Compile Include="Assets\Scripts\RespawnPlayer.js" />
+     <Compile Include="Assets\Scripts\RightWallTest.js" />
+     <Compile Include="Assets\Scripts\StoryController.js" />
+     <Compile Include="Assets\Scripts\UtilScript.js" />
      <Compile Include="Assets\Scripts\UtilScript2.js" />
      <Compile Include="Assets\Scripts\VerticalMovingPlatforms.js" />
-     <Compile Include="Assets\backupCharacter.js.js" />
+     <Compile Include="Assets\Scripts\backupCharacter.js.js" />
+     <Compile Include="Assets\Scripts\oneTouchPlatformClass.js" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>
