@@ -7,7 +7,9 @@ var animSprites: Sprite[];
 // animation is running
 var framesPerSecond: float;
 
+//the character that the enemy will track the location of
 var character : GameObject;
+
 var charTransform : Transform;
 
 // Reference to the renderer of the sprite
@@ -19,6 +21,8 @@ private var timeAtAnimStart: float;
 
 // Indicates whether animation is running or not
 private var animRunning: boolean = false;
+
+var freeze : boolean = false;
 
 // Speed of the movement
 var speed: float = 4f;
@@ -40,7 +44,7 @@ function Start () {
 
 // At fixed time intervals...
 function FixedUpdate () {
-   if(!animRunning) {
+   if(!animRunning && !freeze) {
       // The animation is triggered by user input
       //var userInput: float = Input.GetAxis("Horizontal");
       //if(userInput != 0f) {
@@ -64,9 +68,19 @@ function FixedUpdate () {
 function OnTriggerEnter2D(other : Collider2D) {
    //var enemyWave : EnemyWaveClass;
    if(other.tag=="IceCube"){
-      Destroy(gameObject);
-      }
+      freeze = true;
+      speed = 0;
+      animRunning = false;
+      //Destroy(gameObject);
+   }
 
+	/*if freeze in EnemyControl1 returns false, then execute this
+	if (!freeze) {	
+		if(other.tag == "Player") {
+	    	Application.LoadedLevel();
+		}
+	}   
+   */
    // Check if colliding with the left or right wall
    // (by checking the tags of the collider that the enemy
    //  collided with)
