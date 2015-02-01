@@ -1,8 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\FloatingText.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\OnButtonPress.js">
     <Files>
-      <File FileName="Assets\Scripts\FloatingText.js" Line="19" Column="1" />
+      <File FileName="Assets\Scripts\StoryController.js" Line="17" Column="3" />
+      <File FileName="Assets\Scripts\FloatingText.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MainMenuManager.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MainMenuScript.js" Line="1" Column="1" />
+      <File FileName="Assets\OnButtonPress.js" Line="4" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

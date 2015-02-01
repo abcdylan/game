@@ -39,7 +39,7 @@ function ExecuteCommand(command: String) {
       Application.LoadLevel("Level1");  //intro
          break;
          
-       case "Instruct":
+       case "Controls":
       // Load the first level
       //Application.LoadLevel("Level1");  instructions
          break;
