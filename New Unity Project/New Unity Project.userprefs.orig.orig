@@ -1,37 +1,22 @@
-<<<<<<< local
 ﻿<Properties>
-<<<<<<< local
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench />
-=======
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\backupCharacter.js.js">
-    <Files>
-      <File FileName="Assets\SampleAssets\2D\Scripts\Character.js" Line="1" Column="1" />
-      <File FileName="Assets\backupCharacter.js.js" Line="80" Column="1" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
->>>>>>> other
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-</Properties>=======
-﻿<Properties>
 <<<<<<< local
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\backupCharacter.js.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\SampleAssets\2D\Scripts\FloatingText.js">
     <Files>
+      <File FileName="Assets\Scripts\Enemy1Control.js" Line="74" Column="35" />
+      <File FileName="Assets\SampleAssets\2D\Scripts\AttackClassEnemy.js" Line="1" Column="1" />
+      <File FileName="Assets\SampleAssets\2D\Scripts\EnemyAI.js" Line="1" Column="1" />
+      <File FileName="Assets\SampleAssets\2D\Scripts\Boss.js" Line="1" Column="1" />
       <File FileName="Assets\SampleAssets\2D\Scripts\Character.js" Line="1" Column="1" />
-      <File FileName="Assets\backupCharacter.js.js" Line="80" Column="1" />
+      <File FileName="Assets\SampleAssets\2D\Scripts\StoryController.js" Line="32" Column="6" />
+      <File FileName="Assets\SampleAssets\2D\Scripts\FloatingText.js" Line="12" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
 =======
-  <MonoDevelop.Ide.Workspace />
   <MonoDevelop.Ide.Workbench />
 >>>>>>> other
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-</Properties>>>>>>>> other
+</Properties>
