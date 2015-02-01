@@ -7,6 +7,9 @@ var animSprites: Sprite[];
 // animation is running
 var framesPerSecond: float;
 
+var character : GameObject;
+var charTransform : Transform;
+
 // Reference to the renderer of the sprite
 // game object
 private var animRenderer: SpriteRenderer;
@@ -21,13 +24,18 @@ private var animRunning: boolean = false;
 var speed: float = 4f;
 
 // Direction of the movement
-private   var movementDir: int;
+var movementDir: int;
+
+var iceAttack : AttackClassEnemy;
 
 // When object loads...
 function Start () {
    // Get a reference to game object renderer and
    // cast it to a Sprite Rendere
-   animRenderer = renderer as SpriteRenderer;
+	animRenderer = renderer as SpriteRenderer;
+	charTransform = character.transform;
+	iceAttack = GetComponent(AttackClassEnemy);
+
 }
 
 // At fixed time intervals...
@@ -63,20 +71,11 @@ function OnTriggerEnter2D(other : Collider2D) {
    // (by checking the tags of the collider that the enemy
    //  collided with)
    if(other.tag == "LeftWall") {
-      // If collided with the left wall, get a reference
-      // to the EnemyWave object, which should be a component
-      // of enemies parent
-      //enemyWave = transform.parent.GetComponent(EnemyWaveClass);
       // Set direction of the wave
-      //enemyWave.SetDirectionRight();
       movementDir=1;      
    } else if(other.tag == "RightWall") {
-      // If collided with the right wall, get a reference
-      // to the EnemyWave object, which should be a component
-      // of enemies parent
       //enemyWave = transform.parent.GetComponent(EnemyWaveClass);
       // Set direction of the wave
-      //enemyWave.SetDirectionLeft();
       movementDir= -1;
    }             
 }
@@ -85,7 +84,13 @@ function OnTriggerEnter2D(other : Collider2D) {
 
 // Before rendering next frame...
 function Update() {   
-   
+	if (movementDir < 0 && charTransform.position.x < gameObject.transform.position.x) {
+		iceAttack.IceShoot(); 
+	}  else if (movementDir > 0 && charTransform.position.x > gameObject.transform.position.x) {
+		iceAttack.IceShoot();
+	}
+		
+		 
    if(animRunning) {
       // Animation is running, so we need to 
       // figure out what frame to use at this point
