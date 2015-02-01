@@ -14,7 +14,7 @@ var TellStory : boolean = false;
 // reference to panels script object
 private var story : FloatingText;
 
-private var isEnter : boolean = false;
+//private var isEnter : boolean = false;
 
 function OnTriggerEnter2D (other : Collider2D) {
     if( other.tag == "Player") {
