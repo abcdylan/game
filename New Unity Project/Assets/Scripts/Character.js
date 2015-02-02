@@ -104,6 +104,11 @@ function OnTriggerEnter2D(other: Collider2D) {
 	if (other.tag=="fallingSpikes"){
 		transform.position = spawnPoint.position;		            
 	}
+	
+	if(other.tag == "oneTouchPlatform") {
+	rigidbody2D.AddForce (new Vector2 (0f, jumpForce));
+	}
+		
 }
 
 function Update() {
