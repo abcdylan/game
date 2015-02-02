@@ -33,6 +33,7 @@ function Start () {
    //initialise reference to script object, which is a component of
    // the panel game object
    story = storyPanel.GetComponent(FloatingText);
+   //storyPanel.GetComponent(Animator);
    //story.SetActive(false);
    story.Hide();
          
