@@ -93,13 +93,13 @@ function OnTriggerEnter2D(other: Collider2D) {
 	//if freeze in EnemyControl1 returns false, then execute this
 	//if (!(minion.GetComponent.< Enemy1Control >(). freeze)) {	
     if(other.tag == "Enemy") {
-	    Application.LoadLevel("BossBattle");
-		Boss.health = 5;
+	    Application.LoadLevel(Application.loadedLevelName);
+		Boss.health = 10;
 	}
 	//}   
 	if (other.tag == "EnemyAttack") {
-		Application.LoadLevel("Ice Level Demo");
-		Boss.health = 5;
+		Application.LoadLevel(Application.loadedLevelName);
+		Boss.health = 10;
 	}
 	if (other.tag=="fallingSpikes"){
 		transform.position = spawnPoint.position;		            
