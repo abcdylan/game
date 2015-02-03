@@ -8,6 +8,7 @@ var speed: float;
 //destroy effect
 var DestroyEffect : Transform;
 
+
 function Update () {
 	transform.Translate(Vector3.left * speed * Time.deltaTime);
 	// Check if the game object is visible, if not, destroy self   
