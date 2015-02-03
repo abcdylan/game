@@ -32,6 +32,12 @@ function BigAttack() {
 	fireAttackBoss.Rotate (Vector3.forward * -randNum);
 }
 
+function BigIceAttack () {
+	var randX : float = Random.Range(-9,9);
+	var iceAttackBoss = Instantiate(iceBlockPrefab);
+	iceAttackBoss.position = Vector3(randX, 8.50, 0);	
+}
+
 function IceShoot() {
 	if(shootCooldownTimeLeft <= 0) {
 		var iceBlock = Instantiate(iceBlockPrefab);

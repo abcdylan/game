@@ -1,6 +1,17 @@
 ﻿<Properties>
-<<<<<<< local
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+<<<<<<< local
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\DodgeScript.js">
+    <Files>
+      <File FileName="Assets\Scripts\EnemyAI.js" Line="46" Column="1" />
+      <File FileName="Assets\Scripts\Character.js" Line="96" Column="55" />
+      <File FileName="Assets\Scripts\Boss.js" Line="128" Column="1" />
+      <File FileName="Assets\Scripts\AttackClassBoss.js" Line="37" Column="42" />
+      <File FileName="Assets\Scripts\ProjectileClassBoss.js" Line="12" Column="36" />
+      <File FileName="Assets\DodgeScript.js" Line="13" Column="36" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+=======
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Enemy1Control.js">
     <Files>
       <File FileName="Assets\Scripts\Enemy1Control.js" Line="70" Column="53" />
@@ -10,9 +21,6 @@
       <File FileName="Assets\Scripts\MainMenuScript.js" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-=======
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench />
 >>>>>>> other
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
