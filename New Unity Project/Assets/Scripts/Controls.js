@@ -2,8 +2,9 @@
 
 private var character : Character;
 private var jump : boolean;
-//fire ability boolean, whether or not the character has gotten it
+// fire ability boolean, whether or not the character has gotten it
 private var fAbility : boolean = false;
+// ice ability boolean, whether or not the player has gotten it
 private var iAbility : boolean = false;
 
 private function Awake() {
