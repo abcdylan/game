@@ -13,8 +13,8 @@ var spawnPoint : Transform;
 
 var facingRight : boolean = true;
 private var doubleJumpCount : int = 1;
-private var maxAirJumpCount = 1;
-var airJumpCount : int = 0; //how many more times can the player jump
+//private var maxAirJumpCount = 1;
+//var airJumpCount : int = 0; //how many more times can the player jump
 private var groundCheck : Transform;
 private var groundedRadius : float = .2;
 private var grounded : boolean = false;
