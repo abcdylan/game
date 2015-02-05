@@ -3,9 +3,11 @@
 var pickUp : boolean = false;
 
 function OnTriggerEnter2D (other : Collider2D) {
-   pickUp = true;
-   gameObject.SetActive(false);
+   if(other.tag == "Player") {
+      pickUp = true;
+      gameObject.SetActive(false);
    //Destroy(gameObject);
+   }
 }
 
 /*
