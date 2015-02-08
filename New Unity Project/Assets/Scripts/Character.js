@@ -21,12 +21,15 @@ private var grounded : boolean = false;
 private var ceilingCheck : Transform;
 private var ceilingRadius : float = .01;
 private var anim : Animator;
+public var jumpSound : AudioClip;
+private var source : AudioSource;
 
 
 function Awake () {
 	anim = GetComponent(Animator);
 	groundCheck = transform.Find("GroundCheck");
-	ceilingCheck = transform.Find("CeilingCheck");		
+	ceilingCheck = transform.Find("CeilingCheck");
+	source = GetComponent(AudioSource);		
 }
 
 function FixedUpdate () {
@@ -75,6 +78,7 @@ function Move (move : float, crouch : boolean, jump : boolean) {
 	if (grounded && jump && anim.GetBool("Ground")) {
 		grounded = false;
 		anim.SetBool("Ground", false);
+		source.PlayOneShot(jumpSound, 1f);
 		rigidbody2D.AddForce(new Vector2(0, jumpForce));
 
 	}
