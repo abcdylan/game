@@ -12,7 +12,7 @@ function OnTriggerEnter2D(other : Collider2D) {
    if(other.tag=="Player"){
      other.transform.position = spawnPoint.position;
    }
-   if(other.tag=="Enemy" || other.tag == "FallenGround"){
+   if(other.tag=="Enemy"){
      Destroy(other.gameObject);
    }
    //var cam = camera.main.getComponent(CameraController);

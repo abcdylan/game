@@ -12,10 +12,6 @@ var character : GameObject;
 
 var charTransform : Transform;
 
-// where the enemy will force the player to respawn
-// should the twain ever meet
-var SpawnPoint : Transform;
-
 // Reference to the renderer of the sprite
 // game object
 private var animRenderer: SpriteRenderer;
@@ -48,27 +44,25 @@ function Start () {
 
 // At fixed time intervals...
 function FixedUpdate () {
-   // if the character animation is false and the enemy
-   // has not been frozen by the player
-   if(!animRunning && !freeze) {
-      // The animation is triggered by user input
-      //var userInput: float = Input.GetAxis("Horizontal");
-      //if(userInput != 0f) {
-         // User pressed the move left or right button
+	if(!animRunning && !freeze) {
+		// The animation is triggered by user input
+		//var userInput: float = Input.GetAxis("Horizontal");
+		//if(userInput != 0f) {
+		// User pressed the move left or right button
          
-         // Animation will start playing
-         animRunning = true;
+		// Animation will start playing
+		animRunning = true;
          
-         // Record time at animation start
-         timeAtAnimStart = Time.timeSinceLevelLoad;
+		// Record time at animation start
+		timeAtAnimStart = Time.timeSinceLevelLoad;
          
-         // Get the direction of the movement from the sign
-         // of the axis input (-ve is left, +ve is right)
-         if(movementDir!=-1){
-            movementDir = 1; //Mathf.Sign(userInput);
-            }
-      //}
-   }
+		// Get the direction of the movement from the sign
+		// of the axis input (-ve is left, +ve is right)
+		if(movementDir!=-1){
+			movementDir = 1; //Mathf.Sign(userInput);
+		}
+		//}
+	}
 }
 
 function OnTriggerEnter2D(other : Collider2D) {
@@ -79,20 +73,14 @@ function OnTriggerEnter2D(other : Collider2D) {
       animRunning = false;
       //Destroy(gameObject);
    }
-   	
-	// if the enemy is hit by the players
-	// fireball attack
-	if(other.tag == "Fireball") {
-	   //other.destroyShot();
-	   Destroy(other.gameObject);
-	   Destroy(gameObject);
-	}
-   
-    if(other.tag == "Player") {
-    // spawn player back at spawn point
-       other.transform.position = SpawnPoint.position;
-	}
 
+	/*if freeze in EnemyControl1 returns false, then execute this
+	if (!freeze) {	
+		if(other.tag == "Player") {
+	    	Application.LoadedLevel();
+		}
+	}   
+   */
    // Check if colliding with the left or right wall
    // (by checking the tags of the collider that the enemy
    //  collided with)
