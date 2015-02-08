@@ -1,5 +1,6 @@
 ﻿#pragma strict
 
+
 //reference to the puzzlepiece
 var pickUp1 : GameObject;
 //reference to the puzzlepiece
