@@ -71,6 +71,7 @@
      <Compile Include="Assets\Scripts\FlickeringLightScript.js" />
      <Compile Include="Assets\Scripts\FloatingText.js" />
      <Compile Include="Assets\Scripts\FollowPath.js" />
+     <Compile Include="Assets\Scripts\GameMaster.js" />
      <Compile Include="Assets\Scripts\HUDScript.js" />
      <Compile Include="Assets\Scripts\HarmlessGhostScript.js" />
      <Compile Include="Assets\Scripts\HealthBar.js" />
