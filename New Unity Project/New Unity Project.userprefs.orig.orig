@@ -1,0 +1,43 @@
+﻿<Properties>
+<<<<<<< local
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+<<<<<<< local
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\DodgeScript.js">
+=======
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PickUpScript.js">
+>>>>>>> other
+    <Files>
+=======
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\pausemenu.js">
+=======
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PickUpScript.js">
+>>>>>>> other
+    <Files>
+>>>>>>> other
+<<<<<<< local
+<<<<<<< local
+      <File FileName="Assets\Scripts\ProjectileClass.js" Line="46" Column="2" />
+      <File FileName="Assets\Scripts\EnemyAI.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ProjectileClassLeft.js" Line="49" Column="3" />
+      <File FileName="Assets\Scripts\Boss.js" Line="1" Column="1" />
+      <File FileName="Assets\DodgeScript.js" Line="14" Column="4" />
+=======
+      <File FileName="Assets\Scripts\pausemenu.js" Line="16" Column="36" />
+>>>>>>> other
+=======
+      <File FileName="Assets\Scripts\PickUpScript.js" Line="10" Column="5" />
+      <File FileName="Assets\Scripts\Enemy1Control.js" Line="70" Column="29" />
+      <File FileName="Assets\Scripts\StoryController.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\FloatingText.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MainMenuManager.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MainMenuScript.js" Line="1" Column="1" />
+>>>>>>> other
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
