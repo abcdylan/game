@@ -5,6 +5,7 @@ var jumpForce : float = 400;
 var crouchSpeed : float = .5;
 var airControl : boolean = true;
 var whatIsGround : LayerMask;
+public var abilityPickedUp: boolean;
 
 //enemy object
 //var minion : GameObject;
@@ -25,6 +26,7 @@ private var anim : Animator;
 
 function Awake () {
 	anim = GetComponent(Animator);
+	abilityPickedUp=true;
 	groundCheck = transform.Find("GroundCheck");
 	ceilingCheck = transform.Find("CeilingCheck");		
 }
@@ -90,12 +92,12 @@ function OnTriggerEnter2D(other: Collider2D) {
 		var connectingHinge : HingeJoint2D = this.GetComponent(HingeJoint2D);
 		connectingHinge.enabled = true;
 	}
+	if(other.tag=="Ability"){
+	   abilityPickedUp= !abilityPickedUp;
+	   Destroy(other.gameObject);
+	   }
 	//if freeze in EnemyControl1 returns false, then execute this
-	//if (!(minion.GetComponent.< Enemy1Control >(). freeze)) {	
-    if(other.tag == "Enemy") {
-	    Application.LoadLevel("BossBattle");
-		Boss.health = 5;
-	}
+	//if (!(minion.GetComponent.< Enemy1Control >(). freeze)) {	    
 	//}   
 	if (other.tag == "EnemyAttack") {
 		Application.LoadLevel("Ice Level Demo");
@@ -113,7 +115,7 @@ function Update() {
 			connectingHinge.enabled = false;
 		}
 	} 
-	if (!grounded && doubleJumpCount == 1 && Input.GetKeyDown(KeyCode.Space)) {
+	if (!grounded && doubleJumpCount == 1 && Input.GetKeyDown(KeyCode.Space)&& abilityPickedUp) {
 		rigidbody2D.AddForce (new Vector2 (0f, jumpForce));
 		doubleJumpCount = 0;
 	}

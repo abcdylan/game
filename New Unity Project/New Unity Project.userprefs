@@ -1,6 +1,18 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ParallaxScroll.js">
+    <Files>
+      <File FileName="Assets\Scripts\DestroyScript.js" Line="9" Column="21" />
+      <File FileName="Assets\Scripts\MovingPlatform.js" Line="17" Column="18" />
+      <File FileName="Assets\Scripts\BoxScript.js" Line="25" Column="2" />
+      <File FileName="Assets\Scripts\Invisible.js" Line="19" Column="61" />
+      <File FileName="Assets\Scripts\MovingGroundControl.js" Line="41" Column="86" />
+      <File FileName="Assets\Scripts\Character.js" Line="27" Column="20" />
+      <File FileName="Assets\Scripts\Enemy1Control.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\HarmlessGhostScript.js" Line="74" Column="8" />
+      <File FileName="Assets\Scripts\ParallaxScroll.js" Line="32" Column="4" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
