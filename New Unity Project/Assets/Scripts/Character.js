@@ -6,6 +6,7 @@ var crouchSpeed : float = .5;
 var airControl : boolean = true;
 var whatIsGround : LayerMask;
 var charHealth : float = 3;
+public var abilityPickedUp: boolean;
 
 //enemy object
 //var minion : GameObject;
@@ -31,6 +32,7 @@ private var anim : Animator;
 
 function Awake () {
 	anim = GetComponent(Animator);
+	abilityPickedUp=true;
 	groundCheck = transform.Find("GroundCheck");
 	ceilingCheck = transform.Find("CeilingCheck");		
 }
@@ -90,12 +92,18 @@ function OnTriggerEnter2D(other: Collider2D) {
 	if (other.tag =="DisableAirControl") {
 		airControl = false;
 	} else if (other.tag == "EnableAirControl") {
-		airControl = true;
+	rigidbody2D.velocity.x += (rigidbody2D.velocity.x +3);	
+	rigidbody2D.velocity.y += (rigidbody2D.velocity.y +2);	 
+	airControl = true;
 	}
 	if(other.tag == "Rope") {
 		var connectingHinge : HingeJoint2D = this.GetComponent(HingeJoint2D);
 		connectingHinge.enabled = true;
 	}
+	if(other.tag=="Ability"){
+	   abilityPickedUp= !abilityPickedUp;
+	   Destroy(other.gameObject);
+	   }
 	//if freeze in EnemyControl1 returns false, then execute this
 	//if (!(minion.GetComponent.< Enemy1Control >(). freeze)) {	
 	
@@ -117,6 +125,12 @@ function OnTriggerEnter2D(other: Collider2D) {
 		//Application.LoadLevel(Application.loadedLevelName);
 		//Boss.health = 10;
 	}
+	
+	if(other.tag=="Slide"){
+	rigidbody2D.velocity.x += (rigidbody2D.velocity.x / 7);	
+	rigidbody2D.velocity.y += (rigidbody2D.velocity.y / 8);	 
+}   
+	
 	if (other.tag=="fallingSpikes"){
 		transform.position = spawnPoint.position;		            
 	}
@@ -145,7 +159,7 @@ function Update() {
 			connectingHinge.enabled = false;
 		}
 	} 
-	if (!grounded && doubleJumpCount == 1 && Input.GetKeyDown(KeyCode.Space)) {
+	if (!grounded && doubleJumpCount == 1 && Input.GetKeyDown(KeyCode.Space)&& abilityPickedUp) {
 		rigidbody2D.AddForce (new Vector2 (0f, jumpForce));
 		rigidbody2D.velocity.y = 0;
 		doubleJumpCount = 0;
