@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\DodgeScript.js" />
+     <Compile Include="Assets\Particles\Legacy Particles\TimedObjectDestructor.js" />
      <Compile Include="Assets\Scripts\Appear.js" />
      <Compile Include="Assets\Scripts\AttackClass 1.js" />
      <Compile Include="Assets\Scripts\AttackClass.js" />
@@ -54,6 +55,7 @@
      <Compile Include="Assets\Scripts\AttackClassBoss.js" />
      <Compile Include="Assets\Scripts\AttackClassEnemy.js" />
      <Compile Include="Assets\Scripts\AutoDestroyParticles.js" />
+     <Compile Include="Assets\Scripts\BigEnemyController.js" />
      <Compile Include="Assets\Scripts\Boss.js" />
      <Compile Include="Assets\Scripts\BoudlerDoor.js" />
      <Compile Include="Assets\Scripts\BoxScript.js" />
@@ -70,11 +72,9 @@
      <Compile Include="Assets\Scripts\FlickeringLightScript.js" />
      <Compile Include="Assets\Scripts\FloatingText.js" />
      <Compile Include="Assets\Scripts\FollowPath.js" />
-<<<<<<< local
-     <Compile Include="Assets\Scripts\HarmlessGhostScript.js" />
-=======
+     <Compile Include="Assets\Scripts\GameMaster.js" />
      <Compile Include="Assets\Scripts\HUDScript.js" />
->>>>>>> other
+     <Compile Include="Assets\Scripts\HarmlessGhostScript.js" />
      <Compile Include="Assets\Scripts\HealthBar.js" />
      <Compile Include="Assets\Scripts\Invisible.js" />
      <Compile Include="Assets\Scripts\MainMenuManager.js" />
@@ -106,7 +106,12 @@
      <Compile Include="Assets\Scripts\UtilScript2.js" />
      <Compile Include="Assets\Scripts\VerticalMovingPlatforms.js" />
      <Compile Include="Assets\Scripts\backupCharacter.js.js" />
+<<<<<<< local
      <Compile Include="Assets\Scripts\pausemenu.js" />
+=======
+     <Compile Include="Assets\Scripts\cloudScript.js" />
+     <None Include="Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
+>>>>>>> other
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>

@@ -3,9 +3,9 @@
 private var character : Character;
 private var jump : boolean;
 // fire ability boolean, whether or not the character has gotten it
-private var fAbility : boolean = false;
+//private var fAbility : boolean = false;
 // ice ability boolean, whether or not the player has gotten it
-private var iAbility : boolean = false;
+//private var iAbility : boolean = false;
 
 private function Awake() {
 	character = GetComponent(Character);
@@ -19,11 +19,11 @@ function OnTriggerEnter2D(other : Collider2D) {
 	}
 	//if colliding with the fire ability
 	if(other.tag == "FireAbility") {
-		fAbility = true;
+		character.fAbility = true;
 		Destroy(other.gameObject);
 	}//if colliding with the fire ability
 	else if(other.tag == "IceAbility") {
-		iAbility = true;
+		character.iAbility = true;
 		Destroy(other.gameObject);
 	}
 }
@@ -31,16 +31,12 @@ function OnTriggerEnter2D(other : Collider2D) {
 private function Update() {
 	if (!jump) {
 		jump = Input.GetButtonDown("Jump");
-	}
-	//if (atStory) {
-	//   character.maxSpeed = 0;
-	//}
-		
-	if(/*iAbility && */Input.GetKeyDown(KeyCode.Alpha1)) {
-	character.FireShoot(); 
+	}		
+	if(character.fAbility && Input.GetKeyDown(KeyCode.Alpha1)) {
+	   character.FireShoot(); 
     }
-    if(/*fAbility && */Input.GetKeyDown(KeyCode.Alpha2)) {
-    character.IceShoot();
+    if(/*iAbility &&*/ Input.GetKeyDown(KeyCode.Alpha2)) {
+       character.IceShoot();
     }
 	
 }

@@ -19,6 +19,12 @@ static var health : float = 3;
 var HealthBar : Scrollbar;
 var Health : float = 3;
 
+// fire ability boolean, whether or not the character has gotten it
+var fAbility : boolean = false;
+// ice ability boolean, whether or not the player has gotten it
+var iAbility : boolean = false;
+
+
 var facingRight : boolean = true;
 private var doubleJumpCount : int = 1;
 //private var maxAirJumpCount = 1;
@@ -29,12 +35,14 @@ private var grounded : boolean = false;
 private var ceilingCheck : Transform;
 private var ceilingRadius : float = .01;
 private var anim : Animator;
-
+public var jumpSound : AudioClip;
+private var source : AudioSource;
 function Awake () {
 	anim = GetComponent(Animator);
 	abilityPickedUp=true;
 	groundCheck = transform.Find("GroundCheck");
-	ceilingCheck = transform.Find("CeilingCheck");		
+	ceilingCheck = transform.Find("CeilingCheck");
+	source = GetComponent(AudioSource);		
 }
 
 function FixedUpdate () {
@@ -83,6 +91,7 @@ function Move (move : float, crouch : boolean, jump : boolean) {
 	if (grounded && jump && anim.GetBool("Ground")) {
 		grounded = false;
 		anim.SetBool("Ground", false);
+		source.PlayOneShot(jumpSound, 1f);
 		rigidbody2D.AddForce(new Vector2(0, jumpForce));
 
 	}
@@ -114,17 +123,22 @@ function OnTriggerEnter2D(other: Collider2D) {
 	}
 	//}   
 	if (other.tag == "EnemyAttack") {
-		PlayerHit();
-		Destroy(other.gameObject);
+	    gameObject.transform.position = spawnPoint.position;
+		//Application.LoadLevel(Application.loadedLevelName);
 		//Application.LoadLevel(Application.loadedLevelName);
 		//Boss.health = 10;
 	}
 	if (other.tag == "IceCubeBoss") {
 		PlayerHit();
 		Destroy(other.gameObject);
-		//Application.LoadLevel(Application.loadedLevelName);
+		//Application.Loasource.PlayOneShot(fireballCast, 1f);dLevel(Application.loadedLevelName);
 		//Boss.health = 10;
 	}
+	
+	if(other.tag=="Slide"){
+	rigidbody2D.velocity.x += (rigidbody2D.velocity.x / 7);	
+	rigidbody2D.velocity.y += (rigidbody2D.velocity.y / 8);	 
+}   
 	
 	if(other.tag=="Slide"){
 	rigidbody2D.velocity.x += (rigidbody2D.velocity.x / 7);	
