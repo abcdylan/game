@@ -56,10 +56,12 @@
      <Compile Include="Assets\Scripts\AutoDestroyParticles.js" />
      <Compile Include="Assets\Scripts\Boss.js" />
      <Compile Include="Assets\Scripts\BoudlerDoor.js" />
+     <Compile Include="Assets\Scripts\BoxScript.js" />
      <Compile Include="Assets\Scripts\CameraController.js" />
      <Compile Include="Assets\Scripts\Character.js" />
      <Compile Include="Assets\Scripts\ChildController.js" />
      <Compile Include="Assets\Scripts\Controls.js" />
+     <Compile Include="Assets\Scripts\DestroyScript.js" />
      <Compile Include="Assets\Scripts\DestroySpikeClass.js" />
      <Compile Include="Assets\Scripts\Enemy1Control.js" />
      <Compile Include="Assets\Scripts\EnemyAI.js" />
@@ -68,7 +70,9 @@
      <Compile Include="Assets\Scripts\FlickeringLightScript.js" />
      <Compile Include="Assets\Scripts\FloatingText.js" />
      <Compile Include="Assets\Scripts\FollowPath.js" />
+     <Compile Include="Assets\Scripts\HarmlessGhostScript.js" />
      <Compile Include="Assets\Scripts\HealthBar.js" />
+     <Compile Include="Assets\Scripts\Invisible.js" />
      <Compile Include="Assets\Scripts\MainMenuManager.js" />
      <Compile Include="Assets\Scripts\MainMenuScript.js" />
      <Compile Include="Assets\Scripts\MovingGroundControl.js" />
@@ -87,6 +91,7 @@
      <Compile Include="Assets\Scripts\ProjectileClassBoss.js" />
      <Compile Include="Assets\Scripts\ProjectileClassLeft.js" />
      <Compile Include="Assets\Scripts\PuzzlePickUpScript.js" />
+     <Compile Include="Assets\Scripts\ReduceRender.js" />
      <Compile Include="Assets\Scripts\RespawnPlayer.js" />
      <Compile Include="Assets\Scripts\RightWallTest.js" />
      <Compile Include="Assets\Scripts\SortParticleSystem.js" />
