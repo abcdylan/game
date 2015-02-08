@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\DodgeScript.js" />
      <Compile Include="Assets\Scripts\Appear.js" />
      <Compile Include="Assets\Scripts\AttackClass 1.js" />
      <Compile Include="Assets\Scripts\AttackClass.js" />
@@ -67,7 +68,7 @@
      <Compile Include="Assets\Scripts\FlickeringLightScript.js" />
      <Compile Include="Assets\Scripts\FloatingText.js" />
      <Compile Include="Assets\Scripts\FollowPath.js" />
-     <Compile Include="Assets\Scripts\GrapplingHook.js" />
+     <Compile Include="Assets\Scripts\HealthBar.js" />
      <Compile Include="Assets\Scripts\MainMenuManager.js" />
      <Compile Include="Assets\Scripts\MainMenuScript.js" />
      <Compile Include="Assets\Scripts\MovingGroundControl.js" />
@@ -76,6 +77,7 @@
      <Compile Include="Assets\Scripts\OffsetScroller.js" />
      <Compile Include="Assets\Scripts\ParallaxScroll.js" />
      <Compile Include="Assets\Scripts\PathDefinition.js" />
+     <Compile Include="Assets\Scripts\PickUpScript.js" />
      <Compile Include="Assets\Scripts\PlayerClass.js" />
      <Compile Include="Assets\Scripts\PlayerControl.js" />
      <Compile Include="Assets\Scripts\PlayerMovingGround.js" />
@@ -84,10 +86,13 @@
      <Compile Include="Assets\Scripts\ProjectileClass2.js" />
      <Compile Include="Assets\Scripts\ProjectileClassBoss.js" />
      <Compile Include="Assets\Scripts\ProjectileClassLeft.js" />
+     <Compile Include="Assets\Scripts\PuzzlePickUpScript.js" />
      <Compile Include="Assets\Scripts\RespawnPlayer.js" />
      <Compile Include="Assets\Scripts\RightWallTest.js" />
      <Compile Include="Assets\Scripts\SortParticleSystem.js" />
      <Compile Include="Assets\Scripts\StoryController.js" />
+     <Compile Include="Assets\Scripts\TriggerPlatformController.js" />
+     <Compile Include="Assets\Scripts\TriggeredMovePlatform.js" />
      <Compile Include="Assets\Scripts\UtilScript.js" />
      <Compile Include="Assets\Scripts\UtilScript2.js" />
      <Compile Include="Assets\Scripts\VerticalMovingPlatforms.js" />
