@@ -94,9 +94,9 @@ function OnTriggerEnter2D(other: Collider2D) {
 	// reached the midpoint of the slide and increase their
 	// velocity accordingly
 	if (other.tag == "Slide") {
-	    rigidbody2D.velocity.x += (rigidbody2D.velocity.x/5);
+	    rigidbody2D.velocity.x += (rigidbody2D.velocity.x/7);
 	    //(rigidbody2D.velocity-(rigidbody2D.velocity/2));
-	    rigidbody2D.velocity.y += (rigidbody2D.velocity.y/6);
+	    rigidbody2D.velocity.y += (rigidbody2D.velocity.y/8);
 	}
 	if(other.tag == "Rope") {
 		var connectingHinge : HingeJoint2D = this.GetComponent(HingeJoint2D);
