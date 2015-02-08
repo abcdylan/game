@@ -18,10 +18,12 @@ var spawnPoint : Transform;
 static var health : float = 3;
 var HealthBar : Scrollbar;
 var Health : float = 3;
+
 // fire ability boolean, whether or not the character has gotten it
 var fAbility : boolean = false;
 // ice ability boolean, whether or not the player has gotten it
 var iAbility : boolean = false;
+
 
 var facingRight : boolean = true;
 private var doubleJumpCount : int = 1;
@@ -35,7 +37,6 @@ private var ceilingRadius : float = .01;
 private var anim : Animator;
 public var jumpSound : AudioClip;
 private var source : AudioSource;
-
 function Awake () {
 	anim = GetComponent(Animator);
 	abilityPickedUp=true;
@@ -100,19 +101,9 @@ function OnTriggerEnter2D(other: Collider2D) {
 	if (other.tag =="DisableAirControl") {
 		airControl = false;
 	} else if (other.tag == "EnableAirControl") {
-	    //making sure the character maintains
-	    // velocity upon regaining air control
-	    rigidbody2D.velocity.x = (rigidbody2D.velocity.x+3);
-	    rigidbody2D.velocity.y = (rigidbody2D.velocity.y+2);
-		airControl = true;
-	}
-	// indicate that the player has
-	// reached the midpoint of the slide and increase their
-	// velocity accordingly
-	if (other.tag == "Slide") {
-	    rigidbody2D.velocity.x += (rigidbody2D.velocity.x/7);
-	    //(rigidbody2D.velocity-(rigidbody2D.velocity/2));
-	    rigidbody2D.velocity.y += (rigidbody2D.velocity.y/8);
+	rigidbody2D.velocity.x += (rigidbody2D.velocity.x +3);	
+	rigidbody2D.velocity.y += (rigidbody2D.velocity.y +2);	 
+	airControl = true;
 	}
 	if(other.tag == "Rope") {
 		var connectingHinge : HingeJoint2D = this.GetComponent(HingeJoint2D);
@@ -143,6 +134,11 @@ function OnTriggerEnter2D(other: Collider2D) {
 		//Application.Loasource.PlayOneShot(fireballCast, 1f);dLevel(Application.loadedLevelName);
 		//Boss.health = 10;
 	}
+	
+	if(other.tag=="Slide"){
+	rigidbody2D.velocity.x += (rigidbody2D.velocity.x / 7);	
+	rigidbody2D.velocity.y += (rigidbody2D.velocity.y / 8);	 
+}   
 	
 	if(other.tag=="Slide"){
 	rigidbody2D.velocity.x += (rigidbody2D.velocity.x / 7);	
