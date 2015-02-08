@@ -101,6 +101,10 @@ function OnTriggerEnter2D(other: Collider2D) {
 		Application.LoadLevel(Application.loadedLevelName);
 		Boss.health = 10;
 	}
+	if (other.tag == "IceCubeBoss") {
+		Application.LoadLevel(Application.loadedLevelName);
+		Boss.health = 10;
+	}
 	if (other.tag=="fallingSpikes"){
 		transform.position = spawnPoint.position;		            
 	}
@@ -109,6 +113,13 @@ function OnTriggerEnter2D(other: Collider2D) {
 	rigidbody2D.AddForce (new Vector2 (0f, jumpForce));
 	}
 		
+}
+
+function OnCollisionEnter2D (Coll : Collision2D) {
+	if (Coll.gameObject.tag == "Enemy") {
+		Application.LoadLevel(Application.loadedLevelName);
+		Boss.health = 10;
+	}
 }
 
 function Update() {
