@@ -11,6 +11,11 @@ var whatIsGround : LayerMask;
 
 var spawnPoint : Transform;
 
+// fire ability boolean, whether or not the character has gotten it
+var fAbility : boolean = false;
+// ice ability boolean, whether or not the player has gotten it
+var iAbility : boolean = false;
+
 var facingRight : boolean = true;
 private var doubleJumpCount : int = 1;
 //private var maxAirJumpCount = 1;
