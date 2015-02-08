@@ -14,19 +14,17 @@ public var abilityPickedUp: boolean;
 
 var spawnPoint : Transform;
 
-<<<<<<< local
 // Health bar
 static var health : float = 3;
 var HealthBar : Scrollbar;
 var Health : float = 3;
 
-=======
 // fire ability boolean, whether or not the character has gotten it
 var fAbility : boolean = false;
 // ice ability boolean, whether or not the player has gotten it
 var iAbility : boolean = false;
 
->>>>>>> other
+
 var facingRight : boolean = true;
 private var doubleJumpCount : int = 1;
 //private var maxAirJumpCount = 1;
@@ -167,7 +165,7 @@ function Update() {
 			connectingHinge.enabled = false;
 		}
 	} 
-	if (!grounded && doubleJumpCount == 1 && Input.GetKeyDown(KeyCode.Space)&& abilityPickedUp) {
+	if (!grounded && doubleJumpCount == 1 && Input.GetKeyDown(KeyCode.Space)) {
 		rigidbody2D.AddForce (new Vector2 (0f, jumpForce));
 		rigidbody2D.velocity.y = 0;
 		doubleJumpCount = 0;
