@@ -1,13 +1,16 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Boss.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Character.js">
     <Files>
-      <File FileName="Assets\Scripts\Character.js" Line="134" Column="4" />
+      <File FileName="Assets\Scripts\GameMaster.js" Line="4" Column="23" />
+      <File FileName="Assets\Scripts\Character.js" Line="97" Column="2" />
       <File FileName="Assets\Scripts\Controls.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\EnemyAI.js" Line="48" Column="54" />
+      <File FileName="Assets\Scripts\EnemyAI.js" Line="1" Column="1" />
       <File FileName="Assets\Scripts\AttackClassBoss.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Boss.js" Line="54" Column="57" />
-      <File FileName="Assets\Scripts\ProjectileClassBoss.js" Line="22" Column="13" />
+      <File FileName="Assets\Scripts\Boss.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ProjectileClassBoss.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MainMenuScript.js" Line="43" Column="47" />
+      <File FileName="..\..\BACKUP REPOsitiory\scalar\New Unity Project\Assets\Scripts\Character.js" Line="118" Column="74" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
