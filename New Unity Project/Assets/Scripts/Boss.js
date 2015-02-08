@@ -4,6 +4,7 @@
 var dodgeRandom : float;
 var dodgeColliderRight : EdgeCollider2D;
 var dodgeColliderLeft : EdgeCollider2D;
+var headCollider : EdgeCollider2D;
 var dodgeTimer: float;
 private var dodgeTimerLeft: float = 0;
 
@@ -116,6 +117,11 @@ function OnTriggerEnter2D(other: Collider2D) {
 			Destroy(other.gameObject);
 		}
 	}
+}
+
+function OnCollisionEnter2D (coll : Collision2D) {
+	if (coll.collider == headCollider) {
+		}
 }
 
 function Damage(value : float) {
