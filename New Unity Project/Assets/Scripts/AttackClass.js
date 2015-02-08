@@ -50,15 +50,17 @@ function Shoot() {
 	if (shootCooldownTimeLeft <= 0) {
 		if(character.facingRight) {
 			var fireball = Instantiate(fireballPrefab);
-			source.PlayOneShot(fireballCast, 1f);
+			
 			// sets position of fireball 1 position in front of player
 			fireball.position = transform.position;
 			fireball.position.x += 1;
+			source.PlayOneShot(fireballCast, 1f);
 		} else {
 			var fireballLeft = Instantiate(fireballPrefabLeft);
 			// sets position of fireball 1 position in front of player
 			fireballLeft.position = transform.position;
 			fireballLeft.position.x -= 1;
+			source.PlayOneShot(fireballCast, 1f);
 		}     
 		// set time left until next shot to 
 		// the cooldown time
