@@ -19,7 +19,7 @@ function Update () {
 			Destroy(gameObject);
 		}
 	} else {
-		speed = 6;
+		speed = 10;
 		transform.Translate(Vector3.right * speed * Time.deltaTime);
    		// Check if the game object is visible, if not, destroy self   
    		if (!UtilScript.isVisible(renderer, Camera.main)) {

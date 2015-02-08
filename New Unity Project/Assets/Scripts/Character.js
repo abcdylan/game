@@ -5,12 +5,19 @@ var jumpForce : float = 400;
 var crouchSpeed : float = .5;
 var airControl : boolean = true;
 var whatIsGround : LayerMask;
+var charHealth : float = 3;
+public var abilityPickedUp: boolean;
 
 //enemy object
 //var minion : GameObject;
 
+
 var spawnPoint : Transform;
 
+// Health bar
+static var health : float = 3;
+var HealthBar : Scrollbar;
+var Health : float = 3;
 // fire ability boolean, whether or not the character has gotten it
 var fAbility : boolean = false;
 // ice ability boolean, whether or not the player has gotten it
@@ -26,12 +33,15 @@ private var grounded : boolean = false;
 private var ceilingCheck : Transform;
 private var ceilingRadius : float = .01;
 private var anim : Animator;
-
+public var jumpSound : AudioClip;
+private var source : AudioSource;
 
 function Awake () {
 	anim = GetComponent(Animator);
+	abilityPickedUp=true;
 	groundCheck = transform.Find("GroundCheck");
-	ceilingCheck = transform.Find("CeilingCheck");		
+	ceilingCheck = transform.Find("CeilingCheck");
+	source = GetComponent(AudioSource);		
 }
 
 function FixedUpdate () {
@@ -80,6 +90,7 @@ function Move (move : float, crouch : boolean, jump : boolean) {
 	if (grounded && jump && anim.GetBool("Ground")) {
 		grounded = false;
 		anim.SetBool("Ground", false);
+		source.PlayOneShot(jumpSound, 1f);
 		rigidbody2D.AddForce(new Vector2(0, jumpForce));
 
 	}
@@ -107,55 +118,66 @@ function OnTriggerEnter2D(other: Collider2D) {
 		var connectingHinge : HingeJoint2D = this.GetComponent(HingeJoint2D);
 		connectingHinge.enabled = true;
 	}
+	if(other.tag=="Ability"){
+	   abilityPickedUp= !abilityPickedUp;
+	   Destroy(other.gameObject);
+	   }
 	//if freeze in EnemyControl1 returns false, then execute this
 	//if (!(minion.GetComponent.< Enemy1Control >(). freeze)) {	
-    //if(other.tag == "Enemy") {
-	//    Application.LoadLevel(Application.loadedLevelName);
-	//	Boss.health = 10;
-	//}
+	
+    if(other.tag == "Enemy") {
+   		PlayerHit();
+    	//Application.LoadLevel(Application.loadedLevelName);
+		//Boss.health = 10;
+	}
 	//}   
 	if (other.tag == "EnemyAttack") {
 	    gameObject.transform.position = spawnPoint.position;
 		//Application.LoadLevel(Application.loadedLevelName);
-		Boss.health = 10;
+		//Application.LoadLevel(Application.loadedLevelName);
+		//Boss.health = 10;
 	}
 	if (other.tag == "IceCubeBoss") {
-		Application.LoadLevel(Application.loadedLevelName);
-		Boss.health = 10;
+		PlayerHit();
+		Destroy(other.gameObject);
+		//Application.Loasource.PlayOneShot(fireballCast, 1f);dLevel(Application.loadedLevelName);
+		//Boss.health = 10;
 	}
+	
+	if(other.tag=="Slide"){
+	rigidbody2D.velocity.x += (rigidbody2D.velocity.x / 7);	
+	rigidbody2D.velocity.y += (rigidbody2D.velocity.y / 8);	 
+}   
+	
 	if (other.tag=="fallingSpikes"){
 		transform.position = spawnPoint.position;		            
 	}
-	
 	if(other.tag == "oneTouchPlatform") {
-	   rigidbody2D.AddForce (new Vector2 (0f, jumpForce));
-	}
-	/*
-	if (other.tag == "Slide") {
-	   Debug.Log(rigidbody2D.velocity.x);
-	   rigidbody2D.velocity.x = 10;
-	   
-	}*/
-		
+	rigidbody2D.AddForce (new Vector2 (0f, jumpForce));
+	}		
 }
-/*
+
 function OnCollisionEnter2D (Coll : Collision2D) {
-	if (Coll.gameObject.tag == "Enemy") {
-		Application.LoadLevel(Application.loadedLevelName);
-		Boss.health = 10;
-	}
+	//if (Coll.gameObject.tag == "Enemy") {
+	//	PlayerHit();
+		//if (Coll.
+		//Application.LoadLevel(Application.loadedLevelName);
+		//Boss.health = 10;
+	//}
 }
-*/
 
 function Update() {
+	if (charHealth == 0) {
+		Application.LoadLevel(Application.loadedLevelName);
+		Boss.health = 10;
+	}		
 	var connectingHinge : HingeJoint2D = this.GetComponent(HingeJoint2D);
 	if(connectingHinge.enabled) {
 		if(Input.GetKeyDown(KeyCode.Space)) {
 			connectingHinge.enabled = false;
 		}
 	} 
-	if (!grounded && doubleJumpCount == 1 && Input.GetKeyDown(KeyCode.Space)) {
-		//Debug.Log("Im doublejumping");
+	if (!grounded && doubleJumpCount == 1 && Input.GetKeyDown(KeyCode.Space)&& abilityPickedUp) {
 		rigidbody2D.AddForce (new Vector2 (0f, jumpForce));
 		rigidbody2D.velocity.y = 0;
 		doubleJumpCount = 0;
@@ -165,6 +187,15 @@ function Update() {
 	}
 }
 
+function PlayerHit () {
+	Damage(1);
+	charHealth--;
+}
+
+function Damage(value : float) {
+	Health -= value;
+	HealthBar.size = Health / 3;
+}
 
 private function Flip() {
 	facingRight = !facingRight;

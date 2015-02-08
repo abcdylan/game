@@ -10,9 +10,14 @@ var shootCooldownTime: float;
 // keeping tabs on how much cooldown time is left
 private var shootCooldownTimeLeft: float = 0;
 private var character : Character;
+private var source : AudioSource;
+public var fireballCast : AudioClip;
+public var iceblockCast : AudioClip;
 
 private function Awake() {
 	character = GetComponent(Character);
+	source = GetComponent(AudioSource);
+	
 }
 
 //pre every frame
@@ -30,6 +35,7 @@ function IceShoot() {
 	if(shootCooldownTimeLeft <= 0) {
 		var iceBlock = Instantiate(iceBlockPrefab);
 		iceBlock.position = transform.position;
+		source.PlayOneShot(iceblockCast, 1f);
 		if(character.facingRight) {
 			iceBlock.position.x += 1;
 		} else {
@@ -44,14 +50,17 @@ function Shoot() {
 	if (shootCooldownTimeLeft <= 0) {
 		if(character.facingRight) {
 			var fireball = Instantiate(fireballPrefab);
+			
 			// sets position of fireball 1 position in front of player
 			fireball.position = transform.position;
 			fireball.position.x += 1;
+			source.PlayOneShot(fireballCast, 1f);
 		} else {
 			var fireballLeft = Instantiate(fireballPrefabLeft);
 			// sets position of fireball 1 position in front of player
 			fireballLeft.position = transform.position;
 			fireballLeft.position.x -= 1;
+			source.PlayOneShot(fireballCast, 1f);
 		}     
 		// set time left until next shot to 
 		// the cooldown time
