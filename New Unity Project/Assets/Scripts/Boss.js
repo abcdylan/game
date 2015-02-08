@@ -8,6 +8,9 @@ var headCollider : EdgeCollider2D;
 var dodgeTimer: float;
 private var dodgeTimerLeft: float = 0;
 
+var freezeTime : float;
+private var freezeTimeLeft : float = 0;
+
 // Character stuff
 //var facingRight : boolean = true;
 private var groundCheck : Transform;
@@ -27,6 +30,7 @@ var frozen : boolean = false;
 static var health : float = 10;
 var HealthBar : Scrollbar;
 var Health : float = 100;
+
 var dodgeEnabled : boolean = true;
 
 function Awake () {
@@ -35,7 +39,22 @@ function Awake () {
 	ceilingCheck = transform.Find("CeilingCheck");		
 }
 
-private function FixedUpdate () {			
+private function FixedUpdate () {
+	if (frozen && freezeTimeLeft <= 0) {
+		frozen = false;
+		freezeTimeLeft = freezeTime;
+	}
+	if (frozen && freezeTimeLeft > 0) {
+		freezeTimeLeft -= Time.deltaTime;
+	}
+	if (frozen) {
+		gameObject.GetComponent(SpriteRenderer).color = Color.blue;	
+		maxSpeed = 5;
+	} else {
+		gameObject.GetComponent(SpriteRenderer).color = Color.white;
+		maxSpeed = 10;
+	}
+											
 	if(dodgeTimerLeft <= 0) {
 		dodgeRandom = Random.Range(0, 30);
 		if (dodgeRandom > 15) {
@@ -110,7 +129,7 @@ function Dodge () {
 
 function OnTriggerEnter2D(other: Collider2D) {
 	if (other.tag == "Fireball") {
-		if (dodgeEnabled) {
+		if (dodgeEnabled && !frozen) {
 			Dodge();
 		} else {
 			Damage(10);
@@ -120,15 +139,9 @@ function OnTriggerEnter2D(other: Collider2D) {
 	}
 }
 
-function Frozen () {
-	frozen = true;
-	
-
-}
-
-function OnCollisionEnter2D (coll : Collision2D) {
+function OnCollisionEnter2D(coll: Collision2D) {
 	if (coll.gameObject.tag == "IceCube") {
-		Frozen();
+		frozen = true;
 	}
 }
 
