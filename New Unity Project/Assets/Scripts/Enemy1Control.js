@@ -44,25 +44,25 @@ function Start () {
 
 // At fixed time intervals...
 function FixedUpdate () {
-   if(!animRunning && !freeze) {
-      // The animation is triggered by user input
-      //var userInput: float = Input.GetAxis("Horizontal");
-      //if(userInput != 0f) {
-         // User pressed the move left or right button
+	if(!animRunning && !freeze) {
+		// The animation is triggered by user input
+		//var userInput: float = Input.GetAxis("Horizontal");
+		//if(userInput != 0f) {
+		// User pressed the move left or right button
          
-         // Animation will start playing
-         animRunning = true;
+		// Animation will start playing
+		animRunning = true;
          
-         // Record time at animation start
-         timeAtAnimStart = Time.timeSinceLevelLoad;
+		// Record time at animation start
+		timeAtAnimStart = Time.timeSinceLevelLoad;
          
-         // Get the direction of the movement from the sign
-         // of the axis input (-ve is left, +ve is right)
-         if(movementDir!=-1){
-            movementDir = 1; //Mathf.Sign(userInput);
-            }
-      //}
-   }
+		// Get the direction of the movement from the sign
+		// of the axis input (-ve is left, +ve is right)
+		if(movementDir!=-1){
+			movementDir = 1; //Mathf.Sign(userInput);
+		}
+		//}
+	}
 }
 
 function OnTriggerEnter2D(other : Collider2D) {

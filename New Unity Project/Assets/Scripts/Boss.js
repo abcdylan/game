@@ -21,6 +21,7 @@ var maxSpeed : float = 10;
 var jumpForce : float;
 var crouchSpeed : float = .5;
 var airControl : boolean = true;
+var frozen : boolean = false;
 
 // Health bar
 static var health : float = 10;
@@ -119,9 +120,16 @@ function OnTriggerEnter2D(other: Collider2D) {
 	}
 }
 
+function Frozen () {
+	frozen = true;
+	
+
+}
+
 function OnCollisionEnter2D (coll : Collision2D) {
-	if (coll.collider == headCollider) {
-		}
+	if (coll.gameObject.tag == "IceCube") {
+		Frozen();
+	}
 }
 
 function Damage(value : float) {

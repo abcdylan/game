@@ -5,6 +5,7 @@ var jumpForce : float = 400;
 var crouchSpeed : float = .5;
 var airControl : boolean = true;
 var whatIsGround : LayerMask;
+var charHealth : float = 3;
 
 //enemy object
 //var minion : GameObject;
@@ -93,17 +94,20 @@ function OnTriggerEnter2D(other: Collider2D) {
 	//if freeze in EnemyControl1 returns false, then execute this
 	//if (!(minion.GetComponent.< Enemy1Control >(). freeze)) {	
     if(other.tag == "Enemy") {
-	    Application.LoadLevel(Application.loadedLevelName);
-		Boss.health = 10;
+    	PlayerHit();
+	    //Application.LoadLevel(Application.loadedLevelName);
+		//Boss.health = 10;
 	}
 	//}   
 	if (other.tag == "EnemyAttack") {
-		Application.LoadLevel(Application.loadedLevelName);
-		Boss.health = 10;
+		PlayerHit();
+		//Application.LoadLevel(Application.loadedLevelName);
+		//Boss.health = 10;
 	}
 	if (other.tag == "IceCubeBoss") {
-		Application.LoadLevel(Application.loadedLevelName);
-		Boss.health = 10;
+		PlayerHit();
+		//Application.LoadLevel(Application.loadedLevelName);
+		//Boss.health = 10;
 	}
 	if (other.tag=="fallingSpikes"){
 		transform.position = spawnPoint.position;		            
@@ -117,12 +121,18 @@ function OnTriggerEnter2D(other: Collider2D) {
 
 function OnCollisionEnter2D (Coll : Collision2D) {
 	if (Coll.gameObject.tag == "Enemy") {
-		Application.LoadLevel(Application.loadedLevelName);
-		Boss.health = 10;
+		PlayerHit();
+		//if (Coll.
+		//Application.LoadLevel(Application.loadedLevelName);
+		//Boss.health = 10;
 	}
 }
 
 function Update() {
+	if (charHealth == 0) {
+		Application.LoadLevel(Application.loadedLevelName);
+		Boss.health = 10;
+	}		
 	var connectingHinge : HingeJoint2D = this.GetComponent(HingeJoint2D);
 	if(connectingHinge.enabled) {
 		if(Input.GetKeyDown(KeyCode.Space)) {
@@ -139,6 +149,12 @@ function Update() {
 	}
 }
 
+function PlayerHit () {
+	charHealth--;
+	gameObject.GetComponent(SpriteRenderer).color = Color.red;
+	WaitForSeconds(101);
+	gameObject.GetComponent(SpriteRenderer).color = Color.white;
+}
 
 private function Flip() {
 	facingRight = !facingRight;
