@@ -14,19 +14,11 @@ public var abilityPickedUp: boolean;
 
 var spawnPoint : Transform;
 
-<<<<<<< local
 // Health bar
 static var health : float = 3;
 var HealthBar : Scrollbar;
 var Health : float = 3;
 
-=======
-// fire ability boolean, whether or not the character has gotten it
-var fAbility : boolean = false;
-// ice ability boolean, whether or not the player has gotten it
-var iAbility : boolean = false;
-
->>>>>>> other
 var facingRight : boolean = true;
 private var doubleJumpCount : int = 1;
 //private var maxAirJumpCount = 1;
@@ -37,15 +29,12 @@ private var grounded : boolean = false;
 private var ceilingCheck : Transform;
 private var ceilingRadius : float = .01;
 private var anim : Animator;
-public var jumpSound : AudioClip;
-private var source : AudioSource;
 
 function Awake () {
 	anim = GetComponent(Animator);
 	abilityPickedUp=true;
 	groundCheck = transform.Find("GroundCheck");
-	ceilingCheck = transform.Find("CeilingCheck");
-	source = GetComponent(AudioSource);		
+	ceilingCheck = transform.Find("CeilingCheck");		
 }
 
 function FixedUpdate () {
@@ -94,7 +83,6 @@ function Move (move : float, crouch : boolean, jump : boolean) {
 	if (grounded && jump && anim.GetBool("Ground")) {
 		grounded = false;
 		anim.SetBool("Ground", false);
-		source.PlayOneShot(jumpSound, 1f);
 		rigidbody2D.AddForce(new Vector2(0, jumpForce));
 
 	}
@@ -126,16 +114,10 @@ function OnTriggerEnter2D(other: Collider2D) {
 	}
 	//}   
 	if (other.tag == "EnemyAttack") {
-<<<<<<< local
 		PlayerHit();
 		Destroy(other.gameObject);
 		//Application.LoadLevel(Application.loadedLevelName);
 		//Boss.health = 10;
-=======
-	    gameObject.transform.position = spawnPoint.position;
-		//Application.LoadLevel(Application.loadedLevelName);
-		Boss.health = 10;
->>>>>>> other
 	}
 	if (other.tag == "IceCubeBoss") {
 		PlayerHit();
@@ -185,6 +167,24 @@ function Update() {
 	if (grounded) {
 		doubleJumpCount = 1;
 	}
+}
+
+function PlayerHit () {
+	Damage(1);
+	charHealth--;
+}
+
+function Damage(value : float) {
+	Health -= value;
+	HealthBar.size = Health / 3;
+}
+
+private function Flip() {
+	facingRight = !facingRight;
+	var theScale : Vector3 = transform.localScale;
+	theScale.x *= -1;
+	transform.localScale = theScale;	            
+}  
 }
 
 function PlayerHit () {
