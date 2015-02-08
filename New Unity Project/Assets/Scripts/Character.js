@@ -86,8 +86,8 @@ function OnTriggerEnter2D(other: Collider2D) {
 	} else if (other.tag == "EnableAirControl") {
 	    //making sure the character maintains
 	    // velocity upon regaining air control
-	    rigidbody2D.velocity.x = (rigidbody2D.velocity.x);
-	    rigidbody2D.velocity.y = (rigidbody2D.velocity.y);
+	    rigidbody2D.velocity.x = (rigidbody2D.velocity.x+3);
+	    rigidbody2D.velocity.y = (rigidbody2D.velocity.y+2);
 		airControl = true;
 	}
 	// indicate that the player has
@@ -122,7 +122,7 @@ function OnTriggerEnter2D(other: Collider2D) {
 	}
 	
 	if(other.tag == "oneTouchPlatform") {
-	rigidbody2D.AddForce (new Vector2 (0f, jumpForce));
+	   rigidbody2D.AddForce (new Vector2 (0f, jumpForce));
 	}
 	/*
 	if (other.tag == "Slide") {
@@ -149,6 +149,7 @@ function Update() {
 		}
 	} 
 	if (!grounded && doubleJumpCount == 1 && Input.GetKeyDown(KeyCode.Space)) {
+		//Debug.Log("Im doublejumping");
 		rigidbody2D.AddForce (new Vector2 (0f, jumpForce));
 		rigidbody2D.velocity.y = 0;
 		doubleJumpCount = 0;
