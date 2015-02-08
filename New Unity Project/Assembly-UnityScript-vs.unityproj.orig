@@ -56,12 +56,7 @@
      <Compile Include="Assets\Scripts\AutoDestroyParticles.js" />
      <Compile Include="Assets\Scripts\Boss.js" />
      <Compile Include="Assets\Scripts\BoudlerDoor.js" />
-<<<<<<< local
      <Compile Include="Assets\Scripts\BoxScript.js" />
-     <Compile Include="Assets\Scripts\BreakingGround.js" />
-     <Compile Include="Assets\Scripts\BreakingGroundController.js" />
-=======
->>>>>>> other
      <Compile Include="Assets\Scripts\CameraController.js" />
      <Compile Include="Assets\Scripts\Character.js" />
      <Compile Include="Assets\Scripts\ChildController.js" />
@@ -75,7 +70,11 @@
      <Compile Include="Assets\Scripts\FlickeringLightScript.js" />
      <Compile Include="Assets\Scripts\FloatingText.js" />
      <Compile Include="Assets\Scripts\FollowPath.js" />
+<<<<<<< local
      <Compile Include="Assets\Scripts\HarmlessGhostScript.js" />
+=======
+     <Compile Include="Assets\Scripts\HUDScript.js" />
+>>>>>>> other
      <Compile Include="Assets\Scripts\HealthBar.js" />
      <Compile Include="Assets\Scripts\Invisible.js" />
      <Compile Include="Assets\Scripts\MainMenuManager.js" />
