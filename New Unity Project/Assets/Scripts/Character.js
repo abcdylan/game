@@ -115,7 +115,8 @@ function OnTriggerEnter2D(other: Collider2D) {
 	//}
 	//}   
 	if (other.tag == "EnemyAttack") {
-		Application.LoadLevel(Application.loadedLevelName);
+	    gameObject.transform.position = spawnPoint.position;
+		//Application.LoadLevel(Application.loadedLevelName);
 		Boss.health = 10;
 	}
 	if (other.tag == "IceCubeBoss") {
