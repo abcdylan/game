@@ -40,7 +40,7 @@ function ExecuteCommand(command: String) {
       // (the pausegame flag will be set to false)
       case "New Game":
       // Load the first level
-      Application.LoadLevel("FireLevel");  //intro
+      Application.LoadLevel("fantasylevel");  //intro
          break;
          
        case "Controls":
