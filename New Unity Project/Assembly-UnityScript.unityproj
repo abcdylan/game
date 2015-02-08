@@ -57,12 +57,12 @@
      <Compile Include="Assets\Scripts\BigEnemyController.js" />
      <Compile Include="Assets\Scripts\Boss.js" />
      <Compile Include="Assets\Scripts\BoudlerDoor.js" />
-     <Compile Include="Assets\Scripts\BreakingGround.js" />
-     <Compile Include="Assets\Scripts\BreakingGroundController.js" />
+     <Compile Include="Assets\Scripts\BoxScript.js" />
      <Compile Include="Assets\Scripts\CameraController.js" />
      <Compile Include="Assets\Scripts\Character.js" />
      <Compile Include="Assets\Scripts\ChildController.js" />
      <Compile Include="Assets\Scripts\Controls.js" />
+     <Compile Include="Assets\Scripts\DestroyScript.js" />
      <Compile Include="Assets\Scripts\DestroySpikeClass.js" />
      <Compile Include="Assets\Scripts\Enemy1Control.js" />
      <Compile Include="Assets\Scripts\EnemyAI.js" />
@@ -71,12 +71,16 @@
      <Compile Include="Assets\Scripts\FlickeringLightScript.js" />
      <Compile Include="Assets\Scripts\FloatingText.js" />
      <Compile Include="Assets\Scripts\FollowPath.js" />
+     <Compile Include="Assets\Scripts\GameMaster.js" />
      <Compile Include="Assets\Scripts\HUDScript.js" />
+     <Compile Include="Assets\Scripts\HarmlessGhostScript.js" />
      <Compile Include="Assets\Scripts\HealthBar.js" />
+     <Compile Include="Assets\Scripts\Invisible.js" />
      <Compile Include="Assets\Scripts\MainMenuManager.js" />
      <Compile Include="Assets\Scripts\MainMenuScript.js" />
      <Compile Include="Assets\Scripts\MovingGroundControl.js" />
      <Compile Include="Assets\Scripts\MovingPlatform.js" />
+     <Compile Include="Assets\Scripts\NewBehaviourScript.js" />
      <Compile Include="Assets\Scripts\OffsetScroller.js" />
      <Compile Include="Assets\Scripts\ParallaxScroll.js" />
      <Compile Include="Assets\Scripts\PathDefinition.js" />
@@ -90,16 +94,18 @@
      <Compile Include="Assets\Scripts\ProjectileClassBoss.js" />
      <Compile Include="Assets\Scripts\ProjectileClassLeft.js" />
      <Compile Include="Assets\Scripts\PuzzlePickUpScript.js" />
+     <Compile Include="Assets\Scripts\ReduceRender.js" />
      <Compile Include="Assets\Scripts\RespawnPlayer.js" />
      <Compile Include="Assets\Scripts\RightWallTest.js" />
      <Compile Include="Assets\Scripts\SortParticleSystem.js" />
      <Compile Include="Assets\Scripts\StoryController.js" />
+     <Compile Include="Assets\Scripts\TriggerPlatformController.js" />
      <Compile Include="Assets\Scripts\TriggeredMovePlatform.js" />
      <Compile Include="Assets\Scripts\UtilScript.js" />
      <Compile Include="Assets\Scripts\UtilScript2.js" />
      <Compile Include="Assets\Scripts\VerticalMovingPlatforms.js" />
      <Compile Include="Assets\Scripts\backupCharacter.js.js" />
-     <Compile Include="Assets\Scripts\cloudScript.js" />
+     <Compile Include="Assets\Scripts\pausemenu.js" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>
