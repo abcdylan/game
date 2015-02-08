@@ -30,8 +30,8 @@ function Start () {
 }  
 
 function BigAttack () {
-	gameObject.GetComponent(Transform).position.x = -11.29;
-	gameObject.GetComponent(Transform).position.y = 7.962;
+	gameObject.GetComponent(Transform).position.x = -15.8;
+	gameObject.GetComponent(Transform).position.y = 14;
 	if(shootCooldownTimeLeft <= 0) {
 		var i : int;
 		for (i = 0; i < 7; i++) {
@@ -45,8 +45,8 @@ function BigAttack () {
 }
 
 function BigIceAttack () {
-	gameObject.GetComponent(Transform).position.x = 10.33;
-	gameObject.GetComponent(Transform).position.y = 7.72;
+	gameObject.GetComponent(Transform).position.x = 15.5;
+	gameObject.GetComponent(Transform).position.y = 14;
 	if(iceShootCooldownTimeLeft <= 0) {
 		var i : int;
 		for (i = 0; i < 5; i++) {
