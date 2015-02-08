@@ -12,10 +12,6 @@ var character : GameObject;
 
 var charTransform : Transform;
 
-// where the enemy will force the player to respawn
-// should the twain ever meet
-var SpawnPoint : Transform;
-
 // Reference to the renderer of the sprite
 // game object
 private var animRenderer: SpriteRenderer;
@@ -48,8 +44,6 @@ function Start () {
 
 // At fixed time intervals...
 function FixedUpdate () {
-   // if the character animation is false and the enemy
-   // has not been frozen by the player
    if(!animRunning && !freeze) {
       // The animation is triggered by user input
       //var userInput: float = Input.GetAxis("Horizontal");
@@ -79,20 +73,14 @@ function OnTriggerEnter2D(other : Collider2D) {
       animRunning = false;
       //Destroy(gameObject);
    }
-   	
-	// if the enemy is hit by the players
-	// fireball attack
-	if(other.tag == "Fireball") {
-	   //other.destroyShot();
-	   Destroy(other.gameObject);
-	   Destroy(gameObject);
-	}
-   
-    if(other.tag == "Player") {
-    // spawn player back at spawn point
-       other.transform.position = SpawnPoint.position;
-	}
 
+	/*if freeze in EnemyControl1 returns false, then execute this
+	if (!freeze) {	
+		if(other.tag == "Player") {
+	    	Application.LoadedLevel();
+		}
+	}   
+   */
    // Check if colliding with the left or right wall
    // (by checking the tags of the collider that the enemy
    //  collided with)

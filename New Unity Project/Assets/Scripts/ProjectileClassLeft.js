@@ -1,34 +1,28 @@
 #pragma strict
-//this class controls all attacks moving to the left
+
+//this class controls all attacks
 
 //projectile speed
 var speed: float;
 
-//how long the object lasts before auto-destroying itself
-var timeToLive : float;
-
 //destroy effect
 var DestroyEffect : Transform;
 
+
 function Update () {
 	transform.Translate(Vector3.left * speed * Time.deltaTime);
-	if (gameObject.tag == "Fireball") {
-		if (timeToLive > 0) {
-			timeToLive -= Time.deltaTime;
-		} else {
-		destroyShot();
-		}
-	}
+	// Check if the game object is visible, if not, destroy self   
+	if(!UtilScript.isVisible(renderer, Camera.main)) {
+		if(DestroyEffect != null) {
+    		var destroy = Instantiate(DestroyEffect);
+         	destroy.position = transform.position;
+      	}
+	   	Destroy(gameObject);
+  	}
+   
    	if(gameObject.tag == "IceCube") {
 		if(gameObject.GetComponent(SpriteRenderer).color.a > 0) {
-			gameObject.GetComponent(SpriteRenderer).color.a -= 0.01 * Time.deltaTime * 2 ;
-		} else {
-			Destroy(gameObject);
-		}
-	}
-	if (gameObject.tag == "EnemyAttack") {
-		if (timeToLive > 0) {
-			timeToLive -= Time.deltaTime;
+			gameObject.GetComponent(SpriteRenderer).color.a -= 0.2 * Time.deltaTime * 2 ;
 		} else {
 			Destroy(gameObject);
 		}
@@ -36,22 +30,13 @@ function Update () {
 }
 
 function OnTriggerEnter2D(other: Collider2D) {
-	if(other.tag == "Enemy") {
-		//Destroy(gameObject);	
-	}
+	//if(other.tag == "Enemy") {
+	//	Destroy(gameObject);	
+	//}
 	if(gameObject.tag == "Fireball" && other.tag == "IceCube") {
 		Destroy(gameObject);
 	}
 	if(gameObject.tag == "IceCube" && other.tag == "Fireball") {
 		Destroy(gameObject);
 	}
-}
-
-function destroyShot() {
-
-   if (DestroyEffect != null) {
-         var destroy = Instantiate(DestroyEffect);
-         destroy.position = transform.position;
-      }
-   Destroy(gameObject);
 }
