@@ -84,7 +84,19 @@ function OnTriggerEnter2D(other: Collider2D) {
 	if (other.tag =="DisableAirControl") {
 		airControl = false;
 	} else if (other.tag == "EnableAirControl") {
+	    //making sure the character maintains
+	    // velocity upon regaining air control
+	    rigidbody2D.velocity.x = (rigidbody2D.velocity.x);
+	    rigidbody2D.velocity.y = (rigidbody2D.velocity.y);
 		airControl = true;
+	}
+	// indicate that the player has
+	// reached the midpoint of the slide and increase their
+	// velocity accordingly
+	if (other.tag == "Slide") {
+	    rigidbody2D.velocity.x += (rigidbody2D.velocity.x/5);
+	    //(rigidbody2D.velocity-(rigidbody2D.velocity/2));
+	    rigidbody2D.velocity.y += (rigidbody2D.velocity.y/6);
 	}
 	if(other.tag == "Rope") {
 		var connectingHinge : HingeJoint2D = this.GetComponent(HingeJoint2D);
@@ -92,10 +104,10 @@ function OnTriggerEnter2D(other: Collider2D) {
 	}
 	//if freeze in EnemyControl1 returns false, then execute this
 	//if (!(minion.GetComponent.< Enemy1Control >(). freeze)) {	
-    if(other.tag == "Enemy") {
-	    Application.LoadLevel(Application.loadedLevelName);
-		Boss.health = 10;
-	}
+    //if(other.tag == "Enemy") {
+	//    Application.LoadLevel(Application.loadedLevelName);
+	//	Boss.health = 10;
+	//}
 	//}   
 	if (other.tag == "EnemyAttack") {
 		Application.LoadLevel(Application.loadedLevelName);
@@ -112,15 +124,22 @@ function OnTriggerEnter2D(other: Collider2D) {
 	if(other.tag == "oneTouchPlatform") {
 	rigidbody2D.AddForce (new Vector2 (0f, jumpForce));
 	}
+	/*
+	if (other.tag == "Slide") {
+	   Debug.Log(rigidbody2D.velocity.x);
+	   rigidbody2D.velocity.x = 10;
+	   
+	}*/
 		
 }
-
+/*
 function OnCollisionEnter2D (Coll : Collision2D) {
 	if (Coll.gameObject.tag == "Enemy") {
 		Application.LoadLevel(Application.loadedLevelName);
 		Boss.health = 10;
 	}
 }
+*/
 
 function Update() {
 	var connectingHinge : HingeJoint2D = this.GetComponent(HingeJoint2D);
@@ -131,6 +150,7 @@ function Update() {
 	} 
 	if (!grounded && doubleJumpCount == 1 && Input.GetKeyDown(KeyCode.Space)) {
 		rigidbody2D.AddForce (new Vector2 (0f, jumpForce));
+		rigidbody2D.velocity.y = 0;
 		doubleJumpCount = 0;
 	}
 	if (grounded) {
