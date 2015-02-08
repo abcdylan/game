@@ -10,7 +10,13 @@ var charHealth : float = 3;
 //enemy object
 //var minion : GameObject;
 
+
 var spawnPoint : Transform;
+
+// Health bar
+static var health : float = 3;
+var HealthBar : Scrollbar;
+var Health : float = 3;
 
 var facingRight : boolean = true;
 private var doubleJumpCount : int = 1;
@@ -22,7 +28,6 @@ private var grounded : boolean = false;
 private var ceilingCheck : Transform;
 private var ceilingRadius : float = .01;
 private var anim : Animator;
-
 
 function Awake () {
 	anim = GetComponent(Animator);
@@ -93,39 +98,40 @@ function OnTriggerEnter2D(other: Collider2D) {
 	}
 	//if freeze in EnemyControl1 returns false, then execute this
 	//if (!(minion.GetComponent.< Enemy1Control >(). freeze)) {	
+	
     if(other.tag == "Enemy") {
-    	PlayerHit();
-	    //Application.LoadLevel(Application.loadedLevelName);
+   		PlayerHit();
+    	//Application.LoadLevel(Application.loadedLevelName);
 		//Boss.health = 10;
 	}
 	//}   
 	if (other.tag == "EnemyAttack") {
 		PlayerHit();
+		Destroy(other.gameObject);
 		//Application.LoadLevel(Application.loadedLevelName);
 		//Boss.health = 10;
 	}
 	if (other.tag == "IceCubeBoss") {
 		PlayerHit();
+		Destroy(other.gameObject);
 		//Application.LoadLevel(Application.loadedLevelName);
 		//Boss.health = 10;
 	}
 	if (other.tag=="fallingSpikes"){
 		transform.position = spawnPoint.position;		            
 	}
-	
 	if(other.tag == "oneTouchPlatform") {
 	rigidbody2D.AddForce (new Vector2 (0f, jumpForce));
-	}
-		
+	}		
 }
 
 function OnCollisionEnter2D (Coll : Collision2D) {
-	if (Coll.gameObject.tag == "Enemy") {
-		PlayerHit();
+	//if (Coll.gameObject.tag == "Enemy") {
+	//	PlayerHit();
 		//if (Coll.
 		//Application.LoadLevel(Application.loadedLevelName);
 		//Boss.health = 10;
-	}
+	//}
 }
 
 function Update() {
@@ -150,10 +156,13 @@ function Update() {
 }
 
 function PlayerHit () {
+	Damage(1);
 	charHealth--;
-	gameObject.GetComponent(SpriteRenderer).color = Color.red;
-	WaitForSeconds(101);
-	gameObject.GetComponent(SpriteRenderer).color = Color.white;
+}
+
+function Damage(value : float) {
+	Health -= value;
+	HealthBar.size = Health / 3;
 }
 
 private function Flip() {
