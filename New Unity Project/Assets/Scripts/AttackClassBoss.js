@@ -35,7 +35,7 @@ function BigAttack() {
 }
 
 function BigIceAttack () {
-	var randX : float = Random.Range(-8.5,8);
+	var randX : float = Random.Range(-9.3,8.7);
 	var iceAttackBoss = Instantiate(iceBlockPrefab);
 	iceAttackBoss.position = Vector3(randX, 8.50, 0);	
 }

@@ -131,6 +131,7 @@ function Update() {
 	} 
 	if (!grounded && doubleJumpCount == 1 && Input.GetKeyDown(KeyCode.Space)) {
 		rigidbody2D.AddForce (new Vector2 (0f, jumpForce));
+		rigidbody2D.velocity.y = 0;
 		doubleJumpCount = 0;
 	}
 	if (grounded) {
