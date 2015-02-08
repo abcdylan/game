@@ -54,8 +54,11 @@
      <Compile Include="Assets\Scripts\AttackClassBoss.js" />
      <Compile Include="Assets\Scripts\AttackClassEnemy.js" />
      <Compile Include="Assets\Scripts\AutoDestroyParticles.js" />
+     <Compile Include="Assets\Scripts\BigEnemyController.js" />
      <Compile Include="Assets\Scripts\Boss.js" />
      <Compile Include="Assets\Scripts\BoudlerDoor.js" />
+     <Compile Include="Assets\Scripts\BreakingGround.js" />
+     <Compile Include="Assets\Scripts\BreakingGroundController.js" />
      <Compile Include="Assets\Scripts\CameraController.js" />
      <Compile Include="Assets\Scripts\Character.js" />
      <Compile Include="Assets\Scripts\ChildController.js" />
@@ -68,12 +71,12 @@
      <Compile Include="Assets\Scripts\FlickeringLightScript.js" />
      <Compile Include="Assets\Scripts\FloatingText.js" />
      <Compile Include="Assets\Scripts\FollowPath.js" />
+     <Compile Include="Assets\Scripts\HUDScript.js" />
      <Compile Include="Assets\Scripts\HealthBar.js" />
      <Compile Include="Assets\Scripts\MainMenuManager.js" />
      <Compile Include="Assets\Scripts\MainMenuScript.js" />
      <Compile Include="Assets\Scripts\MovingGroundControl.js" />
      <Compile Include="Assets\Scripts\MovingPlatform.js" />
-     <Compile Include="Assets\Scripts\NewBehaviourScript.js" />
      <Compile Include="Assets\Scripts\OffsetScroller.js" />
      <Compile Include="Assets\Scripts\ParallaxScroll.js" />
      <Compile Include="Assets\Scripts\PathDefinition.js" />
@@ -91,13 +94,12 @@
      <Compile Include="Assets\Scripts\RightWallTest.js" />
      <Compile Include="Assets\Scripts\SortParticleSystem.js" />
      <Compile Include="Assets\Scripts\StoryController.js" />
-     <Compile Include="Assets\Scripts\TriggerPlatformController.js" />
      <Compile Include="Assets\Scripts\TriggeredMovePlatform.js" />
      <Compile Include="Assets\Scripts\UtilScript.js" />
      <Compile Include="Assets\Scripts\UtilScript2.js" />
      <Compile Include="Assets\Scripts\VerticalMovingPlatforms.js" />
      <Compile Include="Assets\Scripts\backupCharacter.js.js" />
-     <Compile Include="Assets\Scripts\pausemenu.js" />
+     <Compile Include="Assets\Scripts\cloudScript.js" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>
