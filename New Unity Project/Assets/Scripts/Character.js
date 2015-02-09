@@ -101,8 +101,8 @@ function OnTriggerEnter2D(other: Collider2D) {
 	if (other.tag =="DisableAirControl") {
 		airControl = false;
 	} else if (other.tag == "EnableAirControl") {
-	rigidbody2D.velocity.x += (rigidbody2D.velocity.x +3);	
-	rigidbody2D.velocity.y += (rigidbody2D.velocity.y +2);	 
+	rigidbody2D.velocity.x = (rigidbody2D.velocity.x +3);	
+	rigidbody2D.velocity.y = (rigidbody2D.velocity.y +2);	 
 	airControl = true;
 	}
 	if(other.tag == "Rope") {
@@ -136,20 +136,15 @@ function OnTriggerEnter2D(other: Collider2D) {
 	}
 	
 	if(other.tag=="Slide"){
-	rigidbody2D.velocity.x += (rigidbody2D.velocity.x / 7);	
-	rigidbody2D.velocity.y += (rigidbody2D.velocity.y / 8);	 
-}   
-	
-	if(other.tag=="Slide"){
-	rigidbody2D.velocity.x += (rigidbody2D.velocity.x / 7);	
-	rigidbody2D.velocity.y += (rigidbody2D.velocity.y / 8);	 
-}   
+	   rigidbody2D.velocity.x += (rigidbody2D.velocity.x / 7);	
+	   rigidbody2D.velocity.y += (rigidbody2D.velocity.y / 8);	 
+    }   
 	
 	if (other.tag=="fallingSpikes"){
 		transform.position = spawnPoint.position;		            
 	}
 	if(other.tag == "oneTouchPlatform") {
-	rigidbody2D.AddForce (new Vector2 (0f, jumpForce));
+	   rigidbody2D.AddForce (new Vector2 (0f, jumpForce));
 	}		
 }
 
