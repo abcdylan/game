@@ -58,13 +58,13 @@ function Shoot() {
 	if (shootCooldownTimeLeft <= 0) {
 		if(bossAI.facingRight) {
 			var fireball = Instantiate(fireballPrefab);
-			fireball.tag = "EnemyAttack";
+			fireball.tag = "BossAttack";
 			// sets position of fireball 1 position in front of player
 			fireball.position = transform.position;
 			fireball.position.x += 1;
 		} else {
 			var fireballLeft = Instantiate(fireballPrefabLeft);
-			fireballLeft.tag = "EnemyAttack";
+			fireballLeft.tag = "BossAttack";
 			// sets position of fireball 1 position in front of player
 			fireballLeft.position = transform.position;
 			fireballLeft.position.x -= 1;
