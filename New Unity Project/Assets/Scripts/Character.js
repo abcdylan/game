@@ -118,7 +118,7 @@ function OnTriggerEnter2D(other: Collider2D) {
 	}
 	//}   
 	if (other.tag == "EnemyAttack") {
-	    gameObject.transform.position = spawnPoint.position;
+	    transform.position = checkpoint.position;
 		//Application.LoadLevel(Application.loadedLevelName);
 		transform.position = checkpoint.position;
 	}
