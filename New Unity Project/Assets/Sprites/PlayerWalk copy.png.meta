@@ -1,0 +1,223 @@
+fileFormatVersion: 2
+guid: 62d376ce3b0d9f1449e23d8593037a98
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: PlayerWalk copy_0
+    21300002: PlayerWalk copy_1
+    21300004: PlayerWalk copy_2
+    21300006: PlayerWalk copy_3
+    21300008: PlayerWalk copy_4
+    21300010: PlayerWalk copy_6
+    21300012: PlayerWalk copy_7
+    21300014: PlayerWalk copy_9
+    21300016: PlayerWalk copy_10
+    21300018: PlayerWalk copy_11
+    21300020: PlayerWalk copy_12
+    21300022: PlayerWalk copy_13
+    21300024: PlayerWalk copy_14
+    21300026: PlayerWalk copy_15
+    21300028: PlayerWalk copy_16
+    21300030: PlayerWalk copy_17
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: PlayerWalk copy_0
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1776
+        width: 112
+        height: 239
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayerWalk copy_1
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 1776
+        width: 110
+        height: 237
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayerWalk copy_2
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 1776
+        width: 110
+        height: 237
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayerWalk copy_3
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 1776
+        width: 110
+        height: 237
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayerWalk copy_4
+      rect:
+        serializedVersion: 2
+        x: 1189
+        y: 1776
+        width: 110
+        height: 240
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayerWalk copy_6
+      rect:
+        serializedVersion: 2
+        x: 1462
+        y: 1770
+        width: 110
+        height: 245
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayerWalk copy_7
+      rect:
+        serializedVersion: 2
+        x: 1733
+        y: 1776
+        width: 111
+        height: 240
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayerWalk copy_9
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 1504
+        width: 112
+        height: 237
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayerWalk copy_10
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 1503
+        width: 110
+        height: 234
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayerWalk copy_11
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 1501
+        width: 112
+        height: 238
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayerWalk copy_12
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 1501
+        width: 108
+        height: 238
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayerWalk copy_13
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 1501
+        width: 111
+        height: 236
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayerWalk copy_14
+      rect:
+        serializedVersion: 2
+        x: 1461
+        y: 1496
+        width: 110
+        height: 241
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayerWalk copy_15
+      rect:
+        serializedVersion: 2
+        x: 1735
+        y: 1495
+        width: 112
+        height: 240
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayerWalk copy_16
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 1223
+        width: 117
+        height: 244
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayerWalk copy_17
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 1224
+        width: 117
+        height: 244
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
