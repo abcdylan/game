@@ -24,7 +24,7 @@ function FixedUpdate () {
       //Switch = false;
    }
    if (transform.position == OriginSpot.position) {
-      Switch = false;
+      //Switch = false;
    }
 
    //if switch then move the platform to origin

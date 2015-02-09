@@ -59,6 +59,8 @@
      <Compile Include="Assets\Scripts\Boss.js" />
      <Compile Include="Assets\Scripts\BoudlerDoor.js" />
      <Compile Include="Assets\Scripts\BoxScript.js" />
+     <Compile Include="Assets\Scripts\BreakingGround.js" />
+     <Compile Include="Assets\Scripts\BreakingGroundController.js" />
      <Compile Include="Assets\Scripts\CameraController.js" />
      <Compile Include="Assets\Scripts\Character.js" />
      <Compile Include="Assets\Scripts\ChildController.js" />
