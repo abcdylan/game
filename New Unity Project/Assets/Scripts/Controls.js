@@ -12,6 +12,7 @@ private function Awake() {
 }
 
 function OnTriggerEnter2D(other : Collider2D) {
+	//Disable/enable the airControl to make the slide work
 	if(other.tag == "disableAirControl") {
 		character.airControl = false;
 	} else if (other.tag == "enableAirControl") {
@@ -32,10 +33,10 @@ private function Update() {
 	if (!jump) {
 		jump = Input.GetButtonDown("Jump");
 	}		
-	if(character.fAbility && Input.GetKeyDown(KeyCode.Alpha1)) {
+	if(/*character.fAbility && */Input.GetKeyDown(KeyCode.Q)) {
 	   character.FireShoot(); 
     }
-    if(/*iAbility &&*/ Input.GetKeyDown(KeyCode.Alpha2)) {
+    if(/*iAbility &&*/ Input.GetKeyDown(KeyCode.W)) {
        character.IceShoot();
     }
 	

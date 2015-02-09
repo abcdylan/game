@@ -1,4 +1,5 @@
-﻿ #pragma strict
+﻿//AI for the Boss
+  #pragma strict
  
 ///Variables Declaration///
 private var enemy : GameObject;
@@ -29,6 +30,7 @@ function Start () {
 	player = GameObject.FindGameObjectWithTag("Player");
 }  
 
+//Fire attack when at low health
 function BigAttack () {
 	gameObject.GetComponent(Transform).position.x = -15.8;
 	gameObject.GetComponent(Transform).position.y = 14;
@@ -44,6 +46,7 @@ function BigAttack () {
 	}
 }
 
+//Rains ice blocks
 function BigIceAttack () {
 	gameObject.GetComponent(Transform).position.x = 15.5;
 	gameObject.GetComponent(Transform).position.y = 14;
