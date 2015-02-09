@@ -11,8 +11,8 @@ public var abilityPickedUp: boolean;
 //enemy object
 //var minion : GameObject;
 
-
-var spawnPoint : Transform;
+// Where you will respawn
+var checkpoint : Transform;
 
 // Health bar
 static var health : float = 3;
@@ -20,11 +20,11 @@ var HealthBar : Scrollbar;
 var Health : float = 3;
 
 // fire ability boolean, whether or not the character has gotten it
-var fAbility : boolean = false;
+var fAbility : boolean;
 // ice ability boolean, whether or not the player has gotten it
-var iAbility : boolean = false;
+var iAbility : boolean;
 
-
+//What direction you are facing
 var facingRight : boolean = true;
 private var doubleJumpCount : int = 1;
 //private var maxAirJumpCount = 1;
@@ -39,7 +39,12 @@ public var jumpSound : AudioClip;
 private var source : AudioSource;
 function Awake () {
 	anim = GetComponent(Animator);
-	abilityPickedUp=true;
+	if(Application.loadedLevelName=="fantasylevel"){
+	   abilityPickedUp=false;
+	  }else{
+	  abilityPickedUp=true;
+	  }  
+	   
 	groundCheck = transform.Find("GroundCheck");
 	ceilingCheck = transform.Find("CeilingCheck");
 	source = GetComponent(AudioSource);		
@@ -98,18 +103,15 @@ function Move (move : float, crouch : boolean, jump : boolean) {
 }
 
 function OnTriggerEnter2D(other: Collider2D) {
-	if (other.tag =="DisableAirControl") {
+	// to disable/enable airControl to make the slide work
+	if (other.tag == "DisableAirControl") {
 		airControl = false;
 	} else if (other.tag == "EnableAirControl") {
-	rigidbody2D.velocity.x += (rigidbody2D.velocity.x +3);	
-	rigidbody2D.velocity.y += (rigidbody2D.velocity.y +2);	 
-	airControl = true;
+	  rigidbody2D.velocity.x = (rigidbody2D.velocity.x +3);	
+	  rigidbody2D.velocity.y = (rigidbody2D.velocity.y +2);	 
+		airControl = true;
 	}
-	if(other.tag == "Rope") {
-		var connectingHinge : HingeJoint2D = this.GetComponent(HingeJoint2D);
-		connectingHinge.enabled = true;
-	}
-	if(other.tag=="Ability"){
+	if(other.tag == "Ability"){
 	   abilityPickedUp= !abilityPickedUp;
 	   Destroy(other.gameObject);
 	   }
@@ -118,61 +120,48 @@ function OnTriggerEnter2D(other: Collider2D) {
 	
     if(other.tag == "Enemy") {
    		PlayerHit();
-    	//Application.LoadLevel(Application.loadedLevelName);
-		//Boss.health = 10;
 	}
 	//}   
 	if (other.tag == "EnemyAttack") {
-	    gameObject.transform.position = spawnPoint.position;
+	    transform.position = checkpoint.position;
 		//Application.LoadLevel(Application.loadedLevelName);
-		//Application.LoadLevel(Application.loadedLevelName);
-		//Boss.health = 10;
+		transform.position = checkpoint.position;
+	}
+	if (other.tag == "BossAttack") {
+		PlayerHit();
+		Destroy(other.gameObject);
 	}
 	if (other.tag == "IceCubeBoss") {
 		PlayerHit();
 		Destroy(other.gameObject);
-		//Application.Loasource.PlayOneShot(fireballCast, 1f);dLevel(Application.loadedLevelName);
-		//Boss.health = 10;
 	}
 	
-	if(other.tag=="Slide"){
-	rigidbody2D.velocity.x += (rigidbody2D.velocity.x / 7);	
-	rigidbody2D.velocity.y += (rigidbody2D.velocity.y / 8);	 
-}   
+	if(other.tag == "Slide"){
+	   rigidbody2D.velocity.x += (rigidbody2D.velocity.x / 7);	
+	   rigidbody2D.velocity.y += (rigidbody2D.velocity.y / 8);	 
+    }   
+
 	
-	if(other.tag=="Slide"){
-	rigidbody2D.velocity.x += (rigidbody2D.velocity.x / 7);	
-	rigidbody2D.velocity.y += (rigidbody2D.velocity.y / 8);	 
-}   
-	
-	if (other.tag=="fallingSpikes"){
-		transform.position = spawnPoint.position;		            
+	if (other.tag == "fallingSpikes"){
+		transform.position = checkpoint.position;	            
+	}
+	if (other.tag == "IceSpikes"){
+		transform.position = checkpoint.position;	            
 	}
 	if(other.tag == "oneTouchPlatform") {
-	rigidbody2D.AddForce (new Vector2 (0f, jumpForce));
-	}		
-}
-
-function OnCollisionEnter2D (Coll : Collision2D) {
-	//if (Coll.gameObject.tag == "Enemy") {
-	//	PlayerHit();
-		//if (Coll.
-		//Application.LoadLevel(Application.loadedLevelName);
-		//Boss.health = 10;
-	//}
+	   rigidbody2D.AddForce (new Vector2 (0f, jumpForce));
+	}	
+	if (other.tag == "Checkpoint") {
+		checkpoint = other.transform;
+	}	
 }
 
 function Update() {
+	// if you have no health left reload the level
 	if (charHealth == 0) {
 		Application.LoadLevel(Application.loadedLevelName);
 		Boss.health = 10;
 	}		
-	var connectingHinge : HingeJoint2D = this.GetComponent(HingeJoint2D);
-	if(connectingHinge.enabled) {
-		if(Input.GetKeyDown(KeyCode.Space)) {
-			connectingHinge.enabled = false;
-		}
-	} 
 	if (!grounded && doubleJumpCount == 1 && Input.GetKeyDown(KeyCode.Space)&& abilityPickedUp) {
 		rigidbody2D.AddForce (new Vector2 (0f, jumpForce));
 		rigidbody2D.velocity.y = 0;
@@ -183,16 +172,19 @@ function Update() {
 	}
 }
 
+//change the healthbar and cause player to take damage
 function PlayerHit () {
 	Damage(1);
 	charHealth--;
 }
 
+// changes the healthbar
 function Damage(value : float) {
 	Health -= value;
 	HealthBar.size = Health / 3;
 }
 
+// Flip the character around
 private function Flip() {
 	facingRight = !facingRight;
 	var theScale : Vector3 = transform.localScale;
