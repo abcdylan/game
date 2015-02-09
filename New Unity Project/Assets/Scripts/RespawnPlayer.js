@@ -2,7 +2,7 @@
 
 //var Player : GameObject;
 
-var spawnPoint : Transform;
+public var spawnPoint : Transform;
 
 function OnTriggerEnter2D(other : Collider2D) {
    //Destroy(other.gameObject);
