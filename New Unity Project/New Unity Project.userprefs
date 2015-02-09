@@ -1,10 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\RespawnPlayer.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\TriggeredMovePlatform.js">
     <Files>
-      <File FileName="Assets\Scripts\MovingPlatform.js" Line="16" Column="63" />
+      <File FileName="Assets\Scripts\TriggeredMovePlatform.js" Line="27" Column="9" />
+      <File FileName="Assets\Scripts\MovingPlatform.js" Line="1" Column="1" />
       <File FileName="..\..\..\HV CS work\assignments\Hannah_vanAlphenFyfe_AssignmentOne\SpaceInvaders\Assets\Scripts\GameMaster.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\RespawnPlayer.js" Line="25" Column="5" />
+      <File FileName="Assets\Scripts\RespawnPlayer.js" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Controls.js" Line="1" Column="1" />
       <File FileName="Assets\Scripts\ChildController.js" Line="1" Column="1" />
       <File FileName="Assets\Scripts\ProjectileClassLeft.js" Line="1" Column="1" />
