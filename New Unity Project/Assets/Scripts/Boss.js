@@ -1,18 +1,18 @@
 ﻿#pragma strict
 
-// Dodging stuff 
+// Boss dodging stuff 
 var dodgeRandom : float;
 var dodgeColliderRight : EdgeCollider2D;
 var dodgeColliderLeft : EdgeCollider2D;
-var headCollider : EdgeCollider2D;
 var dodgeTimer: float;
 private var dodgeTimerLeft: float = 0;
+var dodgeEnabled : boolean = true;
 
+// freezing the boss prevents dodging
 var freezeTime : float;
 private var freezeTimeLeft : float = 0;
 
 // Character stuff
-//var facingRight : boolean = true;
 private var groundCheck : Transform;
 private var groundedRadius : float = .2;
 var grounded : boolean = false;
@@ -31,8 +31,7 @@ static var health : float = 10;
 var HealthBar : Scrollbar;
 var Health : float = 100;
 
-var dodgeEnabled : boolean = true;
-
+//Sets variables
 function Awake () {
 	anim = GetComponent(Animator);
 	groundCheck = transform.Find("GroundCheck");
@@ -54,10 +53,11 @@ private function FixedUpdate () {
 		gameObject.GetComponent(SpriteRenderer).color = Color.white;
 		maxSpeed = 10;
 	}
-											
+	
+	//dodge is randomly generated									
 	if(dodgeTimerLeft <= 0) {
-		dodgeRandom = Random.Range(0, 30);
-		if (dodgeRandom > 15) {
+		dodgeRandom = Random.Range(0, 100);
+		if (dodgeRandom < 15) {
 			dodgeEnabled = true;
 			dodgeColliderRight.enabled = true;
 			dodgeColliderLeft.enabled = true;
@@ -119,6 +119,7 @@ function Move (move : float, crouch : boolean, jump : boolean) {
 	}
 }
 */
+//Boss jumps over player's fireshot
 function Dodge () {
 	if (grounded && anim.GetBool("Ground")) {
 		grounded = false;
@@ -145,6 +146,7 @@ function OnCollisionEnter2D(coll: Collision2D) {
 	}
 }
 
+// changes the healthbar of the boss
 function Damage(value : float) {
 	Health -= value;
 	HealthBar.size = Health / 100;

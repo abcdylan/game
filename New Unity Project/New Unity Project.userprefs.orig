@@ -1,41 +1,17 @@
 ﻿<Properties>
 <<<<<<< local
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Character.js">
-=======
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\HUDScript.js">
->>>>>>> other
+  <MonoDevelop.Ide.Workbench />
+=======
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\AttackClassBoss.js">
     <Files>
-<<<<<<< local
-      <File FileName="Assets\Scripts\GameMaster.js" Line="4" Column="23" />
-      <File FileName="Assets\Scripts\Character.js" Line="97" Column="2" />
-      <File FileName="Assets\Scripts\Controls.js" Line="1" Column="1" />
-=======
-      <File FileName="Assets\Scripts\HUDScript.js" Line="55" Column="7" />
-      <File FileName="Assets\Scripts\Character.js" Line="17" Column="1" />
-      <File FileName="Assets\Scripts\PlatformerCharacter2D.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Enemy1Control.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PuzzlePickUpScript.js" Line="3" Column="1" />
-      <File FileName="Assets\Scripts\AttackClassEnemy.js" Line="1" Column="1" />
->>>>>>> other
-      <File FileName="Assets\Scripts\EnemyAI.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\AttackClassBoss.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Boss.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ProjectileClassBoss.js" Line="1" Column="1" />
-<<<<<<< local
-      <File FileName="Assets\Scripts\MainMenuScript.js" Line="43" Column="47" />
-      <File FileName="..\..\BACKUP REPOsitiory\scalar\New Unity Project\Assets\Scripts\Character.js" Line="118" Column="74" />
-=======
-      <File FileName="Assets\Scripts\ProjectileClass2.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\RespawnPlayer.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\BigEnemyController.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PlayerClass.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\HealthBar.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Controls.js" Line="35" Column="15" />
->>>>>>> other
+      <File FileName="Assets\Scripts\Character.js" Line="121" Column="47" />
+      <File FileName="Assets\Scripts\MainMenuManager.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\AttackClassBoss.js" Line="61" Column="30" />
     </Files>
   </MonoDevelop.Ide.Workbench>
+>>>>>>> other
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
