@@ -2,13 +2,13 @@
 
 //var Player : GameObject;
 
-var spawnPoint : Transform;
+public var spawnPoint : Transform;
 private var source : AudioSource;
 public var deathSound : AudioClip;
 
 
 private function Awake(){
-source.GetComponent(AudioSource);
+   source.GetComponent(AudioSource);
 }
 
 function OnTriggerEnter2D(other : Collider2D) {
@@ -23,9 +23,6 @@ function OnTriggerEnter2D(other : Collider2D) {
    if(other.tag=="Enemy"){
      Destroy(other.gameObject);
    }
-   //var cam = camera.main.getComponent(CameraController);
-   //camera.player = P.transform;
-   
 }
 
 /*

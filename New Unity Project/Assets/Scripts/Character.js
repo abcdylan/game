@@ -123,7 +123,7 @@ function OnTriggerEnter2D(other: Collider2D) {
 	}
 	//}   
 	if (other.tag == "EnemyAttack") {
-	    gameObject.transform.position = spawnPoint.position;
+	    //gameObject.transform.position = other.transform.position - (other.transform.position/2);
 		//Application.LoadLevel(Application.loadedLevelName);
 		//Application.LoadLevel(Application.loadedLevelName);
 		//Boss.health = 10;
