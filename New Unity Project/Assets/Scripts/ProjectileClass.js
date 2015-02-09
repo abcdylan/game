@@ -26,7 +26,7 @@ function Update () {
 			Destroy(gameObject);
 		}
 	}
-	if (gameObject.tag == "EnemyAttack") {
+	if (gameObject.tag == "EnemyAttack" || gameObject.tag == "BossAttack") {
 		if (timeToLive > 0) {
 			timeToLive -= Time.deltaTime;
 		} else {
