@@ -41,9 +41,15 @@ function OnTriggerEnter2D(other: Collider2D) {
 	}
 	if(gameObject.tag == "Fireball" && other.tag == "IceCube") {
 		Destroy(gameObject);
+		Destroy(other.gameObject);
+	}
+	if (gameObject.tag == "Fireball" && other.tag == "IceCubeBoss") {
+		Destroy(gameObject);
+		Destroy(other.gameObject);
 	}
 	if(gameObject.tag == "IceCube" && other.tag == "Fireball") {
 		Destroy(gameObject);
+		Destroy(other.gameObject);
 	}
 }
 
