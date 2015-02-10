@@ -36,14 +36,7 @@ private var ceilingCheck : Transform;
 private var ceilingRadius : float = .01;
 private var anim : Animator;
 public var jumpSound : AudioClip;
-public var doubleJumpSound : AudioClip;
-public var scrollSound : AudioClip;
-public var deathSound : AudioClip;
 private var source : AudioSource;
-public var abilityPickUp : AudioClip;
-
-
-
 function Awake () {
 	anim = GetComponent(Animator);
 	if(Application.loadedLevelName=="fantasylevel"){
@@ -120,7 +113,6 @@ function OnTriggerEnter2D(other: Collider2D) {
 	}
 	if(other.tag == "Ability"){
 	   abilityPickedUp= !abilityPickedUp;
-	   source.PlayOneShot(abilityPickUp, 1f);
 	   Destroy(other.gameObject);
 	   }
 	//if freeze in EnemyControl1 returns false, then execute this
@@ -128,29 +120,19 @@ function OnTriggerEnter2D(other: Collider2D) {
 	
     if(other.tag == "Enemy") {
    		PlayerHit();
-   		source.PlayOneShot(deathSound, 1f);
-	}
-	if(other.tag == "Ghost"){
-	transform.position = checkpoint.position;
-	source.PlayOneShot(deathSound, 1f);
 	}
 	//}   
 	if (other.tag == "EnemyAttack") {
 	    transform.position = checkpoint.position;
 		//Application.LoadLevel(Application.loadedLevelName);
-		transform.position = checkpoint.position;
-		source.PlayOneShot(deathSound, 1f);
 	}
-	
 	if (other.tag == "BossAttack") {
 		PlayerHit();
 		Destroy(other.gameObject);
-		source.PlayOneShot(deathSound, 1f);
 	}
 	if (other.tag == "IceCubeBoss") {
 		PlayerHit();
 		Destroy(other.gameObject);
-		source.PlayOneShot(deathSound, 1f);
 	}
 	
 	if(other.tag == "Slide"){
@@ -160,12 +142,10 @@ function OnTriggerEnter2D(other: Collider2D) {
 
 	
 	if (other.tag == "fallingSpikes"){
-		transform.position = checkpoint.position;
-		source.PlayOneShot(deathSound, 1f);	            
+		transform.position = checkpoint.position;	            
 	}
 	if (other.tag == "IceSpikes"){
-		transform.position = checkpoint.position;
-		source.PlayOneShot(deathSound, 1f);	            
+		transform.position = checkpoint.position;	            
 	}
 	if(other.tag == "oneTouchPlatform") {
 	   rigidbody2D.AddForce (new Vector2 (0f, jumpForce));
@@ -182,7 +162,6 @@ function Update() {
 		Boss.health = 10;
 	}		
 	if (!grounded && doubleJumpCount == 1 && Input.GetKeyDown(KeyCode.Space)&& abilityPickedUp) {
-		source.PlayOneShot(doubleJumpSound, 1f);
 		rigidbody2D.AddForce (new Vector2 (0f, jumpForce));
 		rigidbody2D.velocity.y = 0;
 		doubleJumpCount = 0;
@@ -196,7 +175,6 @@ function Update() {
 function PlayerHit () {
 	Damage(1);
 	charHealth--;
-	
 }
 
 // changes the healthbar
