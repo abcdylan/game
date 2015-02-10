@@ -1,0 +1,19 @@
+﻿<Properties>
+<<<<<<< local
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench />
+=======
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\AttackClassBoss.js">
+    <Files>
+      <File FileName="Assets\Scripts\Character.js" Line="121" Column="47" />
+      <File FileName="Assets\Scripts\MainMenuManager.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\AttackClassBoss.js" Line="61" Column="30" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+>>>>>>> other
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
