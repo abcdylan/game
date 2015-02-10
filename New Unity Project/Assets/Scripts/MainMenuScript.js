@@ -42,15 +42,16 @@ function ExecuteCommand(command: String) {
       // Load the first level
       Application.LoadLevel("fantasylevel");  //intro
          break;
-         
+       /*  
        case "Controls":
       // Load the first level
       //Application.LoadLevel("Level1");  instructions
          break;
-                 
-      case "Load":
-      // Load the first level
-      //Application.LoadLevel("Level1");  intro
+      */        
+      case "Level Select":
+      // Select which level 
+      // you would like to play
+        Application.LoadLevel("LevelSelect");
          break;
 
       /*case "How To":
