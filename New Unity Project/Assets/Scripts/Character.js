@@ -125,7 +125,6 @@ function OnTriggerEnter2D(other: Collider2D) {
 	if (other.tag == "EnemyAttack") {
 	    transform.position = checkpoint.position;
 		//Application.LoadLevel(Application.loadedLevelName);
-		transform.position = checkpoint.position;
 	}
 	if (other.tag == "BossAttack") {
 		PlayerHit();

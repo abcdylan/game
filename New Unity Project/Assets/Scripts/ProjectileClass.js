@@ -51,10 +51,6 @@ function OnTriggerEnter2D(other: Collider2D) {
 		Destroy(gameObject);
 		Destroy(other.gameObject);
 	}
-	if (gameObject.tag == "IceCube" && other.tag == "EnemyAttack") {
-		Destroy(gameObject);
-		Destroy(other.gameObject);
-	}
 }
 
 function destroyShot() {
