@@ -22,7 +22,7 @@ var pickkUp : GameObject;
 var pickkUp2 : GameObject;
 var pickkUp3 : GameObject;
 
-private var charControl : Character;
+//private var charControl : Character;
 // reference to the script attached to the puzzle objects
 private var pickedUp1: PickUpScript;
 private var pickedUp2 : PickUpScript;
@@ -35,7 +35,7 @@ function Start() {
    pickedUp2 = pickkUp2.GetComponent(PickUpScript);
    pickedUp3 = pickkUp3.GetComponent(PickUpScript);
    //getPuz1.color.a = 0;
-   charControl = character.GetComponent(Character);
+   //charControl = character.GetComponent(Character);
    
 }
 
@@ -50,13 +50,13 @@ function Update() {
    if(pickedUp3.pickUp) {
       getPuz3.color.a = 255;
    }
-   /*if(charControl.jumpAbility) {
+   if(AbilityManager.abilityPickedUp) {
       ability1.color.a = 255;
-   }*/
-   if(charControl.iAbility) {
+   }
+   if(AbilityManager.iAbility) {
       ability2.color.a = 255;
    }
-   if(charControl.fAbility) {
+   if(AbilityManager.fAbility) {
       ability3.color.a = 255;
    }
 }

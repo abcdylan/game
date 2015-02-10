@@ -6,11 +6,6 @@ var crouchSpeed : float = .5;
 var airControl : boolean = true;
 var whatIsGround : LayerMask;
 var charHealth : float = 3;
-public var abilityPickedUp: boolean;
-
-//enemy object
-//var minion : GameObject;
-
 
 var spawnPoint : Transform;
 
@@ -19,10 +14,14 @@ static var health : float = 3;
 var HealthBar : Scrollbar;
 var Health : float = 3;
 
+// variable for checking if the player has picked up
+// the double jump ability
+//public var abilityPickedUp: boolean = false;
+
 // fire ability boolean, whether or not the character has gotten it
-var fAbility : boolean = false;
+//var fAbility : boolean = false;
 // ice ability boolean, whether or not the player has gotten it
-var iAbility : boolean = false;
+//var iAbility : boolean = false;
 
 
 var facingRight : boolean = true;
@@ -37,9 +36,11 @@ private var ceilingRadius : float = .01;
 private var anim : Animator;
 public var jumpSound : AudioClip;
 private var source : AudioSource;
+
 function Awake () {
+    //DontDestroyOnLoad(this);
 	anim = GetComponent(Animator);
-	abilityPickedUp=true;
+	//abilityPickedUp=true;
 	groundCheck = transform.Find("GroundCheck");
 	ceilingCheck = transform.Find("CeilingCheck");
 	source = GetComponent(AudioSource);		
@@ -101,21 +102,16 @@ function OnTriggerEnter2D(other: Collider2D) {
 	if (other.tag =="DisableAirControl") {
 		airControl = false;
 	} else if (other.tag == "EnableAirControl") {
-	rigidbody2D.velocity.x = (rigidbody2D.velocity.x +3);	
-	rigidbody2D.velocity.y = (rigidbody2D.velocity.y +2);	 
-	airControl = true;
+	   rigidbody2D.velocity.x = (rigidbody2D.velocity.x +3);	
+	   rigidbody2D.velocity.y = (rigidbody2D.velocity.y +2);	 
+	   airControl = true;
 	}
-	if(other.tag == "Rope") {
-		var connectingHinge : HingeJoint2D = this.GetComponent(HingeJoint2D);
-		connectingHinge.enabled = true;
-	}
+
 	if(other.tag=="Ability"){
-	   abilityPickedUp= !abilityPickedUp;
+	   AbilityManager.abilityPickedUp = true;
 	   Destroy(other.gameObject);
-	   }
-	//if freeze in EnemyControl1 returns false, then execute this
-	//if (!(minion.GetComponent.< Enemy1Control >(). freeze)) {	
-	
+	}
+
     if(other.tag == "Enemy") {
    		PlayerHit();
     	//Application.LoadLevel(Application.loadedLevelName);
@@ -168,7 +164,7 @@ function Update() {
 			connectingHinge.enabled = false;
 		}
 	} 
-	if (!grounded && doubleJumpCount == 1 && Input.GetKeyDown(KeyCode.Space)&& abilityPickedUp) {
+	if (!grounded && doubleJumpCount == 1 && Input.GetKeyDown(KeyCode.Space)&& AbilityManager.abilityPickedUp) {
 		rigidbody2D.AddForce (new Vector2 (0f, jumpForce));
 		rigidbody2D.velocity.y = 0;
 		doubleJumpCount = 0;

@@ -1,9 +1,14 @@
-﻿/*main menu Script, attached to start_menu image*/
+﻿/*Level Select menu*/
 
-var startText : Text = null;
-var instructText : Text = null;
-var loadText : Text = null;
-var quitText : Text = null;
+var Level1Text : Text = null;
+var Level2Text : Text = null;
+var Level3Text : Text = null;
+var FinalLevelText : Text = null;
+
+//back to the main menu
+var ReturnText : Text = null;
+
+//has the key been pressed
 var pressed : boolean;
 public var wait : int;
 private var time : int;
@@ -17,15 +22,13 @@ private var optionArray: Text[];
 
 function Start () {
    // We have two text object in the panel,
-   // so create an array with 2 references
-   // and set the first referect to resumeText
-   // and second reference to quitText
-   optionArray = new Text[4]; 
-   optionArray[0] = startText;
-   //optionArray[1] = instructText;
-   optionArray[1] = instructText;
-   optionArray[2] = loadText;
-   optionArray[3] = quitText; 
+   // so create an array with 4 references
+   optionArray = new Text[5]; 
+   optionArray[0] = Level1Text;
+   optionArray[1] = Level2Text;
+   optionArray[2] = Level3Text;
+   optionArray[3] = FinalLevelText; 
+   optionArray[4] = ReturnText;
    time= wait;  
 }
 
@@ -36,33 +39,28 @@ function ExecuteCommand(command: String) {
 
    switch(command) {
    
-      // For resume option, just hide the panel
-      // (the pausegame flag will be set to false)
-      case "New Game":
+      case "Level 1":
       // Load the first level
-      Application.LoadLevel("fantasylevel");  //intro
+         Application.LoadLevel("fantasylevel"); 
          break;
-       /*  
-       case "Controls":
-      // Load the first level
-      //Application.LoadLevel("Level1");  instructions
-         break;
-      */        
-      case "Level Select":
-      // Select which level 
-      // you would like to play
-        Application.LoadLevel("LevelSelect");
-         break;
-
-      /*case "How To":
-      // Load the first level
-      Application.LoadLevel("Instruct");  
-         break;*/
          
-      // For the quit option load the main menu scene         
-      case "Quit":
-         Application.Quit();
+       case "Level 2":
+      // Load the second level
+         Application.LoadLevel("Ice Level Demo");
          break;
+                 
+      case "Level 3":
+         // Load the third level
+         Application.LoadLevel("FireLevel"); 
+         break;
+        
+      case "Final Level":
+      // Load the final level
+      Application.LoadLevel("BossBattle");       
+      
+      case "Return":
+      // Load the final level
+      Application.LoadLevel("MenuScreen");
                
    }
 }
@@ -115,10 +113,10 @@ function Update () {
           time=wait;
        }
      } 
-         
-
+        
 }
 
+// take note of whether the button is pressed
 private function press() {
-pressed = false;
+   pressed = false;
 }
