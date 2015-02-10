@@ -7,6 +7,9 @@ import UnityEngine.UI;
 
 //reference to UI panel object
 var storyPanel : GameObject;
+var popSound : AudioClip;
+var popDisappear : AudioClip;
+private var isPlaying : boolean = false;
 
 
 var TellStory : boolean = false;
@@ -19,13 +22,19 @@ private var story : FloatingText;
 function OnTriggerEnter2D (other : Collider2D) {
     if( other.tag == "Player") {
        TellStory = true;
+       isPlaying = true;
+       audio.PlayOneShot(popSound, 1f);
+       isPlaying = false;
     }
 }
 
 function OnTriggerExit2D (other : Collider2D) {
    if(other.tag == "Player") {
+   	if(isPlaying == false){
+   audio.PlayOneShot(popDisappear, 1f);
       TellStory = false;
    }
+}
 }
 
 function Start () {
@@ -43,6 +52,7 @@ function Update () {
    if (TellStory) {
       //story.SetActive(true);
       story.showStory();
+      
       //isEnter = true;
       
    } else {

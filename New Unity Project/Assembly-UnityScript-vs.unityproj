@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\DodgeScript.js" />
      <Compile Include="Assets\Particles\Legacy Particles\TimedObjectDestructor.js" />
+     <Compile Include="Assets\Scripts\AbilityManager.js" />
      <Compile Include="Assets\Scripts\Appear.js" />
      <Compile Include="Assets\Scripts\AttackClass 1.js" />
      <Compile Include="Assets\Scripts\AttackClass.js" />
@@ -59,6 +60,8 @@
      <Compile Include="Assets\Scripts\Boss.js" />
      <Compile Include="Assets\Scripts\BoudlerDoor.js" />
      <Compile Include="Assets\Scripts\BoxScript.js" />
+     <Compile Include="Assets\Scripts\BreakingGround.js" />
+     <Compile Include="Assets\Scripts\BreakingGroundController.js" />
      <Compile Include="Assets\Scripts\CameraController.js" />
      <Compile Include="Assets\Scripts\Character.js" />
      <Compile Include="Assets\Scripts\ChildController.js" />
@@ -76,11 +79,12 @@
      <Compile Include="Assets\Scripts\HarmlessGhostScript.js" />
      <Compile Include="Assets\Scripts\HealthBar.js" />
      <Compile Include="Assets\Scripts\Invisible.js" />
+     <Compile Include="Assets\Scripts\LoadLevelManager.js" />
+     <Compile Include="Assets\Scripts\LoadLevelScript.js" />
      <Compile Include="Assets\Scripts\MainMenuManager.js" />
      <Compile Include="Assets\Scripts\MainMenuScript.js" />
      <Compile Include="Assets\Scripts\MovingGroundControl.js" />
      <Compile Include="Assets\Scripts\MovingPlatform.js" />
-     <Compile Include="Assets\Scripts\NewBehaviourScript.js" />
      <Compile Include="Assets\Scripts\OffsetScroller.js" />
      <Compile Include="Assets\Scripts\ParallaxScroll.js" />
      <Compile Include="Assets\Scripts\PathDefinition.js" />

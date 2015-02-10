@@ -2,9 +2,6 @@
 
 var paused : boolean = false;
 
-
-
-
 function Update () {
 
 	if(Input.GetKeyDown("Escape") && paused == false) {   
