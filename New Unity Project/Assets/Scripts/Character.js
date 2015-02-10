@@ -14,6 +14,7 @@ public var abilityPickedUp: boolean;
 // Where you will respawn
 var checkpoint : Transform;
 
+
 // Health bar
 static var health : float = 3;
 var HealthBar : Scrollbar;
@@ -119,13 +120,20 @@ function OnTriggerEnter2D(other: Collider2D) {
 	//if (!(minion.GetComponent.< Enemy1Control >(). freeze)) {	
 	
     if(other.tag == "Enemy") {
-   		PlayerHit();
+       PlayerHit();
+       if (charHealth != 0) {  		
+   		transform.position = checkpoint.position;
+   		}
+   			 
 	}
 	//}   
 	if (other.tag == "EnemyAttack") {
-	    transform.position = checkpoint.position;
+	    PlayerHit();
+	 if (charHealth != 0) {  		
+   		transform.position = checkpoint.position;
+   		} 
 		//Application.LoadLevel(Application.loadedLevelName);
-		transform.position = checkpoint.position;
+		
 	}
 	if (other.tag == "BossAttack") {
 		PlayerHit();
@@ -143,10 +151,18 @@ function OnTriggerEnter2D(other: Collider2D) {
 
 	
 	if (other.tag == "fallingSpikes"){
-		transform.position = checkpoint.position;	            
+	    PlayerHit();
+	 if (charHealth != 0) {  		
+   		transform.position = checkpoint.position;
+   		}
+	            
 	}
 	if (other.tag == "IceSpikes"){
-		transform.position = checkpoint.position;	            
+	    PlayerHit();
+	 if (charHealth != 0) {  		
+   		transform.position = checkpoint.position;
+   		}
+		            
 	}
 	if(other.tag == "oneTouchPlatform") {
 	   rigidbody2D.AddForce (new Vector2 (0f, jumpForce));
@@ -158,8 +174,9 @@ function OnTriggerEnter2D(other: Collider2D) {
 
 function Update() {
 	// if you have no health left reload the level
-	if (charHealth == 0) {
-		Application.LoadLevel(Application.loadedLevelName);
+	if (charHealth == 0) {	    
+		Application.LoadLevel(Application.loadedLevelName);		
+		charHealth=3;				
 		Boss.health = 10;
 	}		
 	if (!grounded && doubleJumpCount == 1 && Input.GetKeyDown(KeyCode.Space)&& abilityPickedUp) {
