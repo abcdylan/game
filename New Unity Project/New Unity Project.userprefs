@@ -1,9 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\RespawnPlayer.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\MainMenuScript.js">
     <Files>
-      <File FileName="Assets\Scripts\RespawnPlayer.js" Line="11" Column="1" />
+      <File FileName="Assets\Scripts\MainMenuScript.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\LoadLevelScript.js" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Character.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\RespawnPlayer.js" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Controls.js" Line="1" Column="1" />
       <File FileName="Assets\Scripts\CameraController.js" Line="1" Column="1" />
       <File FileName="Assets\Scripts\TriggeredMovePlatform.js" Line="1" Column="1" />
@@ -16,6 +18,11 @@
       <File FileName="Assets\Scripts\AttackClassEnemy.js" Line="1" Column="1" />
       <File FileName="Assets\Scripts\MovingGroundControl.js" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Invisible.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\AbilityManager.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GameMaster.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\pausemenu.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MainMenuManager.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\LoadLevelManager.js" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
