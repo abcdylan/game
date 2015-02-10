@@ -72,7 +72,6 @@
      <Compile Include="Assets\Scripts\EnemyAI.js" />
      <Compile Include="Assets\Scripts\FallingSpike.js" />
      <Compile Include="Assets\Scripts\FalllingSpikeAttackClass.js" />
-     <Compile Include="Assets\Scripts\FlickeringLightScript.js" />
      <Compile Include="Assets\Scripts\FloatingText.js" />
      <Compile Include="Assets\Scripts\FollowPath.js" />
      <Compile Include="Assets\Scripts\GameMaster.js" />
