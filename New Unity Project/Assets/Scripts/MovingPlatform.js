@@ -10,10 +10,10 @@ public var doNotMove :boolean;
 public var invisible :boolean;
 
 
-function Update () {
+function FixedUpdate () {
    if(invisible){
       gameObject.GetComponent(SpriteRenderer).color.a = 0;
-   }else{
+   }else if(!invisible && gameObject.tag == "MovingRainCloud"){
       gameObject.GetComponent(SpriteRenderer).color.a = 1;
    }            
    if(!doNotMove){
