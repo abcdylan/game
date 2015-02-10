@@ -12,7 +12,6 @@ private function Awake() {
 }
 
 function OnTriggerEnter2D(other : Collider2D) {
-	//Disable/enable the airControl to make the slide work
 	if(other.tag == "disableAirControl") {
 		character.airControl = false;
 	} else if (other.tag == "enableAirControl") {
@@ -20,11 +19,11 @@ function OnTriggerEnter2D(other : Collider2D) {
 	}
 	//if colliding with the fire ability
 	if(other.tag == "FireAbility") {
-		character.fAbility = true;
+		AbilityManager.fAbility = true;
 		Destroy(other.gameObject);
 	}//if colliding with the fire ability
 	else if(other.tag == "IceAbility") {
-		character.iAbility = true;
+		AbilityManager.iAbility = true;
 		Destroy(other.gameObject);
 	}
 }
@@ -33,10 +32,10 @@ private function Update() {
 	if (!jump) {
 		jump = Input.GetButtonDown("Jump");
 	}		
-	if(/*character.fAbility && */Input.GetKeyDown(KeyCode.Q)) {
+	if(AbilityManager.fAbility && Input.GetKeyDown(KeyCode.Alpha1)) {
 	   character.FireShoot(); 
     }
-    if(/*iAbility &&*/ Input.GetKeyDown(KeyCode.W)) {
+    if(AbilityManager.iAbility && Input.GetKeyDown(KeyCode.Alpha2)) {
        character.IceShoot();
     }
 	
