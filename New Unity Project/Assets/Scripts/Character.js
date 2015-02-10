@@ -20,9 +20,9 @@ var HealthBar : Scrollbar;
 var Health : float = 3;
 
 // fire ability boolean, whether or not the character has gotten it
-var fAbility : boolean = false;
+var fAbility : boolean;
 // ice ability boolean, whether or not the player has gotten it
-var iAbility : boolean = false;
+var iAbility : boolean;
 
 //What direction you are facing
 var facingRight : boolean = true;
@@ -39,7 +39,12 @@ public var jumpSound : AudioClip;
 private var source : AudioSource;
 function Awake () {
 	anim = GetComponent(Animator);
-	abilityPickedUp=true;
+	if(Application.loadedLevelName=="fantasylevel"){
+	   abilityPickedUp=false;
+	  }else{
+	  abilityPickedUp=true;
+	  }  
+	   
 	groundCheck = transform.Find("GroundCheck");
 	ceilingCheck = transform.Find("CeilingCheck");
 	source = GetComponent(AudioSource);		
@@ -102,8 +107,8 @@ function OnTriggerEnter2D(other: Collider2D) {
 	if (other.tag == "DisableAirControl") {
 		airControl = false;
 	} else if (other.tag == "EnableAirControl") {
-		rigidbody2D.velocity.x += (rigidbody2D.velocity.x +3);	
-		rigidbody2D.velocity.y += (rigidbody2D.velocity.y +2);	 
+	  rigidbody2D.velocity.x = (rigidbody2D.velocity.x +3);	
+	  rigidbody2D.velocity.y = (rigidbody2D.velocity.y +2);	 
 		airControl = true;
 	}
 	if(other.tag == "Ability"){
@@ -132,14 +137,10 @@ function OnTriggerEnter2D(other: Collider2D) {
 	}
 	
 	if(other.tag == "Slide"){
-		rigidbody2D.velocity.x += (rigidbody2D.velocity.x / 7);	
-		rigidbody2D.velocity.y += (rigidbody2D.velocity.y / 8);	 
-	}   
-	
-	if(other.tag=="Slide"){
-	rigidbody2D.velocity.x += (rigidbody2D.velocity.x / 7);	
-	rigidbody2D.velocity.y += (rigidbody2D.velocity.y / 8);	 
-}   
+	   rigidbody2D.velocity.x += (rigidbody2D.velocity.x / 7);	
+	   rigidbody2D.velocity.y += (rigidbody2D.velocity.y / 8);	 
+    }   
+
 	
 	if (other.tag == "fallingSpikes"){
 		transform.position = checkpoint.position;	            
@@ -148,7 +149,7 @@ function OnTriggerEnter2D(other: Collider2D) {
 		transform.position = checkpoint.position;	            
 	}
 	if(other.tag == "oneTouchPlatform") {
-		rigidbody2D.AddForce (new Vector2 (0f, jumpForce));
+	   rigidbody2D.AddForce (new Vector2 (0f, jumpForce));
 	}	
 	if (other.tag == "Checkpoint") {
 		checkpoint = other.transform;

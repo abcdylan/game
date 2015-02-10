@@ -40,7 +40,7 @@ function Update () {
 	   }
 	  }
   if(disappear==false){      
-      if(thatObject.GetComponent(SpriteRenderer).color.a < 255 ){
+      if(thatObject.GetComponent(SpriteRenderer).color.a < 1 ){
 		  thatObject.GetComponent(SpriteRenderer).color.a += reappearTime * Time.deltaTime * 2 ; 
 		   thatObject.active=true;    
       }
