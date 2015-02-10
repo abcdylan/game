@@ -1,18 +1,18 @@
 ﻿#pragma strict
 
-// Dodging stuff 
+// Boss dodging stuff 
 var dodgeRandom : float;
 var dodgeColliderRight : EdgeCollider2D;
 var dodgeColliderLeft : EdgeCollider2D;
-var headCollider : EdgeCollider2D;
 var dodgeTimer: float;
 private var dodgeTimerLeft: float = 0;
+var dodgeEnabled : boolean = true;
 
+// freezing the boss prevents dodging
 var freezeTime : float;
 private var freezeTimeLeft : float = 0;
 
 // Character stuff
-//var facingRight : boolean = true;
 private var groundCheck : Transform;
 private var groundedRadius : float = .2;
 var grounded : boolean = false;
@@ -25,15 +25,19 @@ var jumpForce : float;
 var crouchSpeed : float = .5;
 var airControl : boolean = true;
 var frozen : boolean = false;
+var bossColour : Color;
 
 // Health bar
 static var health : float = 10;
 var HealthBar : Scrollbar;
 var Health : float = 100;
 
-var dodgeEnabled : boolean = true;
-
+//Sets variables
 function Awake () {
+	bossColour.r = 106;
+	bossColour.g = 106;
+	bossColour.b = 106;
+	bossColour.a = 255;
 	anim = GetComponent(Animator);
 	groundCheck = transform.Find("GroundCheck");
 	ceilingCheck = transform.Find("CeilingCheck");		
@@ -47,17 +51,18 @@ private function FixedUpdate () {
 	if (frozen && freezeTimeLeft > 0) {
 		freezeTimeLeft -= Time.deltaTime;
 	}
-	if (frozen) {
+	/*if (frozen) {
 		gameObject.GetComponent(SpriteRenderer).color = Color.blue;	
 		maxSpeed = 5;
 	} else {
-		gameObject.GetComponent(SpriteRenderer).color = Color.white;
+		gameObject.GetComponent(SpriteRenderer).color = Color(.5, .5, .5);
 		maxSpeed = 10;
-	}
-											
+	}*/
+	
+	//dodge is randomly generated									
 	if(dodgeTimerLeft <= 0) {
-		dodgeRandom = Random.Range(0, 30);
-		if (dodgeRandom > 15) {
+		dodgeRandom = Random.Range(0, 100);
+		if (dodgeRandom < 15) {
 			dodgeEnabled = true;
 			dodgeColliderRight.enabled = true;
 			dodgeColliderLeft.enabled = true;
@@ -119,6 +124,7 @@ function Move (move : float, crouch : boolean, jump : boolean) {
 	}
 }
 */
+//Boss jumps over player's fireshot
 function Dodge () {
 	if (grounded && anim.GetBool("Ground")) {
 		grounded = false;
@@ -145,6 +151,7 @@ function OnCollisionEnter2D(coll: Collision2D) {
 	}
 }
 
+// changes the healthbar of the boss
 function Damage(value : float) {
 	Health -= value;
 	HealthBar.size = Health / 100;

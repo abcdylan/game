@@ -26,7 +26,7 @@ function Update () {
 			Destroy(gameObject);
 		}
 	}
-	if (gameObject.tag == "EnemyAttack") {
+	if (gameObject.tag == "EnemyAttack" || gameObject.tag == "BossAttack") {
 		if (timeToLive > 0) {
 			timeToLive -= Time.deltaTime;
 		} else {
@@ -39,15 +39,15 @@ function OnTriggerEnter2D(other: Collider2D) {
 	if (other.tag == "Enemy") {
 		//Destroy(gameObject);
 	}
+	if (gameObject.tag == "BossAttack" && other.tag == "IceCube") {
+		Destroy(gameObject);
+		Destroy(other.gameObject);
+	}
 	if (gameObject.tag == "Fireball" && other.tag == "IceCube") {
 		Destroy(gameObject);
 		Destroy(other.gameObject);
 	}
 	if (gameObject.tag == "Fireball" && other.tag == "IceCubeBoss") {
-		Destroy(gameObject);
-		Destroy(other.gameObject);
-	}
-	if (gameObject.tag == "IceCube" && other.tag == "EnemyAttack") {
 		Destroy(gameObject);
 		Destroy(other.gameObject);
 	}

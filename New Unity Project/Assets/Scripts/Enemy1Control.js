@@ -11,6 +11,7 @@ var framesPerSecond: float;
 var character : GameObject;
 
 var charTransform : Transform;
+var spawnPoint : Transform;
 
 // Reference to the renderer of the sprite
 // game object
@@ -73,6 +74,9 @@ function OnTriggerEnter2D(other : Collider2D) {
       animRunning = false;
       //Destroy(gameObject);
    }
+   //if(other.tag=="Player"){
+     // other.transform.position = spawnPoint.position;
+     // }
 
 	/*if freeze in EnemyControl1 returns false, then execute this
 	if (!freeze) {	
