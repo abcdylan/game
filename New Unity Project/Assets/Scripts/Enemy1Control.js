@@ -74,9 +74,9 @@ function OnTriggerEnter2D(other : Collider2D) {
       animRunning = false;
       //Destroy(gameObject);
    }
-   if(other.tag=="Player"){
-      other.transform.position = spawnPoint.position;
-      }
+   //if(other.tag=="Player"){
+     // other.transform.position = spawnPoint.position;
+     // }
 
 	/*if freeze in EnemyControl1 returns false, then execute this
 	if (!freeze) {	

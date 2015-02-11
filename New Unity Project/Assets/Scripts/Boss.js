@@ -25,6 +25,7 @@ var jumpForce : float;
 var crouchSpeed : float = .5;
 var airControl : boolean = true;
 var frozen : boolean = false;
+var bossColour : Color;
 
 // Health bar
 static var health : float = 10;
@@ -33,6 +34,10 @@ var Health : float = 100;
 
 //Sets variables
 function Awake () {
+	bossColour.r = 106;
+	bossColour.g = 106;
+	bossColour.b = 106;
+	bossColour.a = 255;
 	anim = GetComponent(Animator);
 	groundCheck = transform.Find("GroundCheck");
 	ceilingCheck = transform.Find("CeilingCheck");		
@@ -46,13 +51,13 @@ private function FixedUpdate () {
 	if (frozen && freezeTimeLeft > 0) {
 		freezeTimeLeft -= Time.deltaTime;
 	}
-	if (frozen) {
+	/*if (frozen) {
 		gameObject.GetComponent(SpriteRenderer).color = Color.blue;	
 		maxSpeed = 5;
 	} else {
-		gameObject.GetComponent(SpriteRenderer).color = Color.white;
+		gameObject.GetComponent(SpriteRenderer).color = Color(.5, .5, .5);
 		maxSpeed = 10;
-	}
+	}*/
 	
 	//dodge is randomly generated									
 	if(dodgeTimerLeft <= 0) {
