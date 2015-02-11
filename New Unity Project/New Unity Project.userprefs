@@ -1,12 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PickUpScript.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\LoadLevelScript.js">
     <Files>
-      <File FileName="Assets\Scripts\PickUpScript.js" Line="14" Column="20" />
+      <File FileName="Assets\Scripts\LoadLevelScript.js" Line="71" Column="16" />
+      <File FileName="Assets\Scripts\PickUpScript.js" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Character.js" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Enemy1Control.js" Line="1" Column="1" />
       <File FileName="Assets\Scripts\MainMenuScript.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\LoadLevelScript.js" Line="1" Column="1" />
       <File FileName="Assets\Scripts\RespawnPlayer.js" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Controls.js" Line="1" Column="1" />
       <File FileName="Assets\Scripts\CameraController.js" Line="1" Column="1" />

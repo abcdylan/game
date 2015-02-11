@@ -62,12 +62,13 @@ function ExecuteCommand(command: String) {
          AbilityManager.iAbility = true;
          AbilityManager.fAbility = true;
       // Load the final level
-      Application.LoadLevel("BossBattle");       
-      
+         Application.LoadLevel("BossBattle");       
+         break;
+         
       case "Return":
       // Load the final level
       Application.LoadLevel("MenuScreen");
-               
+         break;      
    }
 }
 
