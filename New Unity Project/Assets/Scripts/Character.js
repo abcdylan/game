@@ -6,7 +6,7 @@ var crouchSpeed : float = .5;
 var airControl : boolean = true;
 var whatIsGround : LayerMask;
 var charHealth : float = 3;
-public var abilityPickedUp: boolean;
+//public var abilityPickedUp: boolean;
 
 //enemy object
 //var minion : GameObject;
@@ -21,9 +21,9 @@ var HealthBar : Scrollbar;
 var Health : float = 3;
 
 // fire ability boolean, whether or not the character has gotten it
-var fAbility : boolean;
+//var fAbility : boolean;
 // ice ability boolean, whether or not the player has gotten it
-var iAbility : boolean;
+//var iAbility : boolean;
 
 //What direction you are facing
 var facingRight : boolean = true;
@@ -37,14 +37,15 @@ private var ceilingCheck : Transform;
 private var ceilingRadius : float = .01;
 private var anim : Animator;
 public var jumpSound : AudioClip;
+public var doubleJumpSound : AudioClip;
 private var source : AudioSource;
 function Awake () {
 	anim = GetComponent(Animator);
-	if(Application.loadedLevelName=="fantasylevel"){
+	/*if(Application.loadedLevelName=="fantasylevel"){
 	   abilityPickedUp=false;
 	  }else{
 	  abilityPickedUp=true;
-	  }  
+	  }*/  
 	   
 	groundCheck = transform.Find("GroundCheck");
 	ceilingCheck = transform.Find("CeilingCheck");
@@ -113,7 +114,7 @@ function OnTriggerEnter2D(other: Collider2D) {
 		airControl = true;
 	}
 	if(other.tag == "Ability"){
-	   abilityPickedUp= !abilityPickedUp;
+	   AbilityManager.abilityPickedUp = true;
 	   Destroy(other.gameObject);
 	   }
 	//if freeze in EnemyControl1 returns false, then execute this
@@ -179,7 +180,7 @@ function Update() {
 		charHealth=3;				
 		Boss.health = 10;
 	}		
-	if (!grounded && doubleJumpCount == 1 && Input.GetKeyDown(KeyCode.Space)&& abilityPickedUp) {
+	if (!grounded && doubleJumpCount == 1 && Input.GetKeyDown(KeyCode.Space)&& AbilityManager.abilityPickedUp) {
 		rigidbody2D.AddForce (new Vector2 (0f, jumpForce));
 		rigidbody2D.velocity.y = 0;
 		doubleJumpCount = 0;

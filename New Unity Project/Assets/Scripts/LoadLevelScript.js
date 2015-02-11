@@ -45,16 +45,22 @@ function ExecuteCommand(command: String) {
          break;
          
        case "Level 2":
+         AbilityManager.abilityPickedUp = true;
       // Load the second level
          Application.LoadLevel("Ice Level Demo");
          break;
                  
       case "Level 3":
+         AbilityManager.abilityPickedUp = true;
+         AbilityManager.iAbility = true;
          // Load the third level
          Application.LoadLevel("FireLevel"); 
          break;
         
       case "Final Level":
+         AbilityManager.abilityPickedUp = true;
+         AbilityManager.iAbility = true;
+         AbilityManager.fAbility = true;
       // Load the final level
       Application.LoadLevel("BossBattle");       
       
