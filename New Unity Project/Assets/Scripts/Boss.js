@@ -20,11 +20,10 @@ private var ceilingCheck : Transform;
 private var ceilingRadius : float = .01;
 private var anim : Animator;
 var whatIsGround : LayerMask;
-var maxSpeed : float = 10;
 var jumpForce : float;
 var crouchSpeed : float = .5;
 var airControl : boolean = true;
-var frozen : boolean = false;
+static var frozen : boolean = false;
 var bossColour : Color;
 
 // Health bar
@@ -51,13 +50,13 @@ private function FixedUpdate () {
 	if (frozen && freezeTimeLeft > 0) {
 		freezeTimeLeft -= Time.deltaTime;
 	}
-	/*if (frozen) {
+	if (frozen) {
 		gameObject.GetComponent(SpriteRenderer).color = Color.blue;	
-		maxSpeed = 5;
+		EnemyAI.maxSpeed = 5;
 	} else {
 		gameObject.GetComponent(SpriteRenderer).color = Color(.5, .5, .5);
-		maxSpeed = 10;
-	}*/
+		EnemyAI.maxSpeed = 10;
+	}
 	
 	//dodge is randomly generated									
 	if(dodgeTimerLeft <= 0) {
@@ -148,6 +147,7 @@ function OnTriggerEnter2D(other: Collider2D) {
 function OnCollisionEnter2D(coll: Collision2D) {
 	if (coll.gameObject.tag == "IceCube") {
 		frozen = true;
+		Destroy(coll.gameObject);
 	}
 }
 

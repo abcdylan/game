@@ -5,7 +5,7 @@
 private var enemy : GameObject;
 private var player : GameObject;
 private var boss : Boss;
-var maxSpeed : float = 10;
+static var maxSpeed : float = 10;
 var facingRight : boolean = true;
 private var anim : Animator;
 var jumpForce : float = 400;
@@ -30,6 +30,7 @@ var teleportEffect : Transform;
 
 //Inizialization
 function Start () {
+	anim = GetComponent(Animator);
 	attackClass = GetComponent("AttackClassBoss");
 	enemy = GameObject.FindGameObjectWithTag("Enemy");
 	player = GameObject.FindGameObjectWithTag("Player");
@@ -37,6 +38,8 @@ function Start () {
 
 //Fire attack when at low health
 function BigAttack () {
+	anim.SetFloat("Speed", 0);
+	Boss.frozen = false;
 	if (fireTp < 1) {
 		Instantiate(teleportEffect, transform.position, transform.rotation);
 		fireTp++;
@@ -57,6 +60,8 @@ function BigAttack () {
 
 //Rains ice blocks
 function BigIceAttack () {
+	anim.SetFloat("Speed", 0);
+	Boss.frozen = false;
 	if (iceTp < 1) {
 		Instantiate(teleportEffect, transform.position, transform.rotation);
 		iceTp++;
@@ -102,28 +107,40 @@ function FixedUpdate () {
 	if (player.transform.position.x < gameObject.transform.position.x) {
 		if (facingRight) {
 			if (Mathf.Abs(player.transform.position.x - gameObject.transform.position.x) < 0.1) {
+				anim.SetFloat("Speed", 0);
 				return;
 			} else {
 				Flip();
 			}
 		}
+		if(!specialAttack) {
+			anim.SetFloat("Speed", 1);
+		} else {
+			anim.SetFloat("Speed",0);
+		}
 		rigidbody2D.velocity = new Vector2(-.3*maxSpeed, rigidbody2D.velocity.y);
 		randAttack = Random.Range(0,100);
-		if (randAttack == 1 && !specialAttack) {
+		if (randAttack == 1 && !specialAttack && !Boss.frozen) {
 			attackClass.Shoot();
 		}
 	// if the player is to the right of the enemy, walk right
 	} else if (player.transform.position.x > gameObject.transform.position.x) {
 		if (!facingRight) {
 			if ((Mathf.Abs(player.transform.position.x - gameObject.transform.position.x) < 0.1)) {
+				anim.SetFloat("Speed", 0);
 				return;
 			} else {
 				Flip();
 			}
 		}
+		if(!specialAttack) {
+			anim.SetFloat("Speed", 1);
+		} else {
+			anim.SetFloat("Speed",0);
+		}
 		rigidbody2D.velocity = new Vector2(.3*maxSpeed, rigidbody2D.velocity.y);
 		randAttack = Random.Range(0,100);
-		if (randAttack == 1 && !specialAttack) {
+		if (randAttack == 1 && !specialAttack && !Boss.frozen) {
 			attackClass.Shoot();
 		}	
 	}	
