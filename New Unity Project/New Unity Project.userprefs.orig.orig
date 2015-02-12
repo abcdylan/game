@@ -1,0 +1,98 @@
+<<<<<<< local
+﻿<Properties>
+<<<<<<< local
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Boss.js">
+=======
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\MainMenuScript.js">
+>>>>>>> other
+    <Files>
+<<<<<<< local
+      <File FileName="Assets\Scripts\ProjectileClassLeft.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ProjectileClass.js" Line="53" Column="3" />
+      <File FileName="Assets\Scripts\Character.js" Line="128" Column="1" />
+=======
+      <File FileName="Assets\Scripts\MainMenuScript.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\LoadLevelScript.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Character.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\RespawnPlayer.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Controls.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\CameraController.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\TriggeredMovePlatform.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MovingPlatform.js" Line="1" Column="1" />
+      <File FileName="..\..\..\HV CS work\assignments\Hannah_vanAlphenFyfe_AssignmentOne\SpaceInvaders\Assets\Scripts\GameMaster.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ChildController.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ProjectileClassLeft.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\HUDScript.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\AttackClass 1.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\AttackClassEnemy.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MovingGroundControl.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Invisible.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\AbilityManager.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GameMaster.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\pausemenu.js" Line="1" Column="1" />
+>>>>>>> other
+      <File FileName="Assets\Scripts\MainMenuManager.js" Line="1" Column="1" />
+<<<<<<< local
+      <File FileName="Assets\Scripts\AttackClassBoss.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\EnemyAI.js" Line="16" Column="21" />
+      <File FileName="Assets\Scripts\Boss.js" Line="115" Column="40" />
+=======
+      <File FileName="Assets\Scripts\LoadLevelManager.js" Line="1" Column="1" />
+>>>>>>> other
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>=======
+﻿<Properties>
+<<<<<<< local
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GameMaster.js">
+=======
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\MainMenuScript.js">
+>>>>>>> other
+    <Files>
+<<<<<<< local
+      <File FileName="Assets\Scripts\GameMaster.js" Line="6" Column="2" />
+      <File FileName="Assets\Scripts\RespawnPlayer.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Character.js" Line="178" Column="54" />
+=======
+      <File FileName="Assets\Scripts\MainMenuScript.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\LoadLevelScript.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Character.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\RespawnPlayer.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Controls.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\CameraController.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\TriggeredMovePlatform.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MovingPlatform.js" Line="1" Column="1" />
+      <File FileName="..\..\..\HV CS work\assignments\Hannah_vanAlphenFyfe_AssignmentOne\SpaceInvaders\Assets\Scripts\GameMaster.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ChildController.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ProjectileClassLeft.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\HUDScript.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\AttackClass 1.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\AttackClassEnemy.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MovingGroundControl.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Invisible.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\AbilityManager.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GameMaster.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\pausemenu.js" Line="1" Column="1" />
+>>>>>>> other
+      <File FileName="Assets\Scripts\MainMenuManager.js" Line="1" Column="1" />
+<<<<<<< local
+      <File FileName="Assets\Scripts\AttackClassBoss.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Enemy1Control.js" Line="1" Column="1" />
+=======
+      <File FileName="Assets\Scripts\LoadLevelManager.js" Line="1" Column="1" />
+>>>>>>> other
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>>>>>>>> other
