@@ -1,16 +1,16 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\TyperScript.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\MainMenuScript.js">
     <Files>
+      <File FileName="Assets\Scripts\PickUpScript.js" Line="17" Column="43" />
       <File FileName="Assets\Scripts\TyperScript.js" Line="40" Column="1" />
       <File FileName="Assets\Scripts\GameMaster.js" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Character.js" Line="1" Column="1" />
       <File FileName="Assets\Scripts\CameraController.js" Line="1" Column="1" />
       <File FileName="Assets\Scripts\LevelIntroScript.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\LoadLevelScript.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PickUpScript.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\LoadLevelScript.js" Line="45" Column="42" />
       <File FileName="Assets\Scripts\Enemy1Control.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\MainMenuScript.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MainMenuScript.js" Line="58" Column="10" />
       <File FileName="Assets\Scripts\RespawnPlayer.js" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Controls.js" Line="1" Column="1" />
       <File FileName="Assets\Scripts\TriggeredMovePlatform.js" Line="1" Column="1" />
@@ -24,12 +24,14 @@
       <File FileName="Assets\Scripts\Invisible.js" Line="1" Column="1" />
       <File FileName="Assets\Scripts\AbilityManager.js" Line="1" Column="1" />
       <File FileName="Assets\Scripts\pausemenu.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\MainMenuManager.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MainMenuManager.js" Line="8" Column="1" />
       <File FileName="Assets\Scripts\LoadLevelManager.js" Line="1" Column="1" />
       <File FileName="Assets\Scripts\BreakingGroundController.js" Line="1" Column="1" />
       <File FileName="Assets\Scripts\BreakingGround.js" Line="1" Column="1" />
       <File FileName="Assets\Scripts\AttackClass.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\StoryController.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\StoryController.js" Line="26" Column="40" />
+      <File FileName="Assets\Scripts\PuzzlePickUpScript.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ParallaxScroll.js" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
