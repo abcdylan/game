@@ -6,6 +6,7 @@ import UnityEngine.UI;
 // Reference to UI panel that is our pause menu
 var StartMenuPanel: GameObject;
 
+
 // Reference to panel's script object 
 private var mainMenu: MainMenuScript;
 
