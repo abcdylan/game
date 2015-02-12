@@ -39,6 +39,8 @@ private var anim : Animator;
 public var jumpSound : AudioClip;
 public var doubleJumpSound : AudioClip;
 private var source : AudioSource;
+
+
 function Awake () {
 	anim = GetComponent(Animator);
 	/*if(Application.loadedLevelName=="fantasylevel"){
