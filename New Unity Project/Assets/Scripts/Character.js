@@ -129,13 +129,14 @@ function OnTriggerEnter2D(other: Collider2D) {
 	}
 	//}   
 	if (other.tag == "EnemyAttack") {
-	    PlayerHit();
-	 if (charHealth != 0) {  		
-   		transform.position = checkpoint.position;
+	    Destroy(other.gameObject);
+	    PlayerHit();   
+	    if (charHealth != 0) {  		
+   	    	transform.position = checkpoint.position;
    		} 
-		//Application.LoadLevel(Application.loadedLevelName);
-		
+		//Application.LoadLevel(Application.loadedLevelName);	
 	}
+	
 	if (other.tag == "BossAttack") {
 		PlayerHit();
 		Destroy(other.gameObject);
@@ -153,15 +154,15 @@ function OnTriggerEnter2D(other: Collider2D) {
 	
 	if (other.tag == "fallingSpikes"){
 	    PlayerHit();
-	 if (charHealth != 0) {  		
-   		transform.position = checkpoint.position;
+	    if (charHealth != 0) {  		
+   		   transform.position = checkpoint.position;
    		}
 	            
 	}
 	if (other.tag == "IceSpikes"){
 	    PlayerHit();
-	 if (charHealth != 0) {  		
-   		transform.position = checkpoint.position;
+	    if (charHealth != 0) {  		
+   		   transform.position = checkpoint.position;
    		}
 		            
 	}

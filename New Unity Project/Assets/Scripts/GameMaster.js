@@ -8,4 +8,8 @@ function OnTriggerEnter2D(other: Collider2D) {
 	if (other.tag =="GoToFireLevel") {
 	Application.LoadLevel("FireLevel");
 	} 
+    
+    if (other.tag =="BossLevelTransition") {
+	Application.LoadLevel("BossBattle");
+	} 
 }
