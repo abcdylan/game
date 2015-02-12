@@ -101,6 +101,7 @@
      <Compile Include="Assets\Scripts\StoryController.js" />
      <Compile Include="Assets\Scripts\TriggerPlatformController.js" />
      <Compile Include="Assets\Scripts\TriggeredMovePlatform.js" />
+     <Compile Include="Assets\Scripts\TyperScript.js" />
      <Compile Include="Assets\Scripts\UtilScript.js" />
      <Compile Include="Assets\Scripts\UtilScript2.js" />
      <Compile Include="Assets\Scripts\backupCharacter.js.js" />
