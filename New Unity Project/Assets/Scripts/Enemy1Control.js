@@ -3,7 +3,7 @@
 // An array with the sprites used for animation
 var animSprites: Sprite[];
 
-// Controls how fast to change the sprites when
+// AbilityManager how fast to change the sprites when
 // animation is running
 var framesPerSecond: float;
 
@@ -71,9 +71,14 @@ function OnTriggerEnter2D(other : Collider2D) {
    if(other.tag=="IceCube"){
       freeze = true;
       speed = 0;
-      animRunning = false;
-      //Destroy(gameObject);
-   }
+      animRunning = false;     
+      }
+      
+    if(other.tag == "Player") {
+       if(!freeze){
+          character.GetComponent.< Character >().PlayerHit();
+   		}
+   	}
    
    if (other.tag == "Fireball") {
       Destroy(other.gameObject);
@@ -115,7 +120,7 @@ function Update() {
 	}  else if (movementDir > 0 && charTransform.position.x > gameObject.transform.position.x) {
 		iceAttack.IceShoot();
 	}
-		
+			
 		 
    if(animRunning) {
       // Animation is running, so we need to 

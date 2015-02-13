@@ -17,6 +17,7 @@ static var iAbility : boolean = false;
 static var fAbility : boolean = false;
 
 function Awake() {
+
    DontDestroyOnLoad(this);
 }
 /*

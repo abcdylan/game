@@ -3,7 +3,7 @@
 // An array with the sprites used for animation
 var animSprites: Sprite[];
 
-// Controls how fast to change the sprites when
+// AbilityManager how fast to change the sprites when
 // animation is running
 var framesPerSecond: float;
 
@@ -66,9 +66,9 @@ function FixedUpdate () {
 
 function OnTriggerEnter2D(other : Collider2D) {
    //var enemyWave : EnemyWaveClass;
-   if(other.tag=="Player"){
+   /*if(other.tag=="Player"){
       other.transform.position = spawnPoint.position;
-      }
+      }*/
     if(other.tag=="MovingRainCloud"){
       Destroy(gameObject);
       }
