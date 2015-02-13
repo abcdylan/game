@@ -1,5 +1,9 @@
 ﻿#pragma strict
 
+//var cam : Camera;
+
+//private var startCam : CameraController;
+
 //static variables for the players abilities
 // that the game can access across levels
 
@@ -16,5 +20,12 @@ function Awake() {
 
    DontDestroyOnLoad(this);
 }
+/*
+function Start() {
+   startCam = cam.GetComponent(CameraController);
+}
 
-
+function changeCam(darkChar : GameObject) {
+    
+}
+*/
