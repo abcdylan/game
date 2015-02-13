@@ -1,5 +1,5 @@
 ﻿#pragma strict
-//this class controls all attacks
+//this class AbilityManager all attacks
 
 //projectile speed
 var speed: float;

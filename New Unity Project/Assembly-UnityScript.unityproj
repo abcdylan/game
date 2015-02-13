@@ -78,6 +78,7 @@
      <Compile Include="Assets\Scripts\HUDScript.js" />
      <Compile Include="Assets\Scripts\HarmlessGhostScript.js" />
      <Compile Include="Assets\Scripts\HealthBar.js" />
+     <Compile Include="Assets\Scripts\Hearts.js" />
      <Compile Include="Assets\Scripts\Invisible.js" />
      <Compile Include="Assets\Scripts\LoadLevelManager.js" />
      <Compile Include="Assets\Scripts\LoadLevelScript.js" />
@@ -88,6 +89,7 @@
      <Compile Include="Assets\Scripts\OffsetScroller.js" />
      <Compile Include="Assets\Scripts\ParallaxScroll.js" />
      <Compile Include="Assets\Scripts\PathDefinition.js" />
+     <Compile Include="Assets\Scripts\PauseMenuManager.js" />
      <Compile Include="Assets\Scripts\PickUpScript.js" />
      <Compile Include="Assets\Scripts\PlayerClass.js" />
      <Compile Include="Assets\Scripts\PlayerControl.js" />

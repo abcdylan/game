@@ -14,6 +14,11 @@ var ability1 : Image;
 var ability2 : Image;
 var ability3 : Image;
 
+// Reference to UI panel that is our pause menu
+var pauseMenuPanel: GameObject;
+// Reference to panel's script object 
+private var pauseMenu: PauseMenuManager;
+
 
 
 var character : GameObject;
@@ -37,7 +42,13 @@ function Start() {
    //getPuz1.color.a = 0;
    //charControl = character.GetComponent(Character);
    
+ // Initialise the reference to the script object, which is a
+   // component of the pause menu panel game object
+   pauseMenu = pauseMenuPanel.GetComponent(PauseMenuManager);
+   pauseMenu.Hide(); 
+   
 }
+
 
 function Update() {
    if(pickedUp1.pickUp) {
@@ -58,6 +69,15 @@ function Update() {
    }
    if(AbilityManager.fAbility) {
       ability3.color.a = 255;
+   }   
+   
+   if(Character.gameOver) {
+      // If gameover state detected, show the pause menu in gameover mode   
+      pauseMenu.ShowGameOver();
+      Character.gameOver=false;
+   } else if(Input.GetKey(KeyCode.Escape)) {
+      // If user presses ESC, show the pause menu in pause mode
+      pauseMenu.ShowPause();
    }
 }
 
