@@ -1,0 +1,29 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+<<<<<<< local
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\DestroyScript.js">
+=======
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Hearts.js">
+>>>>>>> other
+    <Files>
+<<<<<<< local
+      <File FileName="Assets\Scripts\DestroyScript.js" Line="11" Column="1" />
+      <File FileName="Assets\Scripts\ProjectileClass.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Character.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Enemy1Control.js" Line="1" Column="1" />
+=======
+      <File FileName="Assets\Scripts\LoadLevelScript.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ParallaxScroll.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\EnemyAI.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Boss.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Character.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Hearts.js" Line="9" Column="4" />
+      <File FileName="Assets\Scripts\HUDScript.js" Line="1" Column="1" />
+>>>>>>> other
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
