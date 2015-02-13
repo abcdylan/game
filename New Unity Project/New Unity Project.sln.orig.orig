@@ -25,16 +25,12 @@ Global
 	EndGlobalSection
 <<<<<<< local
 <<<<<<< local
-																																																																																																																																																																																											GlobalSection(MonoDevelopProperties) = preSolution
+																																																																																																																																																																																																																						GlobalSection(MonoDevelopProperties) = preSolution
 =======
-																																																																																																																																																																																																				GlobalSection(MonoDevelopProperties) = preSolution
+																																																																																																																																																																																																												GlobalSection(MonoDevelopProperties) = preSolution
 >>>>>>> other
 =======
-<<<<<<< local
-																																																																																																																																																																																																			GlobalSection(MonoDevelopProperties) = preSolution
-=======
-																																																																																																																																																																																																							GlobalSection(MonoDevelopProperties) = preSolution
->>>>>>> other
+																																																																																																																																																																																																										GlobalSection(MonoDevelopProperties) = preSolution
 >>>>>>> other
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
