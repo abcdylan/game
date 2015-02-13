@@ -19,15 +19,15 @@ Global
 	EndGlobalSection
 <<<<<<< local
 <<<<<<< local
-																																																																																																																																																																																												GlobalSection(MonoDevelopProperties) = preSolution
+																																																																																																																																																																																																												GlobalSection(MonoDevelopProperties) = preSolution
 =======
-																																																																																																																																																																																																					GlobalSection(MonoDevelopProperties) = preSolution
+																																																																																																																																																																																																													GlobalSection(MonoDevelopProperties) = preSolution
 >>>>>>> other
 =======
 <<<<<<< local
-																																																																																																																																																																																																				GlobalSection(MonoDevelopProperties) = preSolution
+																																																																																																																																																																																																													GlobalSection(MonoDevelopProperties) = preSolution
 =======
-																																																																																																																																																																																																								GlobalSection(MonoDevelopProperties) = preSolution
+																																																																																																																																																																																																											GlobalSection(MonoDevelopProperties) = preSolution
 >>>>>>> other
 >>>>>>> other
 		StartupItem = Assembly-CSharp.csproj
