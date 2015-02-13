@@ -8,7 +8,7 @@ import UnityEngine.UI;
 //reference to UI panel object
 var storyPanel : GameObject;
 var popSound : AudioClip;
-var popDisappear : AudioClip;
+//var popDisappear : AudioClip;
 private var isPlaying : boolean = false;
 
 
@@ -31,7 +31,7 @@ function OnTriggerEnter2D (other : Collider2D) {
 function OnTriggerExit2D (other : Collider2D) {
    if(other.tag == "Player") {
    	if(isPlaying == false){
-      audio.PlayOneShot(popDisappear, 1f);
+   //audio.PlayOneShot(popDisappear, 1f);
       TellStory = false;
    }
 }

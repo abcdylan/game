@@ -5,7 +5,8 @@ var jumpForce : float = 400;
 var crouchSpeed : float = .5;
 var airControl : boolean = true;
 var whatIsGround : LayerMask;
-var charHealth : float = 3;
+static var gameOver :boolean;
+static var charHealth : float = 3;
 //public var abilityPickedUp: boolean;
 
 //enemy object
@@ -18,7 +19,7 @@ var checkpoint : Transform;
 // Health bar
 static var health : float = 3;
 var HealthBar : Scrollbar;
-var Health : float = 3;
+static var Health : float = 3;
 
 // fire ability boolean, whether or not the character has gotten it
 //var fAbility : boolean;
@@ -39,8 +40,6 @@ private var anim : Animator;
 public var jumpSound : AudioClip;
 public var doubleJumpSound : AudioClip;
 private var source : AudioSource;
-
-
 function Awake () {
 	anim = GetComponent(Animator);
 	/*if(Application.loadedLevelName=="fantasylevel"){
@@ -114,37 +113,22 @@ function OnTriggerEnter2D(other: Collider2D) {
 	  rigidbody2D.velocity.x = (rigidbody2D.velocity.x +3);	
 	  rigidbody2D.velocity.y = (rigidbody2D.velocity.y +2);	 
 		airControl = true;
-	}
-	if(other.tag == "Ability"){
-	   AbilityManager.abilityPickedUp = true;
-	   Destroy(other.gameObject);
-	   }
+	}	
 	//if freeze in EnemyControl1 returns false, then execute this
 	//if (!(minion.GetComponent.< Enemy1Control >(). freeze)) {	
 	
-    if(other.tag == "Enemy") {
-       PlayerHit();
-       if (charHealth != 0) {  		
-   		transform.position = checkpoint.position;
-   		}
-   			 
-	}
-	//}   
 	if (other.tag == "EnemyAttack") {
-	    Destroy(other.gameObject);
-	    PlayerHit();   
-	    if (charHealth != 0) {  		
-   	    	transform.position = checkpoint.position;
-   		} 
-		//Application.LoadLevel(Application.loadedLevelName);	
-	}
+	    Damage(1);
+	    Destroy(other.gameObject);	
+   		}		
+
 	
 	if (other.tag == "BossAttack") {
-		PlayerHit();
+		Damage(1);
 		Destroy(other.gameObject);
 	}
 	if (other.tag == "IceCubeBoss") {
-		PlayerHit();
+		Damage(1);
 		Destroy(other.gameObject);
 	}
 	
@@ -155,22 +139,17 @@ function OnTriggerEnter2D(other: Collider2D) {
 
 	
 	if (other.tag == "fallingSpikes"){
-	    PlayerHit();
-	    if (charHealth != 0) {  		
-   		   transform.position = checkpoint.position;
-   		}
-	            
+	    Damage(1);            
 	}
 	if (other.tag == "IceSpikes"){
-	    PlayerHit();
-	    if (charHealth != 0) {  		
-   		   transform.position = checkpoint.position;
-   		}
-		            
+	  PlayerHit();     
 	}
 	if(other.tag == "oneTouchPlatform") {
 	   rigidbody2D.AddForce (new Vector2 (0f, jumpForce));
-	}	
+	}
+	if(other.tag=="Ghost"){
+	   PlayerHit();
+	   }
 	if (other.tag == "Checkpoint") {
 		checkpoint = other.transform;
 	}	
@@ -178,11 +157,7 @@ function OnTriggerEnter2D(other: Collider2D) {
 
 function Update() {
 	// if you have no health left reload the level
-	if (charHealth == 0) {	    
-		Application.LoadLevel(Application.loadedLevelName);		
-		charHealth=3;				
-		Boss.health = 10;
-	}		
+	//control=charObject.GetComponent.< Control >().abilityPickedUp;
 	if (!grounded && doubleJumpCount == 1 && Input.GetKeyDown(KeyCode.Space)&& AbilityManager.abilityPickedUp) {
 		rigidbody2D.AddForce (new Vector2 (0f, jumpForce));
 		rigidbody2D.velocity.y = 0;
@@ -194,15 +169,28 @@ function Update() {
 }
 
 //change the healthbar and cause player to take damage
-function PlayerHit () {
-	Damage(1);
+function PlayerHit () {	
 	charHealth--;
+	transform.position = checkpoint.position;
+	Health=3;
+	HealthBar.size =100;	
+	if (charHealth < 0) {								
+		Boss.health = 10;
+		gameOver=true;				
+	}
 }
 
 // changes the healthbar
 function Damage(value : float) {
 	Health -= value;
 	HealthBar.size = Health / 3;
+	if(Health<0){
+	transform.position = checkpoint.position;
+	PlayerHit();
+	Health=3;
+	HealthBar.size =100;	
+	}
+	
 }
 
 // Flip the character around
