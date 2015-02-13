@@ -1,0 +1,22 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\MainMenuScript.js">
+    <Files>
+      <File FileName="Assets\Scripts\GameMaster.js" Line="17" Column="35" />
+      <File FileName="Assets\Scripts\WaitScript.js" Line="6" Column="21" />
+      <File FileName="Assets\Scripts\Character.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MainMenuScript.js" Line="40" Column="38" />
+      <File FileName="Assets\Scripts\LoadLevelScript.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ParallaxScroll.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\EnemyAI.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Boss.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Hearts.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\HUDScript.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Controls.js" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
