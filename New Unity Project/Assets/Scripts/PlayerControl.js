@@ -3,7 +3,7 @@
 // An array with the sprites used for animation
 var animSprites: Sprite[];
 
-// Controls how fast to change the sprites when
+// AbilityManager how fast to change the sprites when
 // animation is running
 var framesPerSecond: float;
 
