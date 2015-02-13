@@ -7,6 +7,7 @@ var airControl : boolean = true;
 var whatIsGround : LayerMask;
 static var gameOver :boolean;
 static var charHealth : float = 3;
+public var tempchar: int;
 //public var abilityPickedUp: boolean;
 
 //enemy object
@@ -128,7 +129,11 @@ function OnTriggerEnter2D(other: Collider2D) {
 
 	
 	if (other.tag == "BossAttack") {
-		Damage(1);
+	    //bossfire=true;
+		//Damage(1);
+		//PlayerHit();
+		charHealth-=1;
+		Damage(1);				
 		Destroy(other.gameObject);
 	}
 	if (other.tag == "IceCubeBoss") {
@@ -169,6 +174,7 @@ function Update() {
 		rigidbody2D.velocity.y = 0;
 		doubleJumpCount = 0;
 	}
+	tempchar=charHealth;
 	if (grounded) {
 		doubleJumpCount = 1;
 	}
@@ -177,11 +183,11 @@ function Update() {
 //change the healthbar and cause player to take damage
 function PlayerHit () {	
 	charHealth--;
-	transform.position = checkpoint.position;
+	transform.position = checkpoint.position;	
 	Health=3;
-	HealthBar.size =100;	
+	HealthBar.size =100; 
 	if (charHealth < 0) {								
-		Boss.health = 10;
+		Boss.health = 10;	
 		gameOver=true;				
 	}
 }
@@ -190,7 +196,7 @@ function PlayerHit () {
 function Damage(value : float) {
 	Health -= value;
 	HealthBar.size = Health / 3;
-	if(Health<0){
+	if(Health==0){
 	transform.position = checkpoint.position;
 	PlayerHit();
 	Health=3;

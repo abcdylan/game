@@ -56,10 +56,12 @@ function BigAttack () {
 	if (shootCooldownTimeLeft > 0) { 
 		shootCooldownTimeLeft -= Time.deltaTime;
 	}
+	specialAttack = false;
 }
 
 //Rains ice blocks
 function BigIceAttack () {
+	specialAttack = true;
 	anim.SetFloat("Speed", 0);
 	Boss.frozen = false;
 	if (iceTp < 1) {
@@ -78,25 +80,28 @@ function BigIceAttack () {
 	if (iceShootCooldownTimeLeft > 0) { 
 		iceShootCooldownTimeLeft -= Time.deltaTime;
 	}
+	specialAttack = false;
 }
 
 //Fixed Update
 function FixedUpdate () {
+	if (iceShootCooldownTimeLeft == 0) { 
+		specialAttack = false;		
+	}
+	if (shootCooldownTimeLeft == 0) { 
+		specialAttack = false;		
+	}
 	// When health gets low enough to special fire attack
 	if (Boss.health == 3 && bigAttackTimer > 0) {
 		BigAttack();
 		specialAttack = true;
 		bigAttackTimer -= Time.deltaTime;
-	} else {
-		specialAttack = false;
 	}
 	// When health gets low enough to special ice attack
 	if (Boss.health == 6 && iceAttackTimer > 0) {
 		BigIceAttack();
 		specialAttack = true;
 		iceAttackTimer -= Time.deltaTime;
-	} else {
-		specialAttack = false;
 	}
 	// When health is 0 just restart boss battle for now
 	if (Boss.health == 0) {
@@ -144,6 +149,11 @@ function FixedUpdate () {
 			attackClass.Shoot();
 		}	
 	}	
+	if(!specialAttack) {
+			anim.SetFloat("Speed", 1);
+		} else {
+			anim.SetFloat("Speed",0);
+		}
 }
 
 // Changes the direction the boss is facing
