@@ -122,6 +122,7 @@ function OnTriggerEnter2D(other: Collider2D) {
 	    Destroy(other.gameObject);	
    		}		
 
+	
 	if (other.tag == "BossAttack") {
 		Damage(1);
 		Destroy(other.gameObject);
