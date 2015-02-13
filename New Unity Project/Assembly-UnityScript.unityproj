@@ -108,7 +108,6 @@
      <Compile Include="Assets\Scripts\UtilScript.js" />
      <Compile Include="Assets\Scripts\UtilScript2.js" />
      <Compile Include="Assets\Scripts\VerticalMovingPlatforms.js" />
-     <Compile Include="Assets\Scripts\backupCharacter.js.js" />
      <Compile Include="Assets\Scripts\pausemenu.js" />
      <None Include="Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
  <Reference Include="UnityEngine.UI">

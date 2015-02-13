@@ -37,7 +37,9 @@ private var ceilingCheck : Transform;
 private var ceilingRadius : float = .01;
 private var anim : Animator;
 public var jumpSound : AudioClip;
+public var slideSound : AudioClip;
 public var doubleJumpSound : AudioClip;
+public var deathSound : AudioClip;
 private var source : AudioSource;
 
 
@@ -129,7 +131,11 @@ function OnTriggerEnter2D(other: Collider2D) {
    		}
    			 
 	}
-	//}   
+	
+	if (other.tag == "Ghost") {
+	source.PlayOneShot(deathSound, 1f);
+	}
+	   
 	if (other.tag == "EnemyAttack") {
 	    PlayerHit();
 	 if (charHealth != 0) {  		
@@ -149,7 +155,8 @@ function OnTriggerEnter2D(other: Collider2D) {
 	
 	if(other.tag == "Slide"){
 	   rigidbody2D.velocity.x += (rigidbody2D.velocity.x / 7);	
-	   rigidbody2D.velocity.y += (rigidbody2D.velocity.y / 8);	 
+	   rigidbody2D.velocity.y += (rigidbody2D.velocity.y / 8);
+	   source.PlayOneShot(slideSound, 1f);	 
     }   
 
 	
@@ -194,6 +201,7 @@ function Update() {
 
 //change the healthbar and cause player to take damage
 function PlayerHit () {
+	source.PlayOneShot(deathSound, 1f);
 	Damage(1);
 	charHealth--;
 }
