@@ -8,7 +8,7 @@ private var source : AudioSource;
 
 function Start () {
 thatObject.GetComponent.< MovingPlatform >().invisible= true;
-source.GetComponent(AudioSource); 
+source = GetComponent(AudioSource); 
 }
   
 
