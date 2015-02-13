@@ -40,6 +40,9 @@ private var ceilingRadius : float = .01;
 private var anim : Animator;
 public var jumpSound : AudioClip;
 public var doubleJumpSound : AudioClip;
+public var slide_noise : AudioClip;
+public var hitSound : AudioClip;
+public var deathSound : AudioClip;
 private var source : AudioSource;
 function Awake () {
 	anim = GetComponent(Animator);
@@ -120,7 +123,8 @@ function OnTriggerEnter2D(other: Collider2D) {
 	
 	if (other.tag == "EnemyAttack") {
 	    Damage(1);
-	    Destroy(other.gameObject);	
+	    Destroy(other.gameObject);
+	    source.PlayOneShot(hitSound, 1f);	
    		}		
 
 	
@@ -139,7 +143,8 @@ function OnTriggerEnter2D(other: Collider2D) {
 	
 	if(other.tag == "Slide"){
 	   rigidbody2D.velocity.x += (rigidbody2D.velocity.x / 7);	
-	   rigidbody2D.velocity.y += (rigidbody2D.velocity.y / 8);	 
+	   rigidbody2D.velocity.y += (rigidbody2D.velocity.y / 8);	
+	   source.PlayOneShot(slide_noise, 1f); 
     }   
 
 	
@@ -154,6 +159,7 @@ function OnTriggerEnter2D(other: Collider2D) {
 	}
 	if(other.tag=="Ghost"){
 	   PlayerHit();
+	   source.PlayOneShot(deathSound, 1f);
 	   }
 	if (other.tag == "Checkpoint") {
 		checkpoint = other.transform;

@@ -75,7 +75,6 @@
      <Compile Include="Assets\Scripts\FloatingText.js" />
      <Compile Include="Assets\Scripts\FollowPath.js" />
      <Compile Include="Assets\Scripts\GameMaster.js" />
-     <Compile Include="Assets\Scripts\HUDBOSS.js" />
      <Compile Include="Assets\Scripts\HUDScript.js" />
      <Compile Include="Assets\Scripts\HarmlessGhostScript.js" />
      <Compile Include="Assets\Scripts\HealthBar.js" />
@@ -92,6 +91,7 @@
      <Compile Include="Assets\Scripts\PathDefinition.js" />
      <Compile Include="Assets\Scripts\PauseMenuManager.js" />
      <Compile Include="Assets\Scripts\PickUpScript.js" />
+     <Compile Include="Assets\Scripts\PlayerControl.js" />
      <Compile Include="Assets\Scripts\ProjectileClass.js" />
      <Compile Include="Assets\Scripts\ProjectileClass2.js" />
      <Compile Include="Assets\Scripts\ProjectileClassBoss.js" />
@@ -107,7 +107,6 @@
      <Compile Include="Assets\Scripts\TyperScript.js" />
      <Compile Include="Assets\Scripts\UtilScript.js" />
      <Compile Include="Assets\Scripts\UtilScript2.js" />
-     <Compile Include="Assets\Scripts\backupCharacter.js.js" />
      <Compile Include="Assets\Scripts\pausemenu.js" />
      <None Include="Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
  <Reference Include="UnityEngine.UI">
