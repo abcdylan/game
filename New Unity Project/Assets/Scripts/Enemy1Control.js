@@ -79,6 +79,11 @@ function OnTriggerEnter2D(other : Collider2D) {
           character.GetComponent.< Character >().PlayerHit();
    		}
    	}
+   
+   if (other.tag == "Fireball") {
+      Destroy(other.gameObject);
+      Destroy(gameObject);
+   }
    //if(other.tag=="Player"){
      // other.transform.position = spawnPoint.position;
      // }
@@ -100,6 +105,9 @@ function OnTriggerEnter2D(other : Collider2D) {
       //enemyWave = transform.parent.GetComponent(EnemyWaveClass);
       // Set direction of the wave
       movementDir= -1;
+   }
+   if (other.tag == "Destroy") {
+      Destroy(gameObject);
    }             
 }
 

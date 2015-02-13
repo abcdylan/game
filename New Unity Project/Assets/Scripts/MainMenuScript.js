@@ -9,6 +9,8 @@ public var wait : int;
 private var time : int;
 
 
+var cam : AudioSource;
+
 // Array storing text objct with index
 // indicating the current selection
 private var optionIdx: int = 0;
@@ -26,7 +28,8 @@ function Start () {
    optionArray[1] = instructText;
    optionArray[2] = loadText;
    optionArray[3] = quitText; 
-   time= wait;  
+   time= wait;
+   cam = Camera.main.audio;
 }
 
 
@@ -40,7 +43,9 @@ function ExecuteCommand(command: String) {
       // (the pausegame flag will be set to false)
       case "New Game":
       // Load the first level
-      Application.LoadLevel("fantasylevel");  //intro
+      cam.volume = 0.100;
+      yield WaitForSeconds(1);
+      Application.LoadLevel("fantasylevel"); //intro
          break;
        /*  
        case "AbilityManager":
@@ -49,6 +54,8 @@ function ExecuteCommand(command: String) {
          break;
       */        
       case "Level Select":
+         cam.volume = 0.100;
+         yield WaitForSeconds(1);
       // Select which level 
       // you would like to play
         Application.LoadLevel("LevelSelect");

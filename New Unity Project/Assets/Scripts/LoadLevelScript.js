@@ -41,6 +41,9 @@ function ExecuteCommand(command: String) {
    
       case "Level 1":
       // Load the first level
+         AbilityManager.abilityPickedUp = false;
+         AbilityManager.iAbility = false;
+         AbilityManager.fAbility = false;
          Application.LoadLevel("fantasylevel"); 
          break;
          

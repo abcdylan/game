@@ -16,7 +16,11 @@ function fall() {
   rigid.gravityScale = GravityScale;
 }
 
-
+function OnTriggerEnter2D(other : Collider2D) {
+   if(other.tag == "Destroy") {
+      Destroy(gameObject);
+   }
+}
 
 /*
 function Start () {

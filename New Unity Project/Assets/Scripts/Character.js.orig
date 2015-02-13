@@ -135,10 +135,21 @@ function OnTriggerEnter2D(other: Collider2D) {
 =======
 >>>>>>> other
 	if (other.tag == "EnemyAttack") {
+<<<<<<< local
+	    Destroy(other.gameObject);
+	    PlayerHit();   
+	    if (charHealth != 0) {  		
+   	    	transform.position = checkpoint.position;
+   		} 
+		//Application.LoadLevel(Application.loadedLevelName);	
+	}
+	
+=======
 	    Damage(1);
 	    Destroy(other.gameObject);	
    		}		
 
+>>>>>>> other
 	if (other.tag == "BossAttack") {
 		Damage(1);
 		Destroy(other.gameObject);
@@ -156,10 +167,26 @@ function OnTriggerEnter2D(other: Collider2D) {
 
 	
 	if (other.tag == "fallingSpikes"){
+<<<<<<< local
+	    PlayerHit();
+	    if (charHealth != 0) {  		
+   		   transform.position = checkpoint.position;
+   		}
+	            
+=======
 	    Damage(1);            
+>>>>>>> other
 	}
 	if (other.tag == "IceSpikes"){
+<<<<<<< local
+	    PlayerHit();
+	    if (charHealth != 0) {  		
+   		   transform.position = checkpoint.position;
+   		}
+		            
+=======
 	  PlayerHit();     
+>>>>>>> other
 	}
 	if(other.tag == "oneTouchPlatform") {
 	   rigidbody2D.AddForce (new Vector2 (0f, jumpForce));

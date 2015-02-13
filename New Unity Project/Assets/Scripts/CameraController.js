@@ -4,6 +4,13 @@
 // support a margin, and never allow the player to see outside of
 // the bounds we define
 
+//if we wanted to start the camera
+//view at the end of the level and track back to the
+//player 
+
+//var character : GameObject;
+//var Bozz : GameObject;
+
 var player : Transform;
 
 var Margin : Vector2;
@@ -20,6 +27,9 @@ function Start () {
    min = Bounding.bounds.min;
    max = Bounding.bounds.max;
    isFollowing = true;
+   //player = Bozz.transform;
+   //Switch();
+
 }
 
 function Update () {
@@ -46,3 +56,12 @@ function Update () {
            
    }
 }
+
+/*
+function Switch() {
+   yield WaitForSeconds(3);
+   Bozz.particleSystem.Emit(200);
+   yield WaitForSeconds(1);
+   Bozz.SetActive(false);
+   player = character.transform;
+}*/
