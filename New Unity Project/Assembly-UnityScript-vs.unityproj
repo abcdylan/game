@@ -91,6 +91,7 @@
      <Compile Include="Assets\Scripts\PathDefinition.js" />
      <Compile Include="Assets\Scripts\PauseMenuManager.js" />
      <Compile Include="Assets\Scripts\PickUpScript.js" />
+     <Compile Include="Assets\Scripts\PlayerControl.js" />
      <Compile Include="Assets\Scripts\ProjectileClass.js" />
      <Compile Include="Assets\Scripts\ProjectileClass2.js" />
      <Compile Include="Assets\Scripts\ProjectileClassBoss.js" />
