@@ -43,7 +43,7 @@ function ExecuteCommand(command: String) {
       Application.LoadLevel("fantasylevel");  //intro
          break;
        /*  
-       case "Controls":
+       case "AbilityManager":
       // Load the first level
       //Application.LoadLevel("Level1");  instructions
          break;
